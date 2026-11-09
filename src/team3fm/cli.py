@@ -1,4 +1,4 @@
-"""Small CLI entry point for Colab, local machines, and GitHub users."""
+"""Command-line interface for consistency checking and MIS extraction."""
 
 import argparse
 import json
