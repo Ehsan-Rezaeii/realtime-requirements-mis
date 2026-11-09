@@ -1,0 +1,29 @@
+{
+  "case_id": "pilot_mis3",
+  "N": 5,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "recurrence",
+      "signal": "request",
+      "window": 6
+    },
+    {
+      "id": "R2",
+      "type": "response",
+      "trigger": "request",
+      "target": "grant",
+      "deadline": 2
+    },
+    {
+      "id": "R3",
+      "type": "absence",
+      "signal": "grant"
+    },
+    {
+      "id": "R4",
+      "type": "absence",
+      "signal": "backup"
+    }
+  ]
+}

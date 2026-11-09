@@ -1,0 +1,5 @@
+# Core SMT solver and the two analysis libraries from the project guide.
+# Record exact installed versions in every experiment's environment.json.
+z3-solver>=4.13,<6
+pandas>=2.0
+matplotlib>=3.8

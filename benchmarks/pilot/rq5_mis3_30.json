@@ -1,0 +1,165 @@
+{
+  "case_id": "synthetic_mis3_30",
+  "N": 5,
+  "seed": 42,
+  "injected_ids": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "rules": [
+    {
+      "id": "B0017",
+      "type": "absence",
+      "signal": "noise_0017"
+    },
+    {
+      "id": "B0012",
+      "type": "absence",
+      "signal": "noise_0012"
+    },
+    {
+      "id": "B0008",
+      "type": "absence",
+      "signal": "noise_0008"
+    },
+    {
+      "id": "B0024",
+      "type": "absence",
+      "signal": "noise_0024"
+    },
+    {
+      "id": "B0020",
+      "type": "absence",
+      "signal": "noise_0020"
+    },
+    {
+      "id": "B0004",
+      "type": "absence",
+      "signal": "noise_0004"
+    },
+    {
+      "id": "B0003",
+      "type": "absence",
+      "signal": "noise_0003"
+    },
+    {
+      "id": "B0010",
+      "type": "absence",
+      "signal": "noise_0010"
+    },
+    {
+      "id": "B0009",
+      "type": "absence",
+      "signal": "noise_0009"
+    },
+    {
+      "id": "B0013",
+      "type": "absence",
+      "signal": "noise_0013"
+    },
+    {
+      "id": "B0007",
+      "type": "absence",
+      "signal": "noise_0007"
+    },
+    {
+      "id": "B0023",
+      "type": "absence",
+      "signal": "noise_0023"
+    },
+    {
+      "id": "B0027",
+      "type": "absence",
+      "signal": "noise_0027"
+    },
+    {
+      "id": "B0019",
+      "type": "absence",
+      "signal": "noise_0019"
+    },
+    {
+      "id": "B0014",
+      "type": "absence",
+      "signal": "noise_0014"
+    },
+    {
+      "id": "B0025",
+      "type": "absence",
+      "signal": "noise_0025"
+    },
+    {
+      "id": "R2",
+      "type": "response",
+      "trigger": "request",
+      "target": "grant",
+      "deadline": 2
+    },
+    {
+      "id": "B0011",
+      "type": "absence",
+      "signal": "noise_0011"
+    },
+    {
+      "id": "B0016",
+      "type": "absence",
+      "signal": "noise_0016"
+    },
+    {
+      "id": "R3",
+      "type": "absence",
+      "signal": "grant"
+    },
+    {
+      "id": "B0015",
+      "type": "absence",
+      "signal": "noise_0015"
+    },
+    {
+      "id": "B0026",
+      "type": "absence",
+      "signal": "noise_0026"
+    },
+    {
+      "id": "B0002",
+      "type": "absence",
+      "signal": "noise_0002"
+    },
+    {
+      "id": "B0022",
+      "type": "absence",
+      "signal": "noise_0022"
+    },
+    {
+      "id": "B0005",
+      "type": "absence",
+      "signal": "noise_0005"
+    },
+    {
+      "id": "B0006",
+      "type": "absence",
+      "signal": "noise_0006"
+    },
+    {
+      "id": "B0021",
+      "type": "absence",
+      "signal": "noise_0021"
+    },
+    {
+      "id": "R1",
+      "type": "recurrence",
+      "signal": "request",
+      "window": 6
+    },
+    {
+      "id": "B0001",
+      "type": "absence",
+      "signal": "noise_0001"
+    },
+    {
+      "id": "B0018",
+      "type": "absence",
+      "signal": "noise_0018"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "N": 5,
+  "sizes": [12, 30, 60],
+  "mis_size": 3,
+  "style": "mixed",
+  "seed": 42,
+  "repeats": 3,
+  "timeout_ms": 5000,
+  "rq4_N_values": [2, 3, 5, 8, 10],
+  "out_dir": "results/generated"
+}

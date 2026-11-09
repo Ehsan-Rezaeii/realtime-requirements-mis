@@ -1,0 +1,10 @@
+{
+  "experiment": "MIS timing pilot",
+  "N": 5,
+  "num_rules": 4,
+  "repetitions": 10,
+  "solver_timeout_ms_per_check": 5000,
+  "python_version": "3.13.18",
+  "z3_version": "5.3.3",
+  "platform": "Linux-6.6.159+-x86_64-with-glibc2.39"
+}

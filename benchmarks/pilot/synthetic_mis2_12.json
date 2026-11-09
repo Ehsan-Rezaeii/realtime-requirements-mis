@@ -1,0 +1,71 @@
+{
+  "case_id": "synthetic_mis2_12",
+  "N": 5,
+  "seed": 42,
+  "injected_ids": [
+    "R1",
+    "R2"
+  ],
+  "rules": [
+    {
+      "id": "B0006",
+      "type": "absence",
+      "signal": "noise_0006"
+    },
+    {
+      "id": "B0004",
+      "type": "absence",
+      "signal": "noise_0004"
+    },
+    {
+      "id": "B0001",
+      "type": "absence",
+      "signal": "noise_0001"
+    },
+    {
+      "id": "B0007",
+      "type": "absence",
+      "signal": "noise_0007"
+    },
+    {
+      "id": "B0008",
+      "type": "absence",
+      "signal": "noise_0008"
+    },
+    {
+      "id": "B0005",
+      "type": "absence",
+      "signal": "noise_0005"
+    },
+    {
+      "id": "B0010",
+      "type": "absence",
+      "signal": "noise_0010"
+    },
+    {
+      "id": "B0002",
+      "type": "absence",
+      "signal": "noise_0002"
+    },
+    {
+      "id": "B0003",
+      "type": "absence",
+      "signal": "noise_0003"
+    },
+    {
+      "id": "R1",
+      "type": "invariant",
+      "signal": "alarm"
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "alarm"
+    },
+    {
+      "id": "B0009",
+      "type": "absence",
+      "signal": "noise_0009"
+    }
+  ]
+}
