@@ -1,70 +1,117 @@
-"""Non-incremental and assumption-based incremental consistency checking."""
+"""Fresh-solver and assumption-based checks over the same finite trace."""
+
+from contextlib import contextmanager
+from contextvars import ContextVar
+from time import perf_counter
 
 from z3 import Bool, Implies, Solver, sat, unsat
-from .model import encode_rule, make_trace, observation_formulas, validate_rules
+
+from .model import encode_rule, make_trace, observation_formulas
 
 
 class InconclusiveError(RuntimeError):
-    """The Z3 solver answered unknown (e.g. timeout), not SAT or UNSAT."""
+    """Z3 cannot decide a query within its current limits."""
+
+    def __init__(self, reason):
+        self.reason = reason
+        self.status = "timeout" if "timeout" in reason.lower() else "unknown"
+        super().__init__(f"Z3 returned unknown: {reason}")
+
+
+_measurement = ContextVar("solver_measurement", default=None)
+
+
+@contextmanager
+def measure_solver(seed=0):
+    """Collect timings and calls for one benchmark operation."""
+    stats = {"build_seconds": 0.0, "solving_seconds": 0.0, "solver_calls": 0}
+    token = _measurement.set((seed, stats))
+    try:
+        yield stats
+    finally:
+        _measurement.reset(token)
 
 
 def _solver(timeout_ms):
-    if isinstance(timeout_ms, bool) or not isinstance(timeout_ms, int) or timeout_ms <= 0:
+    if type(timeout_ms) is not int or timeout_ms <= 0:
         raise ValueError("timeout_ms must be a positive integer")
     solver = Solver()
-    solver.set(timeout=timeout_ms)
+    measurement = _measurement.get()
+    solver.set(timeout=timeout_ms, random_seed=measurement[0] if measurement else 0)
     return solver
 
 
-def check_nonincremental(rules, N, timeout_ms=5000, observations=None):
-    """Create a fresh solver for *each* query. Returns z3.sat/unsat/unknown."""
-    validate_rules(rules, N)
+def _record_build(start):
+    measurement = _measurement.get()
+    if measurement:
+        measurement[1]["build_seconds"] += perf_counter() - start
+
+
+def _check(solver, assumptions, decided):
+    start = perf_counter()
+    result = solver.check(*assumptions)
+    measurement = _measurement.get()
+    if measurement:
+        stats = measurement[1]
+        stats["solving_seconds"] += perf_counter() - start
+        stats["solver_calls"] += 1
+    if decided and result not in (sat, unsat):
+        raise InconclusiveError(solver.reason_unknown())
+    return result
+
+
+def check_nonincremental(rules, N, timeout_ms=5000, observations=None, *, decided=False):
+    """Construct a fresh solver per query and return SAT, UNSAT or UNKNOWN."""
+    start = perf_counter()
     trace = make_trace(rules, N, observations)
     solver = _solver(timeout_ms)
     solver.add(*observation_formulas(observations, trace))
-    for rule in rules:
-        solver.add(encode_rule(rule, trace, N))
-    return solver.check()
+    solver.add(*(encode_rule(rule, trace, N) for rule in rules))
+    _record_build(start)
+    return _check(solver, (), decided)
 
 
 class IncrementalChecker:
-    """Encode each rule once and turn it on/off through assumption literals."""
+    """Encode each rule once and activate it through an assumption literal."""
 
     def __init__(self, rules, N, timeout_ms=5000, observations=None):
-        validate_rules(rules, N)
+        start = perf_counter()
+        self.trace = make_trace(rules, N, observations)
         self.rules = list(rules)
         self.N = N
-        self.trace = make_trace(rules, N, observations)
         self.solver = _solver(timeout_ms)
         self.solver.add(*observation_formulas(observations, self.trace))
         self.switches = {}
+        constraints = []
         for i, rule in enumerate(rules):
-            flag = Bool(f"__rule_enabled_{i}")
+            flag = Bool(f"activation:{i}")
             self.switches[rule["id"]] = flag
-            self.solver.add(Implies(flag, encode_rule(rule, self.trace, N)))
+            constraints.append(Implies(flag, encode_rule(rule, self.trace, N)))
+        self.solver.add(*constraints)
+        _record_build(start)
 
-    def check(self, selected_rules=None):
+    def check(self, selected_rules=None, *, decided=False):
         if selected_rules is None:
             selected_rules = self.rules
         assumptions = []
         seen = set()
         for rule in selected_rules:
-            rid = rule["id"] if isinstance(rule, dict) else rule
-            if rid not in self.switches:
+            rid = rule.get("id") if isinstance(rule, dict) else rule
+            if not isinstance(rid, str) or rid not in self.switches:
                 raise ValueError(f"unknown rule id: {rid}")
             if rid in seen:
                 raise ValueError(f"duplicate selected rule id: {rid}")
             seen.add(rid)
             assumptions.append(self.switches[rid])
-        return self.solver.check(*assumptions)
+        return _check(self.solver, assumptions, decided)
 
     def core_ids(self):
-        """Call immediately after an UNSAT result on the same checker."""
-        reverse = {str(flag): rid for rid, flag in self.switches.items()}
-        return {reverse[str(flag)] for flag in self.solver.unsat_core()}
+        """Read the assumptions in the last UNSAT proof."""
+        reverse = {flag: rid for rid, flag in self.switches.items()}
+        return {reverse[flag] for flag in self.solver.unsat_core()}
 
 
 def require_decided(result):
     if result not in (sat, unsat):
-        raise InconclusiveError(f"Z3 returned {result}; do not treat unknown as SAT/UNSAT")
+        raise InconclusiveError(str(result))
     return result

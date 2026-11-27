@@ -1,0 +1,6016 @@
+{
+  "case_id": "scale-mixed-1000",
+  "N": 5,
+  "seed": 42,
+  "generator": "mixed",
+  "injected_ids": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "rules": [
+    {
+      "id": "B0774",
+      "type": "absence",
+      "signal": "bg_off_128"
+    },
+    {
+      "id": "B0505",
+      "type": "invariant",
+      "signal": "bg_on_84"
+    },
+    {
+      "id": "B0893",
+      "type": "bounded_delay",
+      "trigger": "bg_on_148",
+      "target": "bg_ack_148",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0920",
+      "type": "invariant",
+      "signal": "bg_ack_153"
+    },
+    {
+      "id": "B0031",
+      "type": "invariant",
+      "signal": "bg_on_5"
+    },
+    {
+      "id": "B0481",
+      "type": "invariant",
+      "signal": "bg_on_80"
+    },
+    {
+      "id": "B0083",
+      "type": "bounded_delay",
+      "trigger": "bg_on_13",
+      "target": "bg_ack_13",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0748",
+      "type": "recurrence",
+      "signal": "bg_on_124",
+      "window": 2
+    },
+    {
+      "id": "B0352",
+      "type": "recurrence",
+      "signal": "bg_on_58",
+      "window": 2
+    },
+    {
+      "id": "B0521",
+      "type": "bounded_delay",
+      "trigger": "bg_on_86",
+      "target": "bg_ack_86",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0182",
+      "type": "invariant",
+      "signal": "bg_ack_30"
+    },
+    {
+      "id": "B0807",
+      "type": "response",
+      "trigger": "bg_on_134",
+      "target": "bg_ack_134",
+      "deadline": 1
+    },
+    {
+      "id": "B0416",
+      "type": "invariant",
+      "signal": "bg_ack_69"
+    },
+    {
+      "id": "B0613",
+      "type": "invariant",
+      "signal": "bg_on_102"
+    },
+    {
+      "id": "B0680",
+      "type": "invariant",
+      "signal": "bg_ack_113"
+    },
+    {
+      "id": "B0499",
+      "type": "invariant",
+      "signal": "bg_on_83"
+    },
+    {
+      "id": "B0758",
+      "type": "invariant",
+      "signal": "bg_ack_126"
+    },
+    {
+      "id": "B0047",
+      "type": "bounded_delay",
+      "trigger": "bg_on_7",
+      "target": "bg_ack_7",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0730",
+      "type": "recurrence",
+      "signal": "bg_on_121",
+      "window": 2
+    },
+    {
+      "id": "B0334",
+      "type": "recurrence",
+      "signal": "bg_on_55",
+      "window": 2
+    },
+    {
+      "id": "B0448",
+      "type": "recurrence",
+      "signal": "bg_on_74",
+      "window": 2
+    },
+    {
+      "id": "B0788",
+      "type": "invariant",
+      "signal": "bg_ack_131"
+    },
+    {
+      "id": "B0348",
+      "type": "absence",
+      "signal": "bg_off_57"
+    },
+    {
+      "id": "B0465",
+      "type": "response",
+      "trigger": "bg_on_77",
+      "target": "bg_ack_77",
+      "deadline": 1
+    },
+    {
+      "id": "B0620",
+      "type": "invariant",
+      "signal": "bg_ack_103"
+    },
+    {
+      "id": "B0474",
+      "type": "absence",
+      "signal": "bg_off_78"
+    },
+    {
+      "id": "B0612",
+      "type": "absence",
+      "signal": "bg_off_101"
+    },
+    {
+      "id": "B0552",
+      "type": "absence",
+      "signal": "bg_off_91"
+    },
+    {
+      "id": "B0363",
+      "type": "response",
+      "trigger": "bg_on_60",
+      "target": "bg_ack_60",
+      "deadline": 1
+    },
+    {
+      "id": "B0768",
+      "type": "absence",
+      "signal": "bg_off_127"
+    },
+    {
+      "id": "B0628",
+      "type": "recurrence",
+      "signal": "bg_on_104",
+      "window": 2
+    },
+    {
+      "id": "B0938",
+      "type": "invariant",
+      "signal": "bg_ack_156"
+    },
+    {
+      "id": "B0795",
+      "type": "response",
+      "trigger": "bg_on_132",
+      "target": "bg_ack_132",
+      "deadline": 1
+    },
+    {
+      "id": "B0494",
+      "type": "invariant",
+      "signal": "bg_ack_82"
+    },
+    {
+      "id": "B0922",
+      "type": "recurrence",
+      "signal": "bg_on_153",
+      "window": 2
+    },
+    {
+      "id": "B0367",
+      "type": "invariant",
+      "signal": "bg_on_61"
+    },
+    {
+      "id": "B0594",
+      "type": "absence",
+      "signal": "bg_off_98"
+    },
+    {
+      "id": "B0718",
+      "type": "recurrence",
+      "signal": "bg_on_119",
+      "window": 2
+    },
+    {
+      "id": "B0051",
+      "type": "response",
+      "trigger": "bg_on_8",
+      "target": "bg_ack_8",
+      "deadline": 1
+    },
+    {
+      "id": "B0424",
+      "type": "recurrence",
+      "signal": "bg_on_70",
+      "window": 2
+    },
+    {
+      "id": "B0054",
+      "type": "absence",
+      "signal": "bg_off_8"
+    },
+    {
+      "id": "B0262",
+      "type": "recurrence",
+      "signal": "bg_on_43",
+      "window": 2
+    },
+    {
+      "id": "B0770",
+      "type": "invariant",
+      "signal": "bg_ack_128"
+    },
+    {
+      "id": "B0183",
+      "type": "response",
+      "trigger": "bg_on_30",
+      "target": "bg_ack_30",
+      "deadline": 1
+    },
+    {
+      "id": "B0464",
+      "type": "invariant",
+      "signal": "bg_ack_77"
+    },
+    {
+      "id": "B0787",
+      "type": "invariant",
+      "signal": "bg_on_131"
+    },
+    {
+      "id": "B0172",
+      "type": "recurrence",
+      "signal": "bg_on_28",
+      "window": 2
+    },
+    {
+      "id": "B0148",
+      "type": "recurrence",
+      "signal": "bg_on_24",
+      "window": 2
+    },
+    {
+      "id": "B0739",
+      "type": "invariant",
+      "signal": "bg_on_123"
+    },
+    {
+      "id": "B0111",
+      "type": "response",
+      "trigger": "bg_on_18",
+      "target": "bg_ack_18",
+      "deadline": 1
+    },
+    {
+      "id": "B0426",
+      "type": "absence",
+      "signal": "bg_off_70"
+    },
+    {
+      "id": "B0963",
+      "type": "response",
+      "trigger": "bg_on_160",
+      "target": "bg_ack_160",
+      "deadline": 1
+    },
+    {
+      "id": "B0016",
+      "type": "recurrence",
+      "signal": "bg_on_2",
+      "window": 2
+    },
+    {
+      "id": "B0187",
+      "type": "invariant",
+      "signal": "bg_on_31"
+    },
+    {
+      "id": "B0412",
+      "type": "recurrence",
+      "signal": "bg_on_68",
+      "window": 2
+    },
+    {
+      "id": "B0587",
+      "type": "bounded_delay",
+      "trigger": "bg_on_97",
+      "target": "bg_ack_97",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0664",
+      "type": "recurrence",
+      "signal": "bg_on_110",
+      "window": 2
+    },
+    {
+      "id": "B0761",
+      "type": "bounded_delay",
+      "trigger": "bg_on_126",
+      "target": "bg_ack_126",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0219",
+      "type": "response",
+      "trigger": "bg_on_36",
+      "target": "bg_ack_36",
+      "deadline": 1
+    },
+    {
+      "id": "B0584",
+      "type": "invariant",
+      "signal": "bg_ack_97"
+    },
+    {
+      "id": "B0579",
+      "type": "response",
+      "trigger": "bg_on_96",
+      "target": "bg_ack_96",
+      "deadline": 1
+    },
+    {
+      "id": "B0297",
+      "type": "response",
+      "trigger": "bg_on_49",
+      "target": "bg_ack_49",
+      "deadline": 1
+    },
+    {
+      "id": "B0636",
+      "type": "absence",
+      "signal": "bg_off_105"
+    },
+    {
+      "id": "B0384",
+      "type": "absence",
+      "signal": "bg_off_63"
+    },
+    {
+      "id": "B0362",
+      "type": "invariant",
+      "signal": "bg_ack_60"
+    },
+    {
+      "id": "B0877",
+      "type": "invariant",
+      "signal": "bg_on_146"
+    },
+    {
+      "id": "B0332",
+      "type": "invariant",
+      "signal": "bg_ack_55"
+    },
+    {
+      "id": "B0014",
+      "type": "invariant",
+      "signal": "bg_ack_2"
+    },
+    {
+      "id": "B0200",
+      "type": "invariant",
+      "signal": "bg_ack_33"
+    },
+    {
+      "id": "R2",
+      "type": "response",
+      "trigger": "request",
+      "target": "grant",
+      "deadline": 2
+    },
+    {
+      "id": "B0036",
+      "type": "absence",
+      "signal": "bg_off_5"
+    },
+    {
+      "id": "B0288",
+      "type": "absence",
+      "signal": "bg_off_47"
+    },
+    {
+      "id": "B0491",
+      "type": "bounded_delay",
+      "trigger": "bg_on_81",
+      "target": "bg_ack_81",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0245",
+      "type": "bounded_delay",
+      "trigger": "bg_on_40",
+      "target": "bg_ack_40",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0504",
+      "type": "absence",
+      "signal": "bg_off_83"
+    },
+    {
+      "id": "B0894",
+      "type": "absence",
+      "signal": "bg_off_148"
+    },
+    {
+      "id": "B0711",
+      "type": "response",
+      "trigger": "bg_on_118",
+      "target": "bg_ack_118",
+      "deadline": 1
+    },
+    {
+      "id": "B0889",
+      "type": "invariant",
+      "signal": "bg_on_148"
+    },
+    {
+      "id": "B0074",
+      "type": "invariant",
+      "signal": "bg_ack_12"
+    },
+    {
+      "id": "B0909",
+      "type": "response",
+      "trigger": "bg_on_151",
+      "target": "bg_ack_151",
+      "deadline": 1
+    },
+    {
+      "id": "B0790",
+      "type": "recurrence",
+      "signal": "bg_on_131",
+      "window": 2
+    },
+    {
+      "id": "B0506",
+      "type": "invariant",
+      "signal": "bg_ack_84"
+    },
+    {
+      "id": "B0175",
+      "type": "invariant",
+      "signal": "bg_on_29"
+    },
+    {
+      "id": "B0840",
+      "type": "absence",
+      "signal": "bg_off_139"
+    },
+    {
+      "id": "B0198",
+      "type": "absence",
+      "signal": "bg_off_32"
+    },
+    {
+      "id": "B0763",
+      "type": "invariant",
+      "signal": "bg_on_127"
+    },
+    {
+      "id": "B0907",
+      "type": "invariant",
+      "signal": "bg_on_151"
+    },
+    {
+      "id": "B0291",
+      "type": "response",
+      "trigger": "bg_on_48",
+      "target": "bg_ack_48",
+      "deadline": 1
+    },
+    {
+      "id": "B0536",
+      "type": "invariant",
+      "signal": "bg_ack_89"
+    },
+    {
+      "id": "B0022",
+      "type": "recurrence",
+      "signal": "bg_on_3",
+      "window": 2
+    },
+    {
+      "id": "B0692",
+      "type": "invariant",
+      "signal": "bg_ack_115"
+    },
+    {
+      "id": "B0208",
+      "type": "recurrence",
+      "signal": "bg_on_34",
+      "window": 2
+    },
+    {
+      "id": "B0422",
+      "type": "invariant",
+      "signal": "bg_ack_70"
+    },
+    {
+      "id": "B0526",
+      "type": "recurrence",
+      "signal": "bg_on_87",
+      "window": 2
+    },
+    {
+      "id": "B0032",
+      "type": "invariant",
+      "signal": "bg_ack_5"
+    },
+    {
+      "id": "B0926",
+      "type": "invariant",
+      "signal": "bg_ack_154"
+    },
+    {
+      "id": "B0396",
+      "type": "absence",
+      "signal": "bg_off_65"
+    },
+    {
+      "id": "B0605",
+      "type": "bounded_delay",
+      "trigger": "bg_on_100",
+      "target": "bg_ack_100",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0296",
+      "type": "invariant",
+      "signal": "bg_ack_49"
+    },
+    {
+      "id": "B0846",
+      "type": "absence",
+      "signal": "bg_off_140"
+    },
+    {
+      "id": "B0666",
+      "type": "absence",
+      "signal": "bg_off_110"
+    },
+    {
+      "id": "B0280",
+      "type": "recurrence",
+      "signal": "bg_on_46",
+      "window": 2
+    },
+    {
+      "id": "B0937",
+      "type": "invariant",
+      "signal": "bg_on_156"
+    },
+    {
+      "id": "B0942",
+      "type": "absence",
+      "signal": "bg_off_156"
+    },
+    {
+      "id": "B0604",
+      "type": "recurrence",
+      "signal": "bg_on_100",
+      "window": 2
+    },
+    {
+      "id": "B0957",
+      "type": "response",
+      "trigger": "bg_on_159",
+      "target": "bg_ack_159",
+      "deadline": 1
+    },
+    {
+      "id": "B0932",
+      "type": "invariant",
+      "signal": "bg_ack_155"
+    },
+    {
+      "id": "B0729",
+      "type": "response",
+      "trigger": "bg_on_121",
+      "target": "bg_ack_121",
+      "deadline": 1
+    },
+    {
+      "id": "B0285",
+      "type": "response",
+      "trigger": "bg_on_47",
+      "target": "bg_ack_47",
+      "deadline": 1
+    },
+    {
+      "id": "B0525",
+      "type": "response",
+      "trigger": "bg_on_87",
+      "target": "bg_ack_87",
+      "deadline": 1
+    },
+    {
+      "id": "B0805",
+      "type": "invariant",
+      "signal": "bg_on_134"
+    },
+    {
+      "id": "B0227",
+      "type": "bounded_delay",
+      "trigger": "bg_on_37",
+      "target": "bg_ack_37",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0434",
+      "type": "invariant",
+      "signal": "bg_ack_72"
+    },
+    {
+      "id": "B0026",
+      "type": "invariant",
+      "signal": "bg_ack_4"
+    },
+    {
+      "id": "B0372",
+      "type": "absence",
+      "signal": "bg_off_61"
+    },
+    {
+      "id": "B0817",
+      "type": "invariant",
+      "signal": "bg_on_136"
+    },
+    {
+      "id": "B0314",
+      "type": "invariant",
+      "signal": "bg_ack_52"
+    },
+    {
+      "id": "B0558",
+      "type": "absence",
+      "signal": "bg_off_92"
+    },
+    {
+      "id": "B0239",
+      "type": "bounded_delay",
+      "trigger": "bg_on_39",
+      "target": "bg_ack_39",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0147",
+      "type": "response",
+      "trigger": "bg_on_24",
+      "target": "bg_ack_24",
+      "deadline": 1
+    },
+    {
+      "id": "B0514",
+      "type": "recurrence",
+      "signal": "bg_on_85",
+      "window": 2
+    },
+    {
+      "id": "B0415",
+      "type": "invariant",
+      "signal": "bg_on_69"
+    },
+    {
+      "id": "B0658",
+      "type": "recurrence",
+      "signal": "bg_on_109",
+      "window": 2
+    },
+    {
+      "id": "B0196",
+      "type": "recurrence",
+      "signal": "bg_on_32",
+      "window": 2
+    },
+    {
+      "id": "B0583",
+      "type": "invariant",
+      "signal": "bg_on_97"
+    },
+    {
+      "id": "B0323",
+      "type": "bounded_delay",
+      "trigger": "bg_on_53",
+      "target": "bg_ack_53",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0821",
+      "type": "bounded_delay",
+      "trigger": "bg_on_136",
+      "target": "bg_ack_136",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0700",
+      "type": "recurrence",
+      "signal": "bg_on_116",
+      "window": 2
+    },
+    {
+      "id": "B0947",
+      "type": "bounded_delay",
+      "trigger": "bg_on_157",
+      "target": "bg_ack_157",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0513",
+      "type": "response",
+      "trigger": "bg_on_85",
+      "target": "bg_ack_85",
+      "deadline": 1
+    },
+    {
+      "id": "B0862",
+      "type": "recurrence",
+      "signal": "bg_on_143",
+      "window": 2
+    },
+    {
+      "id": "B0834",
+      "type": "absence",
+      "signal": "bg_off_138"
+    },
+    {
+      "id": "B0875",
+      "type": "bounded_delay",
+      "trigger": "bg_on_145",
+      "target": "bg_ack_145",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0357",
+      "type": "response",
+      "trigger": "bg_on_59",
+      "target": "bg_ack_59",
+      "deadline": 1
+    },
+    {
+      "id": "B0592",
+      "type": "recurrence",
+      "signal": "bg_on_98",
+      "window": 2
+    },
+    {
+      "id": "B0786",
+      "type": "absence",
+      "signal": "bg_off_130"
+    },
+    {
+      "id": "B0186",
+      "type": "absence",
+      "signal": "bg_off_30"
+    },
+    {
+      "id": "B0064",
+      "type": "recurrence",
+      "signal": "bg_on_10",
+      "window": 2
+    },
+    {
+      "id": "B0353",
+      "type": "bounded_delay",
+      "trigger": "bg_on_58",
+      "target": "bg_ack_58",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0797",
+      "type": "bounded_delay",
+      "trigger": "bg_on_132",
+      "target": "bg_ack_132",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0900",
+      "type": "absence",
+      "signal": "bg_off_149"
+    },
+    {
+      "id": "B0918",
+      "type": "absence",
+      "signal": "bg_off_152"
+    },
+    {
+      "id": "B0940",
+      "type": "recurrence",
+      "signal": "bg_on_156",
+      "window": 2
+    },
+    {
+      "id": "B0328",
+      "type": "recurrence",
+      "signal": "bg_on_54",
+      "window": 2
+    },
+    {
+      "id": "B0725",
+      "type": "bounded_delay",
+      "trigger": "bg_on_120",
+      "target": "bg_ack_120",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0394",
+      "type": "recurrence",
+      "signal": "bg_on_65",
+      "window": 2
+    },
+    {
+      "id": "B0461",
+      "type": "bounded_delay",
+      "trigger": "bg_on_76",
+      "target": "bg_ack_76",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0391",
+      "type": "invariant",
+      "signal": "bg_on_65"
+    },
+    {
+      "id": "B0309",
+      "type": "response",
+      "trigger": "bg_on_51",
+      "target": "bg_ack_51",
+      "deadline": 1
+    },
+    {
+      "id": "B0678",
+      "type": "absence",
+      "signal": "bg_off_112"
+    },
+    {
+      "id": "B0742",
+      "type": "recurrence",
+      "signal": "bg_on_123",
+      "window": 2
+    },
+    {
+      "id": "B0919",
+      "type": "invariant",
+      "signal": "bg_on_153"
+    },
+    {
+      "id": "B0459",
+      "type": "response",
+      "trigger": "bg_on_76",
+      "target": "bg_ack_76",
+      "deadline": 1
+    },
+    {
+      "id": "B0520",
+      "type": "recurrence",
+      "signal": "bg_on_86",
+      "window": 2
+    },
+    {
+      "id": "B0629",
+      "type": "bounded_delay",
+      "trigger": "bg_on_104",
+      "target": "bg_ack_104",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0488",
+      "type": "invariant",
+      "signal": "bg_ack_81"
+    },
+    {
+      "id": "B0193",
+      "type": "invariant",
+      "signal": "bg_on_32"
+    },
+    {
+      "id": "B0254",
+      "type": "invariant",
+      "signal": "bg_ack_42"
+    },
+    {
+      "id": "B0691",
+      "type": "invariant",
+      "signal": "bg_on_115"
+    },
+    {
+      "id": "B0738",
+      "type": "absence",
+      "signal": "bg_off_122"
+    },
+    {
+      "id": "B0575",
+      "type": "bounded_delay",
+      "trigger": "bg_on_95",
+      "target": "bg_ack_95",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0155",
+      "type": "bounded_delay",
+      "trigger": "bg_on_25",
+      "target": "bg_ack_25",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0610",
+      "type": "recurrence",
+      "signal": "bg_on_101",
+      "window": 2
+    },
+    {
+      "id": "B0390",
+      "type": "absence",
+      "signal": "bg_off_64"
+    },
+    {
+      "id": "B0967",
+      "type": "invariant",
+      "signal": "bg_on_161"
+    },
+    {
+      "id": "B0686",
+      "type": "invariant",
+      "signal": "bg_ack_114"
+    },
+    {
+      "id": "B0359",
+      "type": "bounded_delay",
+      "trigger": "bg_on_59",
+      "target": "bg_ack_59",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0814",
+      "type": "recurrence",
+      "signal": "bg_on_135",
+      "window": 2
+    },
+    {
+      "id": "B0399",
+      "type": "response",
+      "trigger": "bg_on_66",
+      "target": "bg_ack_66",
+      "deadline": 1
+    },
+    {
+      "id": "B0090",
+      "type": "absence",
+      "signal": "bg_off_14"
+    },
+    {
+      "id": "B0915",
+      "type": "response",
+      "trigger": "bg_on_152",
+      "target": "bg_ack_152",
+      "deadline": 1
+    },
+    {
+      "id": "B0487",
+      "type": "invariant",
+      "signal": "bg_on_81"
+    },
+    {
+      "id": "B0449",
+      "type": "bounded_delay",
+      "trigger": "bg_on_74",
+      "target": "bg_ack_74",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0249",
+      "type": "response",
+      "trigger": "bg_on_41",
+      "target": "bg_ack_41",
+      "deadline": 1
+    },
+    {
+      "id": "B0651",
+      "type": "response",
+      "trigger": "bg_on_108",
+      "target": "bg_ack_108",
+      "deadline": 1
+    },
+    {
+      "id": "B0767",
+      "type": "bounded_delay",
+      "trigger": "bg_on_127",
+      "target": "bg_ack_127",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0668",
+      "type": "invariant",
+      "signal": "bg_ack_111"
+    },
+    {
+      "id": "B0127",
+      "type": "invariant",
+      "signal": "bg_on_21"
+    },
+    {
+      "id": "B0635",
+      "type": "bounded_delay",
+      "trigger": "bg_on_105",
+      "target": "bg_ack_105",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0989",
+      "type": "bounded_delay",
+      "trigger": "bg_on_164",
+      "target": "bg_ack_164",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0340",
+      "type": "recurrence",
+      "signal": "bg_on_56",
+      "window": 2
+    },
+    {
+      "id": "B0306",
+      "type": "absence",
+      "signal": "bg_off_50"
+    },
+    {
+      "id": "B0134",
+      "type": "invariant",
+      "signal": "bg_ack_22"
+    },
+    {
+      "id": "B0086",
+      "type": "invariant",
+      "signal": "bg_ack_14"
+    },
+    {
+      "id": "B0325",
+      "type": "invariant",
+      "signal": "bg_on_54"
+    },
+    {
+      "id": "B0473",
+      "type": "bounded_delay",
+      "trigger": "bg_on_78",
+      "target": "bg_ack_78",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0979",
+      "type": "invariant",
+      "signal": "bg_on_163"
+    },
+    {
+      "id": "B0848",
+      "type": "invariant",
+      "signal": "bg_ack_141"
+    },
+    {
+      "id": "B0890",
+      "type": "invariant",
+      "signal": "bg_ack_148"
+    },
+    {
+      "id": "B0373",
+      "type": "invariant",
+      "signal": "bg_on_62"
+    },
+    {
+      "id": "B0176",
+      "type": "invariant",
+      "signal": "bg_ack_29"
+    },
+    {
+      "id": "B0024",
+      "type": "absence",
+      "signal": "bg_off_3"
+    },
+    {
+      "id": "B0347",
+      "type": "bounded_delay",
+      "trigger": "bg_on_57",
+      "target": "bg_ack_57",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0497",
+      "type": "bounded_delay",
+      "trigger": "bg_on_82",
+      "target": "bg_ack_82",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0472",
+      "type": "recurrence",
+      "signal": "bg_on_78",
+      "window": 2
+    },
+    {
+      "id": "B0615",
+      "type": "response",
+      "trigger": "bg_on_102",
+      "target": "bg_ack_102",
+      "deadline": 1
+    },
+    {
+      "id": "B0695",
+      "type": "bounded_delay",
+      "trigger": "bg_on_115",
+      "target": "bg_ack_115",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0048",
+      "type": "absence",
+      "signal": "bg_off_7"
+    },
+    {
+      "id": "B0209",
+      "type": "bounded_delay",
+      "trigger": "bg_on_34",
+      "target": "bg_ack_34",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0379",
+      "type": "invariant",
+      "signal": "bg_on_63"
+    },
+    {
+      "id": "B0881",
+      "type": "bounded_delay",
+      "trigger": "bg_on_146",
+      "target": "bg_ack_146",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0171",
+      "type": "response",
+      "trigger": "bg_on_28",
+      "target": "bg_ack_28",
+      "deadline": 1
+    },
+    {
+      "id": "B0145",
+      "type": "invariant",
+      "signal": "bg_on_24"
+    },
+    {
+      "id": "B0417",
+      "type": "response",
+      "trigger": "bg_on_69",
+      "target": "bg_ack_69",
+      "deadline": 1
+    },
+    {
+      "id": "B0959",
+      "type": "bounded_delay",
+      "trigger": "bg_on_159",
+      "target": "bg_ack_159",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0146",
+      "type": "invariant",
+      "signal": "bg_ack_24"
+    },
+    {
+      "id": "B0973",
+      "type": "invariant",
+      "signal": "bg_on_162"
+    },
+    {
+      "id": "B0077",
+      "type": "bounded_delay",
+      "trigger": "bg_on_12",
+      "target": "bg_ack_12",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0773",
+      "type": "bounded_delay",
+      "trigger": "bg_on_128",
+      "target": "bg_ack_128",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0300",
+      "type": "absence",
+      "signal": "bg_off_49"
+    },
+    {
+      "id": "B0993",
+      "type": "response",
+      "trigger": "bg_on_165",
+      "target": "bg_ack_165",
+      "deadline": 1
+    },
+    {
+      "id": "B0523",
+      "type": "invariant",
+      "signal": "bg_on_87"
+    },
+    {
+      "id": "B0772",
+      "type": "recurrence",
+      "signal": "bg_on_128",
+      "window": 2
+    },
+    {
+      "id": "B0229",
+      "type": "invariant",
+      "signal": "bg_on_38"
+    },
+    {
+      "id": "B0623",
+      "type": "bounded_delay",
+      "trigger": "bg_on_103",
+      "target": "bg_ack_103",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0798",
+      "type": "absence",
+      "signal": "bg_off_132"
+    },
+    {
+      "id": "B0559",
+      "type": "invariant",
+      "signal": "bg_on_93"
+    },
+    {
+      "id": "B0507",
+      "type": "response",
+      "trigger": "bg_on_84",
+      "target": "bg_ack_84",
+      "deadline": 1
+    },
+    {
+      "id": "B0838",
+      "type": "recurrence",
+      "signal": "bg_on_139",
+      "window": 2
+    },
+    {
+      "id": "B0492",
+      "type": "absence",
+      "signal": "bg_off_81"
+    },
+    {
+      "id": "B0117",
+      "type": "response",
+      "trigger": "bg_on_19",
+      "target": "bg_ack_19",
+      "deadline": 1
+    },
+    {
+      "id": "B0475",
+      "type": "invariant",
+      "signal": "bg_on_79"
+    },
+    {
+      "id": "B0142",
+      "type": "recurrence",
+      "signal": "bg_on_23",
+      "window": 2
+    },
+    {
+      "id": "B0027",
+      "type": "response",
+      "trigger": "bg_on_4",
+      "target": "bg_ack_4",
+      "deadline": 1
+    },
+    {
+      "id": "B0908",
+      "type": "invariant",
+      "signal": "bg_ack_151"
+    },
+    {
+      "id": "B0119",
+      "type": "bounded_delay",
+      "trigger": "bg_on_19",
+      "target": "bg_ack_19",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0603",
+      "type": "response",
+      "trigger": "bg_on_100",
+      "target": "bg_ack_100",
+      "deadline": 1
+    },
+    {
+      "id": "B0059",
+      "type": "bounded_delay",
+      "trigger": "bg_on_9",
+      "target": "bg_ack_9",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0869",
+      "type": "bounded_delay",
+      "trigger": "bg_on_144",
+      "target": "bg_ack_144",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0570",
+      "type": "absence",
+      "signal": "bg_off_94"
+    },
+    {
+      "id": "B0003",
+      "type": "response",
+      "trigger": "bg_on_0",
+      "target": "bg_ack_0",
+      "deadline": 1
+    },
+    {
+      "id": "B0924",
+      "type": "absence",
+      "signal": "bg_off_153"
+    },
+    {
+      "id": "B0637",
+      "type": "invariant",
+      "signal": "bg_on_106"
+    },
+    {
+      "id": "B0437",
+      "type": "bounded_delay",
+      "trigger": "bg_on_72",
+      "target": "bg_ack_72",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0727",
+      "type": "invariant",
+      "signal": "bg_on_121"
+    },
+    {
+      "id": "B0191",
+      "type": "bounded_delay",
+      "trigger": "bg_on_31",
+      "target": "bg_ack_31",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0750",
+      "type": "absence",
+      "signal": "bg_off_124"
+    },
+    {
+      "id": "B0624",
+      "type": "absence",
+      "signal": "bg_off_103"
+    },
+    {
+      "id": "B0569",
+      "type": "bounded_delay",
+      "trigger": "bg_on_94",
+      "target": "bg_ack_94",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0015",
+      "type": "response",
+      "trigger": "bg_on_2",
+      "target": "bg_ack_2",
+      "deadline": 1
+    },
+    {
+      "id": "B0740",
+      "type": "invariant",
+      "signal": "bg_ack_123"
+    },
+    {
+      "id": "B0912",
+      "type": "absence",
+      "signal": "bg_off_151"
+    },
+    {
+      "id": "B0508",
+      "type": "recurrence",
+      "signal": "bg_on_84",
+      "window": 2
+    },
+    {
+      "id": "B0571",
+      "type": "invariant",
+      "signal": "bg_on_95"
+    },
+    {
+      "id": "B0136",
+      "type": "recurrence",
+      "signal": "bg_on_22",
+      "window": 2
+    },
+    {
+      "id": "B0189",
+      "type": "response",
+      "trigger": "bg_on_31",
+      "target": "bg_ack_31",
+      "deadline": 1
+    },
+    {
+      "id": "B0002",
+      "type": "invariant",
+      "signal": "bg_ack_0"
+    },
+    {
+      "id": "B0441",
+      "type": "response",
+      "trigger": "bg_on_73",
+      "target": "bg_ack_73",
+      "deadline": 1
+    },
+    {
+      "id": "B0018",
+      "type": "absence",
+      "signal": "bg_off_2"
+    },
+    {
+      "id": "B0211",
+      "type": "invariant",
+      "signal": "bg_on_35"
+    },
+    {
+      "id": "B0062",
+      "type": "invariant",
+      "signal": "bg_ack_10"
+    },
+    {
+      "id": "B0409",
+      "type": "invariant",
+      "signal": "bg_on_68"
+    },
+    {
+      "id": "B0299",
+      "type": "bounded_delay",
+      "trigger": "bg_on_49",
+      "target": "bg_ack_49",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0331",
+      "type": "invariant",
+      "signal": "bg_on_55"
+    },
+    {
+      "id": "B0190",
+      "type": "recurrence",
+      "signal": "bg_on_31",
+      "window": 2
+    },
+    {
+      "id": "B0662",
+      "type": "invariant",
+      "signal": "bg_ack_110"
+    },
+    {
+      "id": "B0260",
+      "type": "invariant",
+      "signal": "bg_ack_43"
+    },
+    {
+      "id": "B0645",
+      "type": "response",
+      "trigger": "bg_on_107",
+      "target": "bg_ack_107",
+      "deadline": 1
+    },
+    {
+      "id": "B0808",
+      "type": "recurrence",
+      "signal": "bg_on_134",
+      "window": 2
+    },
+    {
+      "id": "B0230",
+      "type": "invariant",
+      "signal": "bg_ack_38"
+    },
+    {
+      "id": "B0793",
+      "type": "invariant",
+      "signal": "bg_on_132"
+    },
+    {
+      "id": "B0679",
+      "type": "invariant",
+      "signal": "bg_on_113"
+    },
+    {
+      "id": "B0802",
+      "type": "recurrence",
+      "signal": "bg_on_133",
+      "window": 2
+    },
+    {
+      "id": "B0480",
+      "type": "absence",
+      "signal": "bg_off_79"
+    },
+    {
+      "id": "B0358",
+      "type": "recurrence",
+      "signal": "bg_on_59",
+      "window": 2
+    },
+    {
+      "id": "B0836",
+      "type": "invariant",
+      "signal": "bg_ack_139"
+    },
+    {
+      "id": "B0234",
+      "type": "absence",
+      "signal": "bg_off_38"
+    },
+    {
+      "id": "B0625",
+      "type": "invariant",
+      "signal": "bg_on_104"
+    },
+    {
+      "id": "B0955",
+      "type": "invariant",
+      "signal": "bg_on_159"
+    },
+    {
+      "id": "B0580",
+      "type": "recurrence",
+      "signal": "bg_on_96",
+      "window": 2
+    },
+    {
+      "id": "B0270",
+      "type": "absence",
+      "signal": "bg_off_44"
+    },
+    {
+      "id": "B0199",
+      "type": "invariant",
+      "signal": "bg_on_33"
+    },
+    {
+      "id": "B0011",
+      "type": "bounded_delay",
+      "trigger": "bg_on_1",
+      "target": "bg_ack_1",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0425",
+      "type": "bounded_delay",
+      "trigger": "bg_on_70",
+      "target": "bg_ack_70",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0237",
+      "type": "response",
+      "trigger": "bg_on_39",
+      "target": "bg_ack_39",
+      "deadline": 1
+    },
+    {
+      "id": "B0082",
+      "type": "recurrence",
+      "signal": "bg_on_13",
+      "window": 2
+    },
+    {
+      "id": "B0530",
+      "type": "invariant",
+      "signal": "bg_ack_88"
+    },
+    {
+      "id": "B0170",
+      "type": "invariant",
+      "signal": "bg_ack_28"
+    },
+    {
+      "id": "B0287",
+      "type": "bounded_delay",
+      "trigger": "bg_on_47",
+      "target": "bg_ack_47",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0483",
+      "type": "response",
+      "trigger": "bg_on_80",
+      "target": "bg_ack_80",
+      "deadline": 1
+    },
+    {
+      "id": "B0327",
+      "type": "response",
+      "trigger": "bg_on_54",
+      "target": "bg_ack_54",
+      "deadline": 1
+    },
+    {
+      "id": "B0681",
+      "type": "response",
+      "trigger": "bg_on_113",
+      "target": "bg_ack_113",
+      "deadline": 1
+    },
+    {
+      "id": "B0316",
+      "type": "recurrence",
+      "signal": "bg_on_52",
+      "window": 2
+    },
+    {
+      "id": "B0452",
+      "type": "invariant",
+      "signal": "bg_ack_75"
+    },
+    {
+      "id": "B0247",
+      "type": "invariant",
+      "signal": "bg_on_41"
+    },
+    {
+      "id": "B0844",
+      "type": "recurrence",
+      "signal": "bg_on_140",
+      "window": 2
+    },
+    {
+      "id": "B0277",
+      "type": "invariant",
+      "signal": "bg_on_46"
+    },
+    {
+      "id": "B0453",
+      "type": "response",
+      "trigger": "bg_on_75",
+      "target": "bg_ack_75",
+      "deadline": 1
+    },
+    {
+      "id": "B0899",
+      "type": "bounded_delay",
+      "trigger": "bg_on_149",
+      "target": "bg_ack_149",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0759",
+      "type": "response",
+      "trigger": "bg_on_126",
+      "target": "bg_ack_126",
+      "deadline": 1
+    },
+    {
+      "id": "B0545",
+      "type": "bounded_delay",
+      "trigger": "bg_on_90",
+      "target": "bg_ack_90",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0178",
+      "type": "recurrence",
+      "signal": "bg_on_29",
+      "window": 2
+    },
+    {
+      "id": "B0555",
+      "type": "response",
+      "trigger": "bg_on_92",
+      "target": "bg_ack_92",
+      "deadline": 1
+    },
+    {
+      "id": "B0626",
+      "type": "invariant",
+      "signal": "bg_ack_104"
+    },
+    {
+      "id": "B0421",
+      "type": "invariant",
+      "signal": "bg_on_70"
+    },
+    {
+      "id": "B0841",
+      "type": "invariant",
+      "signal": "bg_on_140"
+    },
+    {
+      "id": "B0008",
+      "type": "invariant",
+      "signal": "bg_ack_1"
+    },
+    {
+      "id": "B0197",
+      "type": "bounded_delay",
+      "trigger": "bg_on_32",
+      "target": "bg_ack_32",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0423",
+      "type": "response",
+      "trigger": "bg_on_70",
+      "target": "bg_ack_70",
+      "deadline": 1
+    },
+    {
+      "id": "B0532",
+      "type": "recurrence",
+      "signal": "bg_on_88",
+      "window": 2
+    },
+    {
+      "id": "B0029",
+      "type": "bounded_delay",
+      "trigger": "bg_on_4",
+      "target": "bg_ack_4",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0577",
+      "type": "invariant",
+      "signal": "bg_on_96"
+    },
+    {
+      "id": "B0402",
+      "type": "absence",
+      "signal": "bg_off_66"
+    },
+    {
+      "id": "B0275",
+      "type": "bounded_delay",
+      "trigger": "bg_on_45",
+      "target": "bg_ack_45",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0442",
+      "type": "recurrence",
+      "signal": "bg_on_73",
+      "window": 2
+    },
+    {
+      "id": "B0769",
+      "type": "invariant",
+      "signal": "bg_on_128"
+    },
+    {
+      "id": "B0370",
+      "type": "recurrence",
+      "signal": "bg_on_61",
+      "window": 2
+    },
+    {
+      "id": "B0720",
+      "type": "absence",
+      "signal": "bg_off_119"
+    },
+    {
+      "id": "B0398",
+      "type": "invariant",
+      "signal": "bg_ack_66"
+    },
+    {
+      "id": "B0076",
+      "type": "recurrence",
+      "signal": "bg_on_12",
+      "window": 2
+    },
+    {
+      "id": "B0535",
+      "type": "invariant",
+      "signal": "bg_on_89"
+    },
+    {
+      "id": "B0573",
+      "type": "response",
+      "trigger": "bg_on_95",
+      "target": "bg_ack_95",
+      "deadline": 1
+    },
+    {
+      "id": "B0546",
+      "type": "absence",
+      "signal": "bg_off_90"
+    },
+    {
+      "id": "B0708",
+      "type": "absence",
+      "signal": "bg_off_117"
+    },
+    {
+      "id": "B0039",
+      "type": "response",
+      "trigger": "bg_on_6",
+      "target": "bg_ack_6",
+      "deadline": 1
+    },
+    {
+      "id": "B0883",
+      "type": "invariant",
+      "signal": "bg_on_147"
+    },
+    {
+      "id": "B0630",
+      "type": "absence",
+      "signal": "bg_off_104"
+    },
+    {
+      "id": "B0856",
+      "type": "recurrence",
+      "signal": "bg_on_142",
+      "window": 2
+    },
+    {
+      "id": "B0137",
+      "type": "bounded_delay",
+      "trigger": "bg_on_22",
+      "target": "bg_ack_22",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0383",
+      "type": "bounded_delay",
+      "trigger": "bg_on_63",
+      "target": "bg_ack_63",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0454",
+      "type": "recurrence",
+      "signal": "bg_on_75",
+      "window": 2
+    },
+    {
+      "id": "B0930",
+      "type": "absence",
+      "signal": "bg_off_154"
+    },
+    {
+      "id": "B0811",
+      "type": "invariant",
+      "signal": "bg_on_135"
+    },
+    {
+      "id": "B0138",
+      "type": "absence",
+      "signal": "bg_off_22"
+    },
+    {
+      "id": "B0622",
+      "type": "recurrence",
+      "signal": "bg_on_103",
+      "window": 2
+    },
+    {
+      "id": "B0318",
+      "type": "absence",
+      "signal": "bg_off_52"
+    },
+    {
+      "id": "B0706",
+      "type": "recurrence",
+      "signal": "bg_on_117",
+      "window": 2
+    },
+    {
+      "id": "B0455",
+      "type": "bounded_delay",
+      "trigger": "bg_on_75",
+      "target": "bg_ack_75",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0871",
+      "type": "invariant",
+      "signal": "bg_on_145"
+    },
+    {
+      "id": "B0324",
+      "type": "absence",
+      "signal": "bg_off_53"
+    },
+    {
+      "id": "B0124",
+      "type": "recurrence",
+      "signal": "bg_on_20",
+      "window": 2
+    },
+    {
+      "id": "B0130",
+      "type": "recurrence",
+      "signal": "bg_on_21",
+      "window": 2
+    },
+    {
+      "id": "B0815",
+      "type": "bounded_delay",
+      "trigger": "bg_on_135",
+      "target": "bg_ack_135",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0395",
+      "type": "bounded_delay",
+      "trigger": "bg_on_65",
+      "target": "bg_ack_65",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0913",
+      "type": "invariant",
+      "signal": "bg_on_152"
+    },
+    {
+      "id": "B0991",
+      "type": "invariant",
+      "signal": "bg_on_165"
+    },
+    {
+      "id": "B0413",
+      "type": "bounded_delay",
+      "trigger": "bg_on_68",
+      "target": "bg_ack_68",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0593",
+      "type": "bounded_delay",
+      "trigger": "bg_on_98",
+      "target": "bg_ack_98",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0256",
+      "type": "recurrence",
+      "signal": "bg_on_42",
+      "window": 2
+    },
+    {
+      "id": "B0311",
+      "type": "bounded_delay",
+      "trigger": "bg_on_51",
+      "target": "bg_ack_51",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0407",
+      "type": "bounded_delay",
+      "trigger": "bg_on_67",
+      "target": "bg_ack_67",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0160",
+      "type": "recurrence",
+      "signal": "bg_on_26",
+      "window": 2
+    },
+    {
+      "id": "B0302",
+      "type": "invariant",
+      "signal": "bg_ack_50"
+    },
+    {
+      "id": "B0284",
+      "type": "invariant",
+      "signal": "bg_ack_47"
+    },
+    {
+      "id": "B0642",
+      "type": "absence",
+      "signal": "bg_off_106"
+    },
+    {
+      "id": "B0633",
+      "type": "response",
+      "trigger": "bg_on_105",
+      "target": "bg_ack_105",
+      "deadline": 1
+    },
+    {
+      "id": "B0351",
+      "type": "response",
+      "trigger": "bg_on_58",
+      "target": "bg_ack_58",
+      "deadline": 1
+    },
+    {
+      "id": "B0066",
+      "type": "absence",
+      "signal": "bg_off_10"
+    },
+    {
+      "id": "B0676",
+      "type": "recurrence",
+      "signal": "bg_on_112",
+      "window": 2
+    },
+    {
+      "id": "B0831",
+      "type": "response",
+      "trigger": "bg_on_138",
+      "target": "bg_ack_138",
+      "deadline": 1
+    },
+    {
+      "id": "B0933",
+      "type": "response",
+      "trigger": "bg_on_155",
+      "target": "bg_ack_155",
+      "deadline": 1
+    },
+    {
+      "id": "B0677",
+      "type": "bounded_delay",
+      "trigger": "bg_on_112",
+      "target": "bg_ack_112",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0717",
+      "type": "response",
+      "trigger": "bg_on_119",
+      "target": "bg_ack_119",
+      "deadline": 1
+    },
+    {
+      "id": "B0235",
+      "type": "invariant",
+      "signal": "bg_on_39"
+    },
+    {
+      "id": "B0263",
+      "type": "bounded_delay",
+      "trigger": "bg_on_43",
+      "target": "bg_ack_43",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0088",
+      "type": "recurrence",
+      "signal": "bg_on_14",
+      "window": 2
+    },
+    {
+      "id": "B0833",
+      "type": "bounded_delay",
+      "trigger": "bg_on_138",
+      "target": "bg_ack_138",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0860",
+      "type": "invariant",
+      "signal": "bg_ack_143"
+    },
+    {
+      "id": "B0052",
+      "type": "recurrence",
+      "signal": "bg_on_8",
+      "window": 2
+    },
+    {
+      "id": "B0655",
+      "type": "invariant",
+      "signal": "bg_on_109"
+    },
+    {
+      "id": "B0941",
+      "type": "bounded_delay",
+      "trigger": "bg_on_156",
+      "target": "bg_ack_156",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0404",
+      "type": "invariant",
+      "signal": "bg_ack_67"
+    },
+    {
+      "id": "B0378",
+      "type": "absence",
+      "signal": "bg_off_62"
+    },
+    {
+      "id": "B0122",
+      "type": "invariant",
+      "signal": "bg_ack_20"
+    },
+    {
+      "id": "B0489",
+      "type": "response",
+      "trigger": "bg_on_81",
+      "target": "bg_ack_81",
+      "deadline": 1
+    },
+    {
+      "id": "B0800",
+      "type": "invariant",
+      "signal": "bg_ack_133"
+    },
+    {
+      "id": "B0898",
+      "type": "recurrence",
+      "signal": "bg_on_149",
+      "window": 2
+    },
+    {
+      "id": "B0428",
+      "type": "invariant",
+      "signal": "bg_ack_71"
+    },
+    {
+      "id": "B0943",
+      "type": "invariant",
+      "signal": "bg_on_157"
+    },
+    {
+      "id": "B0701",
+      "type": "bounded_delay",
+      "trigger": "bg_on_116",
+      "target": "bg_ack_116",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0292",
+      "type": "recurrence",
+      "signal": "bg_on_48",
+      "window": 2
+    },
+    {
+      "id": "B0876",
+      "type": "absence",
+      "signal": "bg_off_145"
+    },
+    {
+      "id": "B0210",
+      "type": "absence",
+      "signal": "bg_off_34"
+    },
+    {
+      "id": "B0916",
+      "type": "recurrence",
+      "signal": "bg_on_152",
+      "window": 2
+    },
+    {
+      "id": "B0035",
+      "type": "bounded_delay",
+      "trigger": "bg_on_5",
+      "target": "bg_ack_5",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0858",
+      "type": "absence",
+      "signal": "bg_off_142"
+    },
+    {
+      "id": "B0896",
+      "type": "invariant",
+      "signal": "bg_ack_149"
+    },
+    {
+      "id": "B0123",
+      "type": "response",
+      "trigger": "bg_on_20",
+      "target": "bg_ack_20",
+      "deadline": 1
+    },
+    {
+      "id": "B0021",
+      "type": "response",
+      "trigger": "bg_on_3",
+      "target": "bg_ack_3",
+      "deadline": 1
+    },
+    {
+      "id": "B0837",
+      "type": "response",
+      "trigger": "bg_on_139",
+      "target": "bg_ack_139",
+      "deadline": 1
+    },
+    {
+      "id": "B0974",
+      "type": "invariant",
+      "signal": "bg_ack_162"
+    },
+    {
+      "id": "B0099",
+      "type": "response",
+      "trigger": "bg_on_16",
+      "target": "bg_ack_16",
+      "deadline": 1
+    },
+    {
+      "id": "B0113",
+      "type": "bounded_delay",
+      "trigger": "bg_on_18",
+      "target": "bg_ack_18",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0433",
+      "type": "invariant",
+      "signal": "bg_on_72"
+    },
+    {
+      "id": "B0948",
+      "type": "absence",
+      "signal": "bg_off_157"
+    },
+    {
+      "id": "B0118",
+      "type": "recurrence",
+      "signal": "bg_on_19",
+      "window": 2
+    },
+    {
+      "id": "B0382",
+      "type": "recurrence",
+      "signal": "bg_on_63",
+      "window": 2
+    },
+    {
+      "id": "B0045",
+      "type": "response",
+      "trigger": "bg_on_7",
+      "target": "bg_ack_7",
+      "deadline": 1
+    },
+    {
+      "id": "B0169",
+      "type": "invariant",
+      "signal": "bg_on_28"
+    },
+    {
+      "id": "B0315",
+      "type": "response",
+      "trigger": "bg_on_52",
+      "target": "bg_ack_52",
+      "deadline": 1
+    },
+    {
+      "id": "B0322",
+      "type": "recurrence",
+      "signal": "bg_on_53",
+      "window": 2
+    },
+    {
+      "id": "B0878",
+      "type": "invariant",
+      "signal": "bg_ack_146"
+    },
+    {
+      "id": "B0261",
+      "type": "response",
+      "trigger": "bg_on_43",
+      "target": "bg_ack_43",
+      "deadline": 1
+    },
+    {
+      "id": "B0143",
+      "type": "bounded_delay",
+      "trigger": "bg_on_23",
+      "target": "bg_ack_23",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0041",
+      "type": "bounded_delay",
+      "trigger": "bg_on_6",
+      "target": "bg_ack_6",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0502",
+      "type": "recurrence",
+      "signal": "bg_on_83",
+      "window": 2
+    },
+    {
+      "id": "B0084",
+      "type": "absence",
+      "signal": "bg_off_13"
+    },
+    {
+      "id": "B0374",
+      "type": "invariant",
+      "signal": "bg_ack_62"
+    },
+    {
+      "id": "B0528",
+      "type": "absence",
+      "signal": "bg_off_87"
+    },
+    {
+      "id": "B0982",
+      "type": "recurrence",
+      "signal": "bg_on_163",
+      "window": 2
+    },
+    {
+      "id": "B0849",
+      "type": "response",
+      "trigger": "bg_on_141",
+      "target": "bg_ack_141",
+      "deadline": 1
+    },
+    {
+      "id": "B0343",
+      "type": "invariant",
+      "signal": "bg_on_57"
+    },
+    {
+      "id": "B0401",
+      "type": "bounded_delay",
+      "trigger": "bg_on_66",
+      "target": "bg_ack_66",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0224",
+      "type": "invariant",
+      "signal": "bg_ack_37"
+    },
+    {
+      "id": "B0985",
+      "type": "invariant",
+      "signal": "bg_on_164"
+    },
+    {
+      "id": "B0162",
+      "type": "absence",
+      "signal": "bg_off_26"
+    },
+    {
+      "id": "B0333",
+      "type": "response",
+      "trigger": "bg_on_55",
+      "target": "bg_ack_55",
+      "deadline": 1
+    },
+    {
+      "id": "B0598",
+      "type": "recurrence",
+      "signal": "bg_on_99",
+      "window": 2
+    },
+    {
+      "id": "B0914",
+      "type": "invariant",
+      "signal": "bg_ack_152"
+    },
+    {
+      "id": "B0470",
+      "type": "invariant",
+      "signal": "bg_ack_78"
+    },
+    {
+      "id": "B0445",
+      "type": "invariant",
+      "signal": "bg_on_74"
+    },
+    {
+      "id": "B0105",
+      "type": "response",
+      "trigger": "bg_on_17",
+      "target": "bg_ack_17",
+      "deadline": 1
+    },
+    {
+      "id": "B0854",
+      "type": "invariant",
+      "signal": "bg_ack_142"
+    },
+    {
+      "id": "B0153",
+      "type": "response",
+      "trigger": "bg_on_25",
+      "target": "bg_ack_25",
+      "deadline": 1
+    },
+    {
+      "id": "B0456",
+      "type": "absence",
+      "signal": "bg_off_75"
+    },
+    {
+      "id": "B0278",
+      "type": "invariant",
+      "signal": "bg_ack_46"
+    },
+    {
+      "id": "B0205",
+      "type": "invariant",
+      "signal": "bg_on_34"
+    },
+    {
+      "id": "B0152",
+      "type": "invariant",
+      "signal": "bg_ack_25"
+    },
+    {
+      "id": "B0585",
+      "type": "response",
+      "trigger": "bg_on_97",
+      "target": "bg_ack_97",
+      "deadline": 1
+    },
+    {
+      "id": "B0755",
+      "type": "bounded_delay",
+      "trigger": "bg_on_125",
+      "target": "bg_ack_125",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0983",
+      "type": "bounded_delay",
+      "trigger": "bg_on_163",
+      "target": "bg_ack_163",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0381",
+      "type": "response",
+      "trigger": "bg_on_63",
+      "target": "bg_ack_63",
+      "deadline": 1
+    },
+    {
+      "id": "B0799",
+      "type": "invariant",
+      "signal": "bg_on_133"
+    },
+    {
+      "id": "B0646",
+      "type": "recurrence",
+      "signal": "bg_on_107",
+      "window": 2
+    },
+    {
+      "id": "B0804",
+      "type": "absence",
+      "signal": "bg_off_133"
+    },
+    {
+      "id": "B0534",
+      "type": "absence",
+      "signal": "bg_off_88"
+    },
+    {
+      "id": "B0501",
+      "type": "response",
+      "trigger": "bg_on_83",
+      "target": "bg_ack_83",
+      "deadline": 1
+    },
+    {
+      "id": "B0735",
+      "type": "response",
+      "trigger": "bg_on_122",
+      "target": "bg_ack_122",
+      "deadline": 1
+    },
+    {
+      "id": "B0557",
+      "type": "bounded_delay",
+      "trigger": "bg_on_92",
+      "target": "bg_ack_92",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0542",
+      "type": "invariant",
+      "signal": "bg_ack_90"
+    },
+    {
+      "id": "B0354",
+      "type": "absence",
+      "signal": "bg_off_58"
+    },
+    {
+      "id": "B0204",
+      "type": "absence",
+      "signal": "bg_off_33"
+    },
+    {
+      "id": "B0886",
+      "type": "recurrence",
+      "signal": "bg_on_147",
+      "window": 2
+    },
+    {
+      "id": "B0609",
+      "type": "response",
+      "trigger": "bg_on_101",
+      "target": "bg_ack_101",
+      "deadline": 1
+    },
+    {
+      "id": "B0709",
+      "type": "invariant",
+      "signal": "bg_on_118"
+    },
+    {
+      "id": "B0529",
+      "type": "invariant",
+      "signal": "bg_on_88"
+    },
+    {
+      "id": "B0257",
+      "type": "bounded_delay",
+      "trigger": "bg_on_42",
+      "target": "bg_ack_42",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0151",
+      "type": "invariant",
+      "signal": "bg_on_25"
+    },
+    {
+      "id": "B0850",
+      "type": "recurrence",
+      "signal": "bg_on_141",
+      "window": 2
+    },
+    {
+      "id": "B0061",
+      "type": "invariant",
+      "signal": "bg_on_10"
+    },
+    {
+      "id": "B0432",
+      "type": "absence",
+      "signal": "bg_off_71"
+    },
+    {
+      "id": "B0337",
+      "type": "invariant",
+      "signal": "bg_on_56"
+    },
+    {
+      "id": "B0511",
+      "type": "invariant",
+      "signal": "bg_on_85"
+    },
+    {
+      "id": "B0746",
+      "type": "invariant",
+      "signal": "bg_ack_124"
+    },
+    {
+      "id": "B0485",
+      "type": "bounded_delay",
+      "trigger": "bg_on_80",
+      "target": "bg_ack_80",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0522",
+      "type": "absence",
+      "signal": "bg_off_86"
+    },
+    {
+      "id": "B0891",
+      "type": "response",
+      "trigger": "bg_on_148",
+      "target": "bg_ack_148",
+      "deadline": 1
+    },
+    {
+      "id": "B0950",
+      "type": "invariant",
+      "signal": "bg_ack_158"
+    },
+    {
+      "id": "B0184",
+      "type": "recurrence",
+      "signal": "bg_on_30",
+      "window": 2
+    },
+    {
+      "id": "B0671",
+      "type": "bounded_delay",
+      "trigger": "bg_on_111",
+      "target": "bg_ack_111",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0341",
+      "type": "bounded_delay",
+      "trigger": "bg_on_56",
+      "target": "bg_ack_56",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0375",
+      "type": "response",
+      "trigger": "bg_on_62",
+      "target": "bg_ack_62",
+      "deadline": 1
+    },
+    {
+      "id": "B0901",
+      "type": "invariant",
+      "signal": "bg_on_150"
+    },
+    {
+      "id": "B0366",
+      "type": "absence",
+      "signal": "bg_off_60"
+    },
+    {
+      "id": "B0566",
+      "type": "invariant",
+      "signal": "bg_ack_94"
+    },
+    {
+      "id": "B0273",
+      "type": "response",
+      "trigger": "bg_on_45",
+      "target": "bg_ack_45",
+      "deadline": 1
+    },
+    {
+      "id": "B0688",
+      "type": "recurrence",
+      "signal": "bg_on_114",
+      "window": 2
+    },
+    {
+      "id": "B0264",
+      "type": "absence",
+      "signal": "bg_off_43"
+    },
+    {
+      "id": "B0780",
+      "type": "absence",
+      "signal": "bg_off_129"
+    },
+    {
+      "id": "B0935",
+      "type": "bounded_delay",
+      "trigger": "bg_on_155",
+      "target": "bg_ack_155",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0531",
+      "type": "response",
+      "trigger": "bg_on_88",
+      "target": "bg_ack_88",
+      "deadline": 1
+    },
+    {
+      "id": "B0020",
+      "type": "invariant",
+      "signal": "bg_ack_3"
+    },
+    {
+      "id": "B0540",
+      "type": "absence",
+      "signal": "bg_off_89"
+    },
+    {
+      "id": "B0095",
+      "type": "bounded_delay",
+      "trigger": "bg_on_15",
+      "target": "bg_ack_15",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0293",
+      "type": "bounded_delay",
+      "trigger": "bg_on_48",
+      "target": "bg_ack_48",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0458",
+      "type": "invariant",
+      "signal": "bg_ack_76"
+    },
+    {
+      "id": "B0195",
+      "type": "response",
+      "trigger": "bg_on_32",
+      "target": "bg_ack_32",
+      "deadline": 1
+    },
+    {
+      "id": "B0705",
+      "type": "response",
+      "trigger": "bg_on_117",
+      "target": "bg_ack_117",
+      "deadline": 1
+    },
+    {
+      "id": "B0259",
+      "type": "invariant",
+      "signal": "bg_on_43"
+    },
+    {
+      "id": "B0308",
+      "type": "invariant",
+      "signal": "bg_ack_51"
+    },
+    {
+      "id": "B0977",
+      "type": "bounded_delay",
+      "trigger": "bg_on_162",
+      "target": "bg_ack_162",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0158",
+      "type": "invariant",
+      "signal": "bg_ack_26"
+    },
+    {
+      "id": "B0400",
+      "type": "recurrence",
+      "signal": "bg_on_66",
+      "window": 2
+    },
+    {
+      "id": "B0537",
+      "type": "response",
+      "trigger": "bg_on_89",
+      "target": "bg_ack_89",
+      "deadline": 1
+    },
+    {
+      "id": "B0174",
+      "type": "absence",
+      "signal": "bg_off_28"
+    },
+    {
+      "id": "B0724",
+      "type": "recurrence",
+      "signal": "bg_on_120",
+      "window": 2
+    },
+    {
+      "id": "B0791",
+      "type": "bounded_delay",
+      "trigger": "bg_on_131",
+      "target": "bg_ack_131",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0816",
+      "type": "absence",
+      "signal": "bg_off_135"
+    },
+    {
+      "id": "B0776",
+      "type": "invariant",
+      "signal": "bg_ack_129"
+    },
+    {
+      "id": "B0754",
+      "type": "recurrence",
+      "signal": "bg_on_125",
+      "window": 2
+    },
+    {
+      "id": "B0295",
+      "type": "invariant",
+      "signal": "bg_on_49"
+    },
+    {
+      "id": "B0089",
+      "type": "bounded_delay",
+      "trigger": "bg_on_14",
+      "target": "bg_ack_14",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0927",
+      "type": "response",
+      "trigger": "bg_on_154",
+      "target": "bg_ack_154",
+      "deadline": 1
+    },
+    {
+      "id": "B0447",
+      "type": "response",
+      "trigger": "bg_on_74",
+      "target": "bg_ack_74",
+      "deadline": 1
+    },
+    {
+      "id": "B0643",
+      "type": "invariant",
+      "signal": "bg_on_107"
+    },
+    {
+      "id": "B0012",
+      "type": "absence",
+      "signal": "bg_off_1"
+    },
+    {
+      "id": "B0478",
+      "type": "recurrence",
+      "signal": "bg_on_79",
+      "window": 2
+    },
+    {
+      "id": "B0994",
+      "type": "recurrence",
+      "signal": "bg_on_165",
+      "window": 2
+    },
+    {
+      "id": "B0866",
+      "type": "invariant",
+      "signal": "bg_ack_144"
+    },
+    {
+      "id": "B0429",
+      "type": "response",
+      "trigger": "bg_on_71",
+      "target": "bg_ack_71",
+      "deadline": 1
+    },
+    {
+      "id": "B0693",
+      "type": "response",
+      "trigger": "bg_on_115",
+      "target": "bg_ack_115",
+      "deadline": 1
+    },
+    {
+      "id": "B0500",
+      "type": "invariant",
+      "signal": "bg_ack_83"
+    },
+    {
+      "id": "B0258",
+      "type": "absence",
+      "signal": "bg_off_42"
+    },
+    {
+      "id": "B0326",
+      "type": "invariant",
+      "signal": "bg_ack_54"
+    },
+    {
+      "id": "B0177",
+      "type": "response",
+      "trigger": "bg_on_29",
+      "target": "bg_ack_29",
+      "deadline": 1
+    },
+    {
+      "id": "B0562",
+      "type": "recurrence",
+      "signal": "bg_on_93",
+      "window": 2
+    },
+    {
+      "id": "B0393",
+      "type": "response",
+      "trigger": "bg_on_65",
+      "target": "bg_ack_65",
+      "deadline": 1
+    },
+    {
+      "id": "B0493",
+      "type": "invariant",
+      "signal": "bg_on_82"
+    },
+    {
+      "id": "B0033",
+      "type": "response",
+      "trigger": "bg_on_5",
+      "target": "bg_ack_5",
+      "deadline": 1
+    },
+    {
+      "id": "B0440",
+      "type": "invariant",
+      "signal": "bg_ack_73"
+    },
+    {
+      "id": "B0925",
+      "type": "invariant",
+      "signal": "bg_on_154"
+    },
+    {
+      "id": "B0657",
+      "type": "response",
+      "trigger": "bg_on_109",
+      "target": "bg_ack_109",
+      "deadline": 1
+    },
+    {
+      "id": "B0634",
+      "type": "recurrence",
+      "signal": "bg_on_105",
+      "window": 2
+    },
+    {
+      "id": "B0096",
+      "type": "absence",
+      "signal": "bg_off_15"
+    },
+    {
+      "id": "B0335",
+      "type": "bounded_delay",
+      "trigger": "bg_on_55",
+      "target": "bg_ack_55",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0010",
+      "type": "recurrence",
+      "signal": "bg_on_1",
+      "window": 2
+    },
+    {
+      "id": "B0682",
+      "type": "recurrence",
+      "signal": "bg_on_113",
+      "window": 2
+    },
+    {
+      "id": "B0114",
+      "type": "absence",
+      "signal": "bg_off_18"
+    },
+    {
+      "id": "B0444",
+      "type": "absence",
+      "signal": "bg_off_73"
+    },
+    {
+      "id": "B0405",
+      "type": "response",
+      "trigger": "bg_on_67",
+      "target": "bg_ack_67",
+      "deadline": 1
+    },
+    {
+      "id": "B0813",
+      "type": "response",
+      "trigger": "bg_on_135",
+      "target": "bg_ack_135",
+      "deadline": 1
+    },
+    {
+      "id": "B0310",
+      "type": "recurrence",
+      "signal": "bg_on_51",
+      "window": 2
+    },
+    {
+      "id": "B0356",
+      "type": "invariant",
+      "signal": "bg_ack_59"
+    },
+    {
+      "id": "B0469",
+      "type": "invariant",
+      "signal": "bg_on_78"
+    },
+    {
+      "id": "B0202",
+      "type": "recurrence",
+      "signal": "bg_on_33",
+      "window": 2
+    },
+    {
+      "id": "B0225",
+      "type": "response",
+      "trigger": "bg_on_37",
+      "target": "bg_ack_37",
+      "deadline": 1
+    },
+    {
+      "id": "B0479",
+      "type": "bounded_delay",
+      "trigger": "bg_on_79",
+      "target": "bg_ack_79",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0037",
+      "type": "invariant",
+      "signal": "bg_on_6"
+    },
+    {
+      "id": "B0389",
+      "type": "bounded_delay",
+      "trigger": "bg_on_64",
+      "target": "bg_ack_64",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0108",
+      "type": "absence",
+      "signal": "bg_off_17"
+    },
+    {
+      "id": "B0830",
+      "type": "invariant",
+      "signal": "bg_ack_138"
+    },
+    {
+      "id": "B0810",
+      "type": "absence",
+      "signal": "bg_off_134"
+    },
+    {
+      "id": "B0960",
+      "type": "absence",
+      "signal": "bg_off_159"
+    },
+    {
+      "id": "B0419",
+      "type": "bounded_delay",
+      "trigger": "bg_on_69",
+      "target": "bg_ack_69",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0338",
+      "type": "invariant",
+      "signal": "bg_ack_56"
+    },
+    {
+      "id": "B0181",
+      "type": "invariant",
+      "signal": "bg_on_30"
+    },
+    {
+      "id": "B0995",
+      "type": "bounded_delay",
+      "trigger": "bg_on_165",
+      "target": "bg_ack_165",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0420",
+      "type": "absence",
+      "signal": "bg_off_69"
+    },
+    {
+      "id": "B0179",
+      "type": "bounded_delay",
+      "trigger": "bg_on_29",
+      "target": "bg_ack_29",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0902",
+      "type": "invariant",
+      "signal": "bg_ack_150"
+    },
+    {
+      "id": "B0859",
+      "type": "invariant",
+      "signal": "bg_on_143"
+    },
+    {
+      "id": "B0647",
+      "type": "bounded_delay",
+      "trigger": "bg_on_107",
+      "target": "bg_ack_107",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0743",
+      "type": "bounded_delay",
+      "trigger": "bg_on_123",
+      "target": "bg_ack_123",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0698",
+      "type": "invariant",
+      "signal": "bg_ack_116"
+    },
+    {
+      "id": "B0103",
+      "type": "invariant",
+      "signal": "bg_on_17"
+    },
+    {
+      "id": "B0917",
+      "type": "bounded_delay",
+      "trigger": "bg_on_152",
+      "target": "bg_ack_152",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0649",
+      "type": "invariant",
+      "signal": "bg_on_108"
+    },
+    {
+      "id": "B0364",
+      "type": "recurrence",
+      "signal": "bg_on_60",
+      "window": 2
+    },
+    {
+      "id": "B0617",
+      "type": "bounded_delay",
+      "trigger": "bg_on_102",
+      "target": "bg_ack_102",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0903",
+      "type": "response",
+      "trigger": "bg_on_150",
+      "target": "bg_ack_150",
+      "deadline": 1
+    },
+    {
+      "id": "B0313",
+      "type": "invariant",
+      "signal": "bg_on_52"
+    },
+    {
+      "id": "B0040",
+      "type": "recurrence",
+      "signal": "bg_on_6",
+      "window": 2
+    },
+    {
+      "id": "B0128",
+      "type": "invariant",
+      "signal": "bg_ack_21"
+    },
+    {
+      "id": "B0438",
+      "type": "absence",
+      "signal": "bg_off_72"
+    },
+    {
+      "id": "B0149",
+      "type": "bounded_delay",
+      "trigger": "bg_on_24",
+      "target": "bg_ack_24",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0586",
+      "type": "recurrence",
+      "signal": "bg_on_97",
+      "window": 2
+    },
+    {
+      "id": "B0034",
+      "type": "recurrence",
+      "signal": "bg_on_5",
+      "window": 2
+    },
+    {
+      "id": "B0150",
+      "type": "absence",
+      "signal": "bg_off_24"
+    },
+    {
+      "id": "B0674",
+      "type": "invariant",
+      "signal": "bg_ack_112"
+    },
+    {
+      "id": "B0958",
+      "type": "recurrence",
+      "signal": "bg_on_159",
+      "window": 2
+    },
+    {
+      "id": "B0599",
+      "type": "bounded_delay",
+      "trigger": "bg_on_99",
+      "target": "bg_ack_99",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0435",
+      "type": "response",
+      "trigger": "bg_on_72",
+      "target": "bg_ack_72",
+      "deadline": 1
+    },
+    {
+      "id": "B0450",
+      "type": "absence",
+      "signal": "bg_off_74"
+    },
+    {
+      "id": "B0783",
+      "type": "response",
+      "trigger": "bg_on_130",
+      "target": "bg_ack_130",
+      "deadline": 1
+    },
+    {
+      "id": "B0266",
+      "type": "invariant",
+      "signal": "bg_ack_44"
+    },
+    {
+      "id": "B0131",
+      "type": "bounded_delay",
+      "trigger": "bg_on_21",
+      "target": "bg_ack_21",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0339",
+      "type": "response",
+      "trigger": "bg_on_56",
+      "target": "bg_ack_56",
+      "deadline": 1
+    },
+    {
+      "id": "B0801",
+      "type": "response",
+      "trigger": "bg_on_133",
+      "target": "bg_ack_133",
+      "deadline": 1
+    },
+    {
+      "id": "B0043",
+      "type": "invariant",
+      "signal": "bg_on_7"
+    },
+    {
+      "id": "B0281",
+      "type": "bounded_delay",
+      "trigger": "bg_on_46",
+      "target": "bg_ack_46",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0650",
+      "type": "invariant",
+      "signal": "bg_ack_108"
+    },
+    {
+      "id": "B0946",
+      "type": "recurrence",
+      "signal": "bg_on_157",
+      "window": 2
+    },
+    {
+      "id": "B0050",
+      "type": "invariant",
+      "signal": "bg_ack_8"
+    },
+    {
+      "id": "B0819",
+      "type": "response",
+      "trigger": "bg_on_136",
+      "target": "bg_ack_136",
+      "deadline": 1
+    },
+    {
+      "id": "B0777",
+      "type": "response",
+      "trigger": "bg_on_129",
+      "target": "bg_ack_129",
+      "deadline": 1
+    },
+    {
+      "id": "B0975",
+      "type": "response",
+      "trigger": "bg_on_162",
+      "target": "bg_ack_162",
+      "deadline": 1
+    },
+    {
+      "id": "B0597",
+      "type": "response",
+      "trigger": "bg_on_99",
+      "target": "bg_ack_99",
+      "deadline": 1
+    },
+    {
+      "id": "B0206",
+      "type": "invariant",
+      "signal": "bg_ack_34"
+    },
+    {
+      "id": "B0349",
+      "type": "invariant",
+      "signal": "bg_on_58"
+    },
+    {
+      "id": "B0213",
+      "type": "response",
+      "trigger": "bg_on_35",
+      "target": "bg_ack_35",
+      "deadline": 1
+    },
+    {
+      "id": "B0286",
+      "type": "recurrence",
+      "signal": "bg_on_47",
+      "window": 2
+    },
+    {
+      "id": "B0276",
+      "type": "absence",
+      "signal": "bg_off_45"
+    },
+    {
+      "id": "B0951",
+      "type": "response",
+      "trigger": "bg_on_158",
+      "target": "bg_ack_158",
+      "deadline": 1
+    },
+    {
+      "id": "B0818",
+      "type": "invariant",
+      "signal": "bg_ack_136"
+    },
+    {
+      "id": "B0107",
+      "type": "bounded_delay",
+      "trigger": "bg_on_17",
+      "target": "bg_ack_17",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0116",
+      "type": "invariant",
+      "signal": "bg_ack_19"
+    },
+    {
+      "id": "B0939",
+      "type": "response",
+      "trigger": "bg_on_156",
+      "target": "bg_ack_156",
+      "deadline": 1
+    },
+    {
+      "id": "B0135",
+      "type": "response",
+      "trigger": "bg_on_22",
+      "target": "bg_ack_22",
+      "deadline": 1
+    },
+    {
+      "id": "B0104",
+      "type": "invariant",
+      "signal": "bg_ack_17"
+    },
+    {
+      "id": "B0304",
+      "type": "recurrence",
+      "signal": "bg_on_50",
+      "window": 2
+    },
+    {
+      "id": "B0970",
+      "type": "recurrence",
+      "signal": "bg_on_161",
+      "window": 2
+    },
+    {
+      "id": "B0006",
+      "type": "absence",
+      "signal": "bg_off_0"
+    },
+    {
+      "id": "B0820",
+      "type": "recurrence",
+      "signal": "bg_on_136",
+      "window": 2
+    },
+    {
+      "id": "B0307",
+      "type": "invariant",
+      "signal": "bg_on_51"
+    },
+    {
+      "id": "B0554",
+      "type": "invariant",
+      "signal": "bg_ack_92"
+    },
+    {
+      "id": "B0741",
+      "type": "response",
+      "trigger": "bg_on_123",
+      "target": "bg_ack_123",
+      "deadline": 1
+    },
+    {
+      "id": "B0632",
+      "type": "invariant",
+      "signal": "bg_ack_105"
+    },
+    {
+      "id": "B0289",
+      "type": "invariant",
+      "signal": "bg_on_48"
+    },
+    {
+      "id": "B0376",
+      "type": "recurrence",
+      "signal": "bg_on_62",
+      "window": 2
+    },
+    {
+      "id": "B0887",
+      "type": "bounded_delay",
+      "trigger": "bg_on_147",
+      "target": "bg_ack_147",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0627",
+      "type": "response",
+      "trigger": "bg_on_104",
+      "target": "bg_ack_104",
+      "deadline": 1
+    },
+    {
+      "id": "B0355",
+      "type": "invariant",
+      "signal": "bg_on_59"
+    },
+    {
+      "id": "B0710",
+      "type": "invariant",
+      "signal": "bg_ack_118"
+    },
+    {
+      "id": "B0618",
+      "type": "absence",
+      "signal": "bg_off_102"
+    },
+    {
+      "id": "B0516",
+      "type": "absence",
+      "signal": "bg_off_85"
+    },
+    {
+      "id": "B0660",
+      "type": "absence",
+      "signal": "bg_off_109"
+    },
+    {
+      "id": "B0548",
+      "type": "invariant",
+      "signal": "bg_ack_91"
+    },
+    {
+      "id": "B0073",
+      "type": "invariant",
+      "signal": "bg_on_12"
+    },
+    {
+      "id": "B0100",
+      "type": "recurrence",
+      "signal": "bg_on_16",
+      "window": 2
+    },
+    {
+      "id": "B0574",
+      "type": "recurrence",
+      "signal": "bg_on_95",
+      "window": 2
+    },
+    {
+      "id": "B0855",
+      "type": "response",
+      "trigger": "bg_on_142",
+      "target": "bg_ack_142",
+      "deadline": 1
+    },
+    {
+      "id": "B0007",
+      "type": "invariant",
+      "signal": "bg_on_1"
+    },
+    {
+      "id": "B0072",
+      "type": "absence",
+      "signal": "bg_off_11"
+    },
+    {
+      "id": "B0949",
+      "type": "invariant",
+      "signal": "bg_on_158"
+    },
+    {
+      "id": "B0466",
+      "type": "recurrence",
+      "signal": "bg_on_77",
+      "window": 2
+    },
+    {
+      "id": "B0305",
+      "type": "bounded_delay",
+      "trigger": "bg_on_50",
+      "target": "bg_ack_50",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0132",
+      "type": "absence",
+      "signal": "bg_off_21"
+    },
+    {
+      "id": "B0857",
+      "type": "bounded_delay",
+      "trigger": "bg_on_142",
+      "target": "bg_ack_142",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0882",
+      "type": "absence",
+      "signal": "bg_off_146"
+    },
+    {
+      "id": "B0242",
+      "type": "invariant",
+      "signal": "bg_ack_40"
+    },
+    {
+      "id": "B0639",
+      "type": "response",
+      "trigger": "bg_on_106",
+      "target": "bg_ack_106",
+      "deadline": 1
+    },
+    {
+      "id": "B0207",
+      "type": "response",
+      "trigger": "bg_on_34",
+      "target": "bg_ack_34",
+      "deadline": 1
+    },
+    {
+      "id": "B0265",
+      "type": "invariant",
+      "signal": "bg_on_44"
+    },
+    {
+      "id": "B0868",
+      "type": "recurrence",
+      "signal": "bg_on_144",
+      "window": 2
+    },
+    {
+      "id": "B0533",
+      "type": "bounded_delay",
+      "trigger": "bg_on_88",
+      "target": "bg_ack_88",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0576",
+      "type": "absence",
+      "signal": "bg_off_95"
+    },
+    {
+      "id": "B0843",
+      "type": "response",
+      "trigger": "bg_on_140",
+      "target": "bg_ack_140",
+      "deadline": 1
+    },
+    {
+      "id": "B0966",
+      "type": "absence",
+      "signal": "bg_off_160"
+    },
+    {
+      "id": "B0081",
+      "type": "response",
+      "trigger": "bg_on_13",
+      "target": "bg_ack_13",
+      "deadline": 1
+    },
+    {
+      "id": "B0038",
+      "type": "invariant",
+      "signal": "bg_ack_6"
+    },
+    {
+      "id": "B0606",
+      "type": "absence",
+      "signal": "bg_off_100"
+    },
+    {
+      "id": "B0590",
+      "type": "invariant",
+      "signal": "bg_ack_98"
+    },
+    {
+      "id": "B0851",
+      "type": "bounded_delay",
+      "trigger": "bg_on_141",
+      "target": "bg_ack_141",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0581",
+      "type": "bounded_delay",
+      "trigger": "bg_on_96",
+      "target": "bg_ack_96",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0120",
+      "type": "absence",
+      "signal": "bg_off_19"
+    },
+    {
+      "id": "B0411",
+      "type": "response",
+      "trigger": "bg_on_68",
+      "target": "bg_ack_68",
+      "deadline": 1
+    },
+    {
+      "id": "B0238",
+      "type": "recurrence",
+      "signal": "bg_on_39",
+      "window": 2
+    },
+    {
+      "id": "B0721",
+      "type": "invariant",
+      "signal": "bg_on_120"
+    },
+    {
+      "id": "B0607",
+      "type": "invariant",
+      "signal": "bg_on_101"
+    },
+    {
+      "id": "B0764",
+      "type": "invariant",
+      "signal": "bg_ack_127"
+    },
+    {
+      "id": "B0188",
+      "type": "invariant",
+      "signal": "bg_ack_31"
+    },
+    {
+      "id": "B0080",
+      "type": "invariant",
+      "signal": "bg_ack_13"
+    },
+    {
+      "id": "B0518",
+      "type": "invariant",
+      "signal": "bg_ack_86"
+    },
+    {
+      "id": "B0874",
+      "type": "recurrence",
+      "signal": "bg_on_145",
+      "window": 2
+    },
+    {
+      "id": "B0803",
+      "type": "bounded_delay",
+      "trigger": "bg_on_133",
+      "target": "bg_ack_133",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0781",
+      "type": "invariant",
+      "signal": "bg_on_130"
+    },
+    {
+      "id": "B0512",
+      "type": "invariant",
+      "signal": "bg_ack_85"
+    },
+    {
+      "id": "B0486",
+      "type": "absence",
+      "signal": "bg_off_80"
+    },
+    {
+      "id": "B0845",
+      "type": "bounded_delay",
+      "trigger": "bg_on_140",
+      "target": "bg_ack_140",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0670",
+      "type": "recurrence",
+      "signal": "bg_on_111",
+      "window": 2
+    },
+    {
+      "id": "B0056",
+      "type": "invariant",
+      "signal": "bg_ack_9"
+    },
+    {
+      "id": "B0319",
+      "type": "invariant",
+      "signal": "bg_on_53"
+    },
+    {
+      "id": "B0689",
+      "type": "bounded_delay",
+      "trigger": "bg_on_114",
+      "target": "bg_ack_114",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0553",
+      "type": "invariant",
+      "signal": "bg_on_92"
+    },
+    {
+      "id": "B0591",
+      "type": "response",
+      "trigger": "bg_on_98",
+      "target": "bg_ack_98",
+      "deadline": 1
+    },
+    {
+      "id": "B0835",
+      "type": "invariant",
+      "signal": "bg_on_139"
+    },
+    {
+      "id": "B0220",
+      "type": "recurrence",
+      "signal": "bg_on_36",
+      "window": 2
+    },
+    {
+      "id": "B0301",
+      "type": "invariant",
+      "signal": "bg_on_50"
+    },
+    {
+      "id": "B0714",
+      "type": "absence",
+      "signal": "bg_off_118"
+    },
+    {
+      "id": "B0156",
+      "type": "absence",
+      "signal": "bg_off_25"
+    },
+    {
+      "id": "B0496",
+      "type": "recurrence",
+      "signal": "bg_on_82",
+      "window": 2
+    },
+    {
+      "id": "B0567",
+      "type": "response",
+      "trigger": "bg_on_94",
+      "target": "bg_ack_94",
+      "deadline": 1
+    },
+    {
+      "id": "B0895",
+      "type": "invariant",
+      "signal": "bg_on_149"
+    },
+    {
+      "id": "B0290",
+      "type": "invariant",
+      "signal": "bg_ack_48"
+    },
+    {
+      "id": "B0463",
+      "type": "invariant",
+      "signal": "bg_on_77"
+    },
+    {
+      "id": "B0986",
+      "type": "invariant",
+      "signal": "bg_ack_164"
+    },
+    {
+      "id": "B0397",
+      "type": "invariant",
+      "signal": "bg_on_66"
+    },
+    {
+      "id": "R3",
+      "type": "absence",
+      "signal": "grant"
+    },
+    {
+      "id": "B0884",
+      "type": "invariant",
+      "signal": "bg_ack_147"
+    },
+    {
+      "id": "B0166",
+      "type": "recurrence",
+      "signal": "bg_on_27",
+      "window": 2
+    },
+    {
+      "id": "B0723",
+      "type": "response",
+      "trigger": "bg_on_120",
+      "target": "bg_ack_120",
+      "deadline": 1
+    },
+    {
+      "id": "B0867",
+      "type": "response",
+      "trigger": "bg_on_144",
+      "target": "bg_ack_144",
+      "deadline": 1
+    },
+    {
+      "id": "B0216",
+      "type": "absence",
+      "signal": "bg_off_35"
+    },
+    {
+      "id": "B0490",
+      "type": "recurrence",
+      "signal": "bg_on_81",
+      "window": 2
+    },
+    {
+      "id": "B0713",
+      "type": "bounded_delay",
+      "trigger": "bg_on_118",
+      "target": "bg_ack_118",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0749",
+      "type": "bounded_delay",
+      "trigger": "bg_on_124",
+      "target": "bg_ack_124",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0168",
+      "type": "absence",
+      "signal": "bg_off_27"
+    },
+    {
+      "id": "B0240",
+      "type": "absence",
+      "signal": "bg_off_39"
+    },
+    {
+      "id": "B0978",
+      "type": "absence",
+      "signal": "bg_off_162"
+    },
+    {
+      "id": "B0013",
+      "type": "invariant",
+      "signal": "bg_on_2"
+    },
+    {
+      "id": "B0551",
+      "type": "bounded_delay",
+      "trigger": "bg_on_91",
+      "target": "bg_ack_91",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0665",
+      "type": "bounded_delay",
+      "trigger": "bg_on_110",
+      "target": "bg_ack_110",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0049",
+      "type": "invariant",
+      "signal": "bg_on_8"
+    },
+    {
+      "id": "B0987",
+      "type": "response",
+      "trigger": "bg_on_164",
+      "target": "bg_ack_164",
+      "deadline": 1
+    },
+    {
+      "id": "B0561",
+      "type": "response",
+      "trigger": "bg_on_93",
+      "target": "bg_ack_93",
+      "deadline": 1
+    },
+    {
+      "id": "B0451",
+      "type": "invariant",
+      "signal": "bg_on_75"
+    },
+    {
+      "id": "B0075",
+      "type": "response",
+      "trigger": "bg_on_12",
+      "target": "bg_ack_12",
+      "deadline": 1
+    },
+    {
+      "id": "B0253",
+      "type": "invariant",
+      "signal": "bg_on_42"
+    },
+    {
+      "id": "B0910",
+      "type": "recurrence",
+      "signal": "bg_on_151",
+      "window": 2
+    },
+    {
+      "id": "B0715",
+      "type": "invariant",
+      "signal": "bg_on_119"
+    },
+    {
+      "id": "B0185",
+      "type": "bounded_delay",
+      "trigger": "bg_on_30",
+      "target": "bg_ack_30",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0827",
+      "type": "bounded_delay",
+      "trigger": "bg_on_137",
+      "target": "bg_ack_137",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0141",
+      "type": "response",
+      "trigger": "bg_on_23",
+      "target": "bg_ack_23",
+      "deadline": 1
+    },
+    {
+      "id": "B0964",
+      "type": "recurrence",
+      "signal": "bg_on_160",
+      "window": 2
+    },
+    {
+      "id": "B0812",
+      "type": "invariant",
+      "signal": "bg_ack_135"
+    },
+    {
+      "id": "B0703",
+      "type": "invariant",
+      "signal": "bg_on_117"
+    },
+    {
+      "id": "B0921",
+      "type": "response",
+      "trigger": "bg_on_153",
+      "target": "bg_ack_153",
+      "deadline": 1
+    },
+    {
+      "id": "B0252",
+      "type": "absence",
+      "signal": "bg_off_41"
+    },
+    {
+      "id": "B0109",
+      "type": "invariant",
+      "signal": "bg_on_18"
+    },
+    {
+      "id": "B0345",
+      "type": "response",
+      "trigger": "bg_on_57",
+      "target": "bg_ack_57",
+      "deadline": 1
+    },
+    {
+      "id": "B0410",
+      "type": "invariant",
+      "signal": "bg_ack_68"
+    },
+    {
+      "id": "B0060",
+      "type": "absence",
+      "signal": "bg_off_9"
+    },
+    {
+      "id": "B0098",
+      "type": "invariant",
+      "signal": "bg_ack_16"
+    },
+    {
+      "id": "B0659",
+      "type": "bounded_delay",
+      "trigger": "bg_on_109",
+      "target": "bg_ack_109",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0667",
+      "type": "invariant",
+      "signal": "bg_on_111"
+    },
+    {
+      "id": "B0687",
+      "type": "response",
+      "trigger": "bg_on_114",
+      "target": "bg_ack_114",
+      "deadline": 1
+    },
+    {
+      "id": "B0053",
+      "type": "bounded_delay",
+      "trigger": "bg_on_8",
+      "target": "bg_ack_8",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0476",
+      "type": "invariant",
+      "signal": "bg_ack_79"
+    },
+    {
+      "id": "B0418",
+      "type": "recurrence",
+      "signal": "bg_on_69",
+      "window": 2
+    },
+    {
+      "id": "B0753",
+      "type": "response",
+      "trigger": "bg_on_125",
+      "target": "bg_ack_125",
+      "deadline": 1
+    },
+    {
+      "id": "B0360",
+      "type": "absence",
+      "signal": "bg_off_59"
+    },
+    {
+      "id": "B0439",
+      "type": "invariant",
+      "signal": "bg_on_73"
+    },
+    {
+      "id": "B0672",
+      "type": "absence",
+      "signal": "bg_off_111"
+    },
+    {
+      "id": "B0944",
+      "type": "invariant",
+      "signal": "bg_ack_157"
+    },
+    {
+      "id": "B0094",
+      "type": "recurrence",
+      "signal": "bg_on_15",
+      "window": 2
+    },
+    {
+      "id": "B0192",
+      "type": "absence",
+      "signal": "bg_off_31"
+    },
+    {
+      "id": "B0414",
+      "type": "absence",
+      "signal": "bg_off_68"
+    },
+    {
+      "id": "B0707",
+      "type": "bounded_delay",
+      "trigger": "bg_on_117",
+      "target": "bg_ack_117",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0246",
+      "type": "absence",
+      "signal": "bg_off_40"
+    },
+    {
+      "id": "B0482",
+      "type": "invariant",
+      "signal": "bg_ack_80"
+    },
+    {
+      "id": "B0588",
+      "type": "absence",
+      "signal": "bg_off_97"
+    },
+    {
+      "id": "B0582",
+      "type": "absence",
+      "signal": "bg_off_96"
+    },
+    {
+      "id": "B0133",
+      "type": "invariant",
+      "signal": "bg_on_22"
+    },
+    {
+      "id": "B0751",
+      "type": "invariant",
+      "signal": "bg_on_125"
+    },
+    {
+      "id": "B0217",
+      "type": "invariant",
+      "signal": "bg_on_36"
+    },
+    {
+      "id": "B0765",
+      "type": "response",
+      "trigger": "bg_on_127",
+      "target": "bg_ack_127",
+      "deadline": 1
+    },
+    {
+      "id": "B0683",
+      "type": "bounded_delay",
+      "trigger": "bg_on_113",
+      "target": "bg_ack_113",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0283",
+      "type": "invariant",
+      "signal": "bg_on_47"
+    },
+    {
+      "id": "B0241",
+      "type": "invariant",
+      "signal": "bg_on_40"
+    },
+    {
+      "id": "B0524",
+      "type": "invariant",
+      "signal": "bg_ack_87"
+    },
+    {
+      "id": "B0726",
+      "type": "absence",
+      "signal": "bg_off_120"
+    },
+    {
+      "id": "B0336",
+      "type": "absence",
+      "signal": "bg_off_55"
+    },
+    {
+      "id": "B0870",
+      "type": "absence",
+      "signal": "bg_off_144"
+    },
+    {
+      "id": "B0067",
+      "type": "invariant",
+      "signal": "bg_on_11"
+    },
+    {
+      "id": "B0872",
+      "type": "invariant",
+      "signal": "bg_ack_145"
+    },
+    {
+      "id": "B0058",
+      "type": "recurrence",
+      "signal": "bg_on_9",
+      "window": 2
+    },
+    {
+      "id": "B0644",
+      "type": "invariant",
+      "signal": "bg_ack_107"
+    },
+    {
+      "id": "B0722",
+      "type": "invariant",
+      "signal": "bg_ack_120"
+    },
+    {
+      "id": "B0070",
+      "type": "recurrence",
+      "signal": "bg_on_11",
+      "window": 2
+    },
+    {
+      "id": "B0005",
+      "type": "bounded_delay",
+      "trigger": "bg_on_0",
+      "target": "bg_ack_0",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0965",
+      "type": "bounded_delay",
+      "trigger": "bg_on_160",
+      "target": "bg_ack_160",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0732",
+      "type": "absence",
+      "signal": "bg_off_121"
+    },
+    {
+      "id": "B0233",
+      "type": "bounded_delay",
+      "trigger": "bg_on_38",
+      "target": "bg_ack_38",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0565",
+      "type": "invariant",
+      "signal": "bg_on_94"
+    },
+    {
+      "id": "B0600",
+      "type": "absence",
+      "signal": "bg_off_99"
+    },
+    {
+      "id": "B0019",
+      "type": "invariant",
+      "signal": "bg_on_3"
+    },
+    {
+      "id": "B0344",
+      "type": "invariant",
+      "signal": "bg_ack_57"
+    },
+    {
+      "id": "B0825",
+      "type": "response",
+      "trigger": "bg_on_137",
+      "target": "bg_ack_137",
+      "deadline": 1
+    },
+    {
+      "id": "B0228",
+      "type": "absence",
+      "signal": "bg_off_37"
+    },
+    {
+      "id": "B0251",
+      "type": "bounded_delay",
+      "trigger": "bg_on_41",
+      "target": "bg_ack_41",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0121",
+      "type": "invariant",
+      "signal": "bg_on_20"
+    },
+    {
+      "id": "B0460",
+      "type": "recurrence",
+      "signal": "bg_on_76",
+      "window": 2
+    },
+    {
+      "id": "B0527",
+      "type": "bounded_delay",
+      "trigger": "bg_on_87",
+      "target": "bg_ack_87",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0446",
+      "type": "invariant",
+      "signal": "bg_ack_74"
+    },
+    {
+      "id": "B0829",
+      "type": "invariant",
+      "signal": "bg_on_138"
+    },
+    {
+      "id": "B0969",
+      "type": "response",
+      "trigger": "bg_on_161",
+      "target": "bg_ack_161",
+      "deadline": 1
+    },
+    {
+      "id": "B0685",
+      "type": "invariant",
+      "signal": "bg_on_114"
+    },
+    {
+      "id": "B0842",
+      "type": "invariant",
+      "signal": "bg_ack_140"
+    },
+    {
+      "id": "B0317",
+      "type": "bounded_delay",
+      "trigger": "bg_on_52",
+      "target": "bg_ack_52",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0728",
+      "type": "invariant",
+      "signal": "bg_ack_121"
+    },
+    {
+      "id": "B0203",
+      "type": "bounded_delay",
+      "trigger": "bg_on_33",
+      "target": "bg_ack_33",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0704",
+      "type": "invariant",
+      "signal": "bg_ack_117"
+    },
+    {
+      "id": "B0936",
+      "type": "absence",
+      "signal": "bg_off_155"
+    },
+    {
+      "id": "B0782",
+      "type": "invariant",
+      "signal": "bg_ack_130"
+    },
+    {
+      "id": "B0864",
+      "type": "absence",
+      "signal": "bg_off_143"
+    },
+    {
+      "id": "B0431",
+      "type": "bounded_delay",
+      "trigger": "bg_on_71",
+      "target": "bg_ack_71",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0619",
+      "type": "invariant",
+      "signal": "bg_on_103"
+    },
+    {
+      "id": "B0538",
+      "type": "recurrence",
+      "signal": "bg_on_89",
+      "window": 2
+    },
+    {
+      "id": "B0853",
+      "type": "invariant",
+      "signal": "bg_on_142"
+    },
+    {
+      "id": "B0167",
+      "type": "bounded_delay",
+      "trigger": "bg_on_27",
+      "target": "bg_ack_27",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0560",
+      "type": "invariant",
+      "signal": "bg_ack_93"
+    },
+    {
+      "id": "B0484",
+      "type": "recurrence",
+      "signal": "bg_on_80",
+      "window": 2
+    },
+    {
+      "id": "B0673",
+      "type": "invariant",
+      "signal": "bg_on_112"
+    },
+    {
+      "id": "B0129",
+      "type": "response",
+      "trigger": "bg_on_21",
+      "target": "bg_ack_21",
+      "deadline": 1
+    },
+    {
+      "id": "B0126",
+      "type": "absence",
+      "signal": "bg_off_20"
+    },
+    {
+      "id": "B0543",
+      "type": "response",
+      "trigger": "bg_on_90",
+      "target": "bg_ack_90",
+      "deadline": 1
+    },
+    {
+      "id": "B0068",
+      "type": "invariant",
+      "signal": "bg_ack_11"
+    },
+    {
+      "id": "B0495",
+      "type": "response",
+      "trigger": "bg_on_82",
+      "target": "bg_ack_82",
+      "deadline": 1
+    },
+    {
+      "id": "B0747",
+      "type": "response",
+      "trigger": "bg_on_124",
+      "target": "bg_ack_124",
+      "deadline": 1
+    },
+    {
+      "id": "B0085",
+      "type": "invariant",
+      "signal": "bg_on_14"
+    },
+    {
+      "id": "B0931",
+      "type": "invariant",
+      "signal": "bg_on_155"
+    },
+    {
+      "id": "B0863",
+      "type": "bounded_delay",
+      "trigger": "bg_on_143",
+      "target": "bg_ack_143",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0244",
+      "type": "recurrence",
+      "signal": "bg_on_40",
+      "window": 2
+    },
+    {
+      "id": "B0057",
+      "type": "response",
+      "trigger": "bg_on_9",
+      "target": "bg_ack_9",
+      "deadline": 1
+    },
+    {
+      "id": "B0243",
+      "type": "response",
+      "trigger": "bg_on_40",
+      "target": "bg_ack_40",
+      "deadline": 1
+    },
+    {
+      "id": "B0312",
+      "type": "absence",
+      "signal": "bg_off_51"
+    },
+    {
+      "id": "B0369",
+      "type": "response",
+      "trigger": "bg_on_61",
+      "target": "bg_ack_61",
+      "deadline": 1
+    },
+    {
+      "id": "B0806",
+      "type": "invariant",
+      "signal": "bg_ack_134"
+    },
+    {
+      "id": "B0017",
+      "type": "bounded_delay",
+      "trigger": "bg_on_2",
+      "target": "bg_ack_2",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0498",
+      "type": "absence",
+      "signal": "bg_off_82"
+    },
+    {
+      "id": "B0329",
+      "type": "bounded_delay",
+      "trigger": "bg_on_54",
+      "target": "bg_ack_54",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0611",
+      "type": "bounded_delay",
+      "trigger": "bg_on_101",
+      "target": "bg_ack_101",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "R1",
+      "type": "recurrence",
+      "signal": "request",
+      "window": 6
+    },
+    {
+      "id": "B0541",
+      "type": "invariant",
+      "signal": "bg_on_90"
+    },
+    {
+      "id": "B0550",
+      "type": "recurrence",
+      "signal": "bg_on_91",
+      "window": 2
+    },
+    {
+      "id": "B0163",
+      "type": "invariant",
+      "signal": "bg_on_27"
+    },
+    {
+      "id": "B0796",
+      "type": "recurrence",
+      "signal": "bg_on_132",
+      "window": 2
+    },
+    {
+      "id": "B0380",
+      "type": "invariant",
+      "signal": "bg_ack_63"
+    },
+    {
+      "id": "B0832",
+      "type": "recurrence",
+      "signal": "bg_on_138",
+      "window": 2
+    },
+    {
+      "id": "B0971",
+      "type": "bounded_delay",
+      "trigger": "bg_on_161",
+      "target": "bg_ack_161",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0892",
+      "type": "recurrence",
+      "signal": "bg_on_148",
+      "window": 2
+    },
+    {
+      "id": "B0794",
+      "type": "invariant",
+      "signal": "bg_ack_132"
+    },
+    {
+      "id": "B0997",
+      "type": "invariant",
+      "signal": "bg_on_166"
+    },
+    {
+      "id": "B0303",
+      "type": "response",
+      "trigger": "bg_on_50",
+      "target": "bg_ack_50",
+      "deadline": 1
+    },
+    {
+      "id": "B0638",
+      "type": "invariant",
+      "signal": "bg_ack_106"
+    },
+    {
+      "id": "B0106",
+      "type": "recurrence",
+      "signal": "bg_on_17",
+      "window": 2
+    },
+    {
+      "id": "B0517",
+      "type": "invariant",
+      "signal": "bg_on_86"
+    },
+    {
+      "id": "B0180",
+      "type": "absence",
+      "signal": "bg_off_29"
+    },
+    {
+      "id": "B0778",
+      "type": "recurrence",
+      "signal": "bg_on_129",
+      "window": 2
+    },
+    {
+      "id": "B0510",
+      "type": "absence",
+      "signal": "bg_off_84"
+    },
+    {
+      "id": "B0928",
+      "type": "recurrence",
+      "signal": "bg_on_154",
+      "window": 2
+    },
+    {
+      "id": "B0734",
+      "type": "invariant",
+      "signal": "bg_ack_122"
+    },
+    {
+      "id": "B0737",
+      "type": "bounded_delay",
+      "trigger": "bg_on_122",
+      "target": "bg_ack_122",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0001",
+      "type": "invariant",
+      "signal": "bg_on_0"
+    },
+    {
+      "id": "B0906",
+      "type": "absence",
+      "signal": "bg_off_150"
+    },
+    {
+      "id": "B0159",
+      "type": "response",
+      "trigger": "bg_on_26",
+      "target": "bg_ack_26",
+      "deadline": 1
+    },
+    {
+      "id": "B0443",
+      "type": "bounded_delay",
+      "trigger": "bg_on_73",
+      "target": "bg_ack_73",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0929",
+      "type": "bounded_delay",
+      "trigger": "bg_on_154",
+      "target": "bg_ack_154",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0996",
+      "type": "absence",
+      "signal": "bg_off_165"
+    },
+    {
+      "id": "B0953",
+      "type": "bounded_delay",
+      "trigger": "bg_on_158",
+      "target": "bg_ack_158",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0654",
+      "type": "absence",
+      "signal": "bg_off_108"
+    },
+    {
+      "id": "B0785",
+      "type": "bounded_delay",
+      "trigger": "bg_on_130",
+      "target": "bg_ack_130",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0897",
+      "type": "response",
+      "trigger": "bg_on_149",
+      "target": "bg_ack_149",
+      "deadline": 1
+    },
+    {
+      "id": "B0766",
+      "type": "recurrence",
+      "signal": "bg_on_127",
+      "window": 2
+    },
+    {
+      "id": "B0934",
+      "type": "recurrence",
+      "signal": "bg_on_155",
+      "window": 2
+    },
+    {
+      "id": "B0696",
+      "type": "absence",
+      "signal": "bg_off_115"
+    },
+    {
+      "id": "B0115",
+      "type": "invariant",
+      "signal": "bg_on_19"
+    },
+    {
+      "id": "B0736",
+      "type": "recurrence",
+      "signal": "bg_on_122",
+      "window": 2
+    },
+    {
+      "id": "B0828",
+      "type": "absence",
+      "signal": "bg_off_137"
+    },
+    {
+      "id": "B0009",
+      "type": "response",
+      "trigger": "bg_on_1",
+      "target": "bg_ack_1",
+      "deadline": 1
+    },
+    {
+      "id": "B0564",
+      "type": "absence",
+      "signal": "bg_off_93"
+    },
+    {
+      "id": "B0255",
+      "type": "response",
+      "trigger": "bg_on_42",
+      "target": "bg_ack_42",
+      "deadline": 1
+    },
+    {
+      "id": "B0539",
+      "type": "bounded_delay",
+      "trigger": "bg_on_89",
+      "target": "bg_ack_89",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0477",
+      "type": "response",
+      "trigger": "bg_on_79",
+      "target": "bg_ack_79",
+      "deadline": 1
+    },
+    {
+      "id": "B0961",
+      "type": "invariant",
+      "signal": "bg_on_160"
+    },
+    {
+      "id": "B0388",
+      "type": "recurrence",
+      "signal": "bg_on_64",
+      "window": 2
+    },
+    {
+      "id": "B0392",
+      "type": "invariant",
+      "signal": "bg_ack_65"
+    },
+    {
+      "id": "B0063",
+      "type": "response",
+      "trigger": "bg_on_10",
+      "target": "bg_ack_10",
+      "deadline": 1
+    },
+    {
+      "id": "B0608",
+      "type": "invariant",
+      "signal": "bg_ack_101"
+    },
+    {
+      "id": "B0954",
+      "type": "absence",
+      "signal": "bg_off_158"
+    },
+    {
+      "id": "B0694",
+      "type": "recurrence",
+      "signal": "bg_on_115",
+      "window": 2
+    },
+    {
+      "id": "B0809",
+      "type": "bounded_delay",
+      "trigger": "bg_on_134",
+      "target": "bg_ack_134",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0956",
+      "type": "invariant",
+      "signal": "bg_ack_159"
+    },
+    {
+      "id": "B0640",
+      "type": "recurrence",
+      "signal": "bg_on_106",
+      "window": 2
+    },
+    {
+      "id": "B0154",
+      "type": "recurrence",
+      "signal": "bg_on_25",
+      "window": 2
+    },
+    {
+      "id": "B0110",
+      "type": "invariant",
+      "signal": "bg_ack_18"
+    },
+    {
+      "id": "B0046",
+      "type": "recurrence",
+      "signal": "bg_on_7",
+      "window": 2
+    },
+    {
+      "id": "B0771",
+      "type": "response",
+      "trigger": "bg_on_128",
+      "target": "bg_ack_128",
+      "deadline": 1
+    },
+    {
+      "id": "B0091",
+      "type": "invariant",
+      "signal": "bg_on_15"
+    },
+    {
+      "id": "B0503",
+      "type": "bounded_delay",
+      "trigger": "bg_on_83",
+      "target": "bg_ack_83",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0519",
+      "type": "response",
+      "trigger": "bg_on_86",
+      "target": "bg_ack_86",
+      "deadline": 1
+    },
+    {
+      "id": "B0139",
+      "type": "invariant",
+      "signal": "bg_on_23"
+    },
+    {
+      "id": "B0879",
+      "type": "response",
+      "trigger": "bg_on_146",
+      "target": "bg_ack_146",
+      "deadline": 1
+    },
+    {
+      "id": "B0923",
+      "type": "bounded_delay",
+      "trigger": "bg_on_153",
+      "target": "bg_ack_153",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0406",
+      "type": "recurrence",
+      "signal": "bg_on_67",
+      "window": 2
+    },
+    {
+      "id": "B0595",
+      "type": "invariant",
+      "signal": "bg_on_99"
+    },
+    {
+      "id": "B0436",
+      "type": "recurrence",
+      "signal": "bg_on_72",
+      "window": 2
+    },
+    {
+      "id": "B0596",
+      "type": "invariant",
+      "signal": "bg_ack_99"
+    },
+    {
+      "id": "B0762",
+      "type": "absence",
+      "signal": "bg_off_126"
+    },
+    {
+      "id": "B0267",
+      "type": "response",
+      "trigger": "bg_on_44",
+      "target": "bg_ack_44",
+      "deadline": 1
+    },
+    {
+      "id": "B0549",
+      "type": "response",
+      "trigger": "bg_on_91",
+      "target": "bg_ack_91",
+      "deadline": 1
+    },
+    {
+      "id": "B0972",
+      "type": "absence",
+      "signal": "bg_off_161"
+    },
+    {
+      "id": "B0760",
+      "type": "recurrence",
+      "signal": "bg_on_126",
+      "window": 2
+    },
+    {
+      "id": "B0250",
+      "type": "recurrence",
+      "signal": "bg_on_41",
+      "window": 2
+    },
+    {
+      "id": "B0990",
+      "type": "absence",
+      "signal": "bg_off_164"
+    },
+    {
+      "id": "B0269",
+      "type": "bounded_delay",
+      "trigger": "bg_on_44",
+      "target": "bg_ack_44",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0144",
+      "type": "absence",
+      "signal": "bg_off_23"
+    },
+    {
+      "id": "B0467",
+      "type": "bounded_delay",
+      "trigger": "bg_on_77",
+      "target": "bg_ack_77",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0656",
+      "type": "invariant",
+      "signal": "bg_ack_109"
+    },
+    {
+      "id": "B0403",
+      "type": "invariant",
+      "signal": "bg_on_67"
+    },
+    {
+      "id": "B0509",
+      "type": "bounded_delay",
+      "trigger": "bg_on_84",
+      "target": "bg_ack_84",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0669",
+      "type": "response",
+      "trigger": "bg_on_111",
+      "target": "bg_ack_111",
+      "deadline": 1
+    },
+    {
+      "id": "B0215",
+      "type": "bounded_delay",
+      "trigger": "bg_on_35",
+      "target": "bg_ack_35",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0320",
+      "type": "invariant",
+      "signal": "bg_ack_53"
+    },
+    {
+      "id": "B0733",
+      "type": "invariant",
+      "signal": "bg_on_122"
+    },
+    {
+      "id": "B0578",
+      "type": "invariant",
+      "signal": "bg_ack_96"
+    },
+    {
+      "id": "B0214",
+      "type": "recurrence",
+      "signal": "bg_on_35",
+      "window": 2
+    },
+    {
+      "id": "B0065",
+      "type": "bounded_delay",
+      "trigger": "bg_on_10",
+      "target": "bg_ack_10",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0272",
+      "type": "invariant",
+      "signal": "bg_ack_45"
+    },
+    {
+      "id": "B0408",
+      "type": "absence",
+      "signal": "bg_off_67"
+    },
+    {
+      "id": "B0321",
+      "type": "response",
+      "trigger": "bg_on_53",
+      "target": "bg_ack_53",
+      "deadline": 1
+    },
+    {
+      "id": "B0822",
+      "type": "absence",
+      "signal": "bg_off_136"
+    },
+    {
+      "id": "B0980",
+      "type": "invariant",
+      "signal": "bg_ack_163"
+    },
+    {
+      "id": "B0839",
+      "type": "bounded_delay",
+      "trigger": "bg_on_139",
+      "target": "bg_ack_139",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0232",
+      "type": "recurrence",
+      "signal": "bg_on_38",
+      "window": 2
+    },
+    {
+      "id": "B0055",
+      "type": "invariant",
+      "signal": "bg_on_9"
+    },
+    {
+      "id": "B0792",
+      "type": "absence",
+      "signal": "bg_off_131"
+    },
+    {
+      "id": "B0784",
+      "type": "recurrence",
+      "signal": "bg_on_130",
+      "window": 2
+    },
+    {
+      "id": "B0861",
+      "type": "response",
+      "trigger": "bg_on_143",
+      "target": "bg_ack_143",
+      "deadline": 1
+    },
+    {
+      "id": "B0330",
+      "type": "absence",
+      "signal": "bg_off_54"
+    },
+    {
+      "id": "B0699",
+      "type": "response",
+      "trigger": "bg_on_116",
+      "target": "bg_ack_116",
+      "deadline": 1
+    },
+    {
+      "id": "B0222",
+      "type": "absence",
+      "signal": "bg_off_36"
+    },
+    {
+      "id": "B0568",
+      "type": "recurrence",
+      "signal": "bg_on_94",
+      "window": 2
+    },
+    {
+      "id": "B0702",
+      "type": "absence",
+      "signal": "bg_off_116"
+    },
+    {
+      "id": "B0653",
+      "type": "bounded_delay",
+      "trigger": "bg_on_108",
+      "target": "bg_ack_108",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0274",
+      "type": "recurrence",
+      "signal": "bg_on_45",
+      "window": 2
+    },
+    {
+      "id": "B0386",
+      "type": "invariant",
+      "signal": "bg_ack_64"
+    },
+    {
+      "id": "B0471",
+      "type": "response",
+      "trigger": "bg_on_78",
+      "target": "bg_ack_78",
+      "deadline": 1
+    },
+    {
+      "id": "B0165",
+      "type": "response",
+      "trigger": "bg_on_27",
+      "target": "bg_ack_27",
+      "deadline": 1
+    },
+    {
+      "id": "B0992",
+      "type": "invariant",
+      "signal": "bg_ack_165"
+    },
+    {
+      "id": "B0744",
+      "type": "absence",
+      "signal": "bg_off_123"
+    },
+    {
+      "id": "B0544",
+      "type": "recurrence",
+      "signal": "bg_on_90",
+      "window": 2
+    },
+    {
+      "id": "B0173",
+      "type": "bounded_delay",
+      "trigger": "bg_on_28",
+      "target": "bg_ack_28",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0905",
+      "type": "bounded_delay",
+      "trigger": "bg_on_150",
+      "target": "bg_ack_150",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0621",
+      "type": "response",
+      "trigger": "bg_on_103",
+      "target": "bg_ack_103",
+      "deadline": 1
+    },
+    {
+      "id": "B0071",
+      "type": "bounded_delay",
+      "trigger": "bg_on_11",
+      "target": "bg_ack_11",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0661",
+      "type": "invariant",
+      "signal": "bg_on_110"
+    },
+    {
+      "id": "B0697",
+      "type": "invariant",
+      "signal": "bg_on_116"
+    },
+    {
+      "id": "B0968",
+      "type": "invariant",
+      "signal": "bg_ack_161"
+    },
+    {
+      "id": "B0271",
+      "type": "invariant",
+      "signal": "bg_on_45"
+    },
+    {
+      "id": "B0684",
+      "type": "absence",
+      "signal": "bg_off_113"
+    },
+    {
+      "id": "B0212",
+      "type": "invariant",
+      "signal": "bg_ack_35"
+    },
+    {
+      "id": "B0361",
+      "type": "invariant",
+      "signal": "bg_on_60"
+    },
+    {
+      "id": "B0377",
+      "type": "bounded_delay",
+      "trigger": "bg_on_62",
+      "target": "bg_ack_62",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0164",
+      "type": "invariant",
+      "signal": "bg_ack_27"
+    },
+    {
+      "id": "B0371",
+      "type": "bounded_delay",
+      "trigger": "bg_on_61",
+      "target": "bg_ack_61",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0852",
+      "type": "absence",
+      "signal": "bg_off_141"
+    },
+    {
+      "id": "B0648",
+      "type": "absence",
+      "signal": "bg_off_107"
+    },
+    {
+      "id": "B0462",
+      "type": "absence",
+      "signal": "bg_off_76"
+    },
+    {
+      "id": "B0952",
+      "type": "recurrence",
+      "signal": "bg_on_158",
+      "window": 2
+    },
+    {
+      "id": "B0945",
+      "type": "response",
+      "trigger": "bg_on_157",
+      "target": "bg_ack_157",
+      "deadline": 1
+    },
+    {
+      "id": "B0101",
+      "type": "bounded_delay",
+      "trigger": "bg_on_16",
+      "target": "bg_ack_16",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0885",
+      "type": "response",
+      "trigger": "bg_on_147",
+      "target": "bg_ack_147",
+      "deadline": 1
+    },
+    {
+      "id": "B0976",
+      "type": "recurrence",
+      "signal": "bg_on_162",
+      "window": 2
+    },
+    {
+      "id": "B0873",
+      "type": "response",
+      "trigger": "bg_on_145",
+      "target": "bg_ack_145",
+      "deadline": 1
+    },
+    {
+      "id": "B0079",
+      "type": "invariant",
+      "signal": "bg_on_13"
+    },
+    {
+      "id": "B0294",
+      "type": "absence",
+      "signal": "bg_off_48"
+    },
+    {
+      "id": "B0789",
+      "type": "response",
+      "trigger": "bg_on_131",
+      "target": "bg_ack_131",
+      "deadline": 1
+    },
+    {
+      "id": "B0231",
+      "type": "response",
+      "trigger": "bg_on_38",
+      "target": "bg_ack_38",
+      "deadline": 1
+    },
+    {
+      "id": "B0675",
+      "type": "response",
+      "trigger": "bg_on_112",
+      "target": "bg_ack_112",
+      "deadline": 1
+    },
+    {
+      "id": "B0044",
+      "type": "invariant",
+      "signal": "bg_ack_7"
+    },
+    {
+      "id": "B0069",
+      "type": "response",
+      "trigger": "bg_on_11",
+      "target": "bg_ack_11",
+      "deadline": 1
+    },
+    {
+      "id": "B0719",
+      "type": "bounded_delay",
+      "trigger": "bg_on_119",
+      "target": "bg_ack_119",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0194",
+      "type": "invariant",
+      "signal": "bg_ack_32"
+    },
+    {
+      "id": "B0589",
+      "type": "invariant",
+      "signal": "bg_on_98"
+    },
+    {
+      "id": "B0368",
+      "type": "invariant",
+      "signal": "bg_ack_61"
+    },
+    {
+      "id": "B0880",
+      "type": "recurrence",
+      "signal": "bg_on_146",
+      "window": 2
+    },
+    {
+      "id": "B0904",
+      "type": "recurrence",
+      "signal": "bg_on_150",
+      "window": 2
+    },
+    {
+      "id": "B0631",
+      "type": "invariant",
+      "signal": "bg_on_105"
+    },
+    {
+      "id": "B0641",
+      "type": "bounded_delay",
+      "trigger": "bg_on_106",
+      "target": "bg_ack_106",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0847",
+      "type": "invariant",
+      "signal": "bg_on_141"
+    },
+    {
+      "id": "B0298",
+      "type": "recurrence",
+      "signal": "bg_on_49",
+      "window": 2
+    },
+    {
+      "id": "B0563",
+      "type": "bounded_delay",
+      "trigger": "bg_on_93",
+      "target": "bg_ack_93",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0078",
+      "type": "absence",
+      "signal": "bg_off_12"
+    },
+    {
+      "id": "B0385",
+      "type": "invariant",
+      "signal": "bg_on_64"
+    },
+    {
+      "id": "B0125",
+      "type": "bounded_delay",
+      "trigger": "bg_on_20",
+      "target": "bg_ack_20",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0547",
+      "type": "invariant",
+      "signal": "bg_on_91"
+    },
+    {
+      "id": "B0468",
+      "type": "absence",
+      "signal": "bg_off_77"
+    },
+    {
+      "id": "B0745",
+      "type": "invariant",
+      "signal": "bg_on_124"
+    },
+    {
+      "id": "B0042",
+      "type": "absence",
+      "signal": "bg_off_6"
+    },
+    {
+      "id": "B0824",
+      "type": "invariant",
+      "signal": "bg_ack_137"
+    },
+    {
+      "id": "B0268",
+      "type": "recurrence",
+      "signal": "bg_on_44",
+      "window": 2
+    },
+    {
+      "id": "B0616",
+      "type": "recurrence",
+      "signal": "bg_on_102",
+      "window": 2
+    },
+    {
+      "id": "B0350",
+      "type": "invariant",
+      "signal": "bg_ack_58"
+    },
+    {
+      "id": "B0865",
+      "type": "invariant",
+      "signal": "bg_on_144"
+    },
+    {
+      "id": "B0365",
+      "type": "bounded_delay",
+      "trigger": "bg_on_60",
+      "target": "bg_ack_60",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0097",
+      "type": "invariant",
+      "signal": "bg_on_16"
+    },
+    {
+      "id": "B0387",
+      "type": "response",
+      "trigger": "bg_on_64",
+      "target": "bg_ack_64",
+      "deadline": 1
+    },
+    {
+      "id": "B0092",
+      "type": "invariant",
+      "signal": "bg_ack_15"
+    },
+    {
+      "id": "B0988",
+      "type": "recurrence",
+      "signal": "bg_on_164",
+      "window": 2
+    },
+    {
+      "id": "B0342",
+      "type": "absence",
+      "signal": "bg_off_56"
+    },
+    {
+      "id": "B0779",
+      "type": "bounded_delay",
+      "trigger": "bg_on_129",
+      "target": "bg_ack_129",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0218",
+      "type": "invariant",
+      "signal": "bg_ack_36"
+    },
+    {
+      "id": "B0157",
+      "type": "invariant",
+      "signal": "bg_on_26"
+    },
+    {
+      "id": "B0962",
+      "type": "invariant",
+      "signal": "bg_ack_160"
+    },
+    {
+      "id": "B0346",
+      "type": "recurrence",
+      "signal": "bg_on_57",
+      "window": 2
+    },
+    {
+      "id": "B0981",
+      "type": "response",
+      "trigger": "bg_on_163",
+      "target": "bg_ack_163",
+      "deadline": 1
+    },
+    {
+      "id": "B0712",
+      "type": "recurrence",
+      "signal": "bg_on_118",
+      "window": 2
+    },
+    {
+      "id": "B0161",
+      "type": "bounded_delay",
+      "trigger": "bg_on_26",
+      "target": "bg_ack_26",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0823",
+      "type": "invariant",
+      "signal": "bg_on_137"
+    },
+    {
+      "id": "B0775",
+      "type": "invariant",
+      "signal": "bg_on_129"
+    },
+    {
+      "id": "B0004",
+      "type": "recurrence",
+      "signal": "bg_on_0",
+      "window": 2
+    },
+    {
+      "id": "B0888",
+      "type": "absence",
+      "signal": "bg_off_147"
+    },
+    {
+      "id": "B0826",
+      "type": "recurrence",
+      "signal": "bg_on_137",
+      "window": 2
+    },
+    {
+      "id": "B0282",
+      "type": "absence",
+      "signal": "bg_off_46"
+    },
+    {
+      "id": "B0601",
+      "type": "invariant",
+      "signal": "bg_on_100"
+    },
+    {
+      "id": "B0457",
+      "type": "invariant",
+      "signal": "bg_on_76"
+    },
+    {
+      "id": "B0223",
+      "type": "invariant",
+      "signal": "bg_on_37"
+    },
+    {
+      "id": "B0427",
+      "type": "invariant",
+      "signal": "bg_on_71"
+    },
+    {
+      "id": "B0984",
+      "type": "absence",
+      "signal": "bg_off_163"
+    },
+    {
+      "id": "B0716",
+      "type": "invariant",
+      "signal": "bg_ack_119"
+    },
+    {
+      "id": "B0663",
+      "type": "response",
+      "trigger": "bg_on_110",
+      "target": "bg_ack_110",
+      "deadline": 1
+    },
+    {
+      "id": "B0731",
+      "type": "bounded_delay",
+      "trigger": "bg_on_121",
+      "target": "bg_ack_121",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0201",
+      "type": "response",
+      "trigger": "bg_on_33",
+      "target": "bg_ack_33",
+      "deadline": 1
+    },
+    {
+      "id": "B0572",
+      "type": "invariant",
+      "signal": "bg_ack_95"
+    },
+    {
+      "id": "B0025",
+      "type": "invariant",
+      "signal": "bg_on_4"
+    },
+    {
+      "id": "B0614",
+      "type": "invariant",
+      "signal": "bg_ack_102"
+    },
+    {
+      "id": "B0515",
+      "type": "bounded_delay",
+      "trigger": "bg_on_85",
+      "target": "bg_ack_85",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0236",
+      "type": "invariant",
+      "signal": "bg_ack_39"
+    },
+    {
+      "id": "B0221",
+      "type": "bounded_delay",
+      "trigger": "bg_on_36",
+      "target": "bg_ack_36",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0093",
+      "type": "response",
+      "trigger": "bg_on_15",
+      "target": "bg_ack_15",
+      "deadline": 1
+    },
+    {
+      "id": "B0028",
+      "type": "recurrence",
+      "signal": "bg_on_4",
+      "window": 2
+    },
+    {
+      "id": "B0030",
+      "type": "absence",
+      "signal": "bg_off_4"
+    },
+    {
+      "id": "B0430",
+      "type": "recurrence",
+      "signal": "bg_on_71",
+      "window": 2
+    },
+    {
+      "id": "B0602",
+      "type": "invariant",
+      "signal": "bg_ack_100"
+    },
+    {
+      "id": "B0087",
+      "type": "response",
+      "trigger": "bg_on_14",
+      "target": "bg_ack_14",
+      "deadline": 1
+    },
+    {
+      "id": "B0556",
+      "type": "recurrence",
+      "signal": "bg_on_92",
+      "window": 2
+    },
+    {
+      "id": "B0911",
+      "type": "bounded_delay",
+      "trigger": "bg_on_151",
+      "target": "bg_ack_151",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0756",
+      "type": "absence",
+      "signal": "bg_off_125"
+    },
+    {
+      "id": "B0690",
+      "type": "absence",
+      "signal": "bg_off_114"
+    },
+    {
+      "id": "B0102",
+      "type": "absence",
+      "signal": "bg_off_16"
+    },
+    {
+      "id": "B0752",
+      "type": "invariant",
+      "signal": "bg_ack_125"
+    },
+    {
+      "id": "B0140",
+      "type": "invariant",
+      "signal": "bg_ack_23"
+    },
+    {
+      "id": "B0226",
+      "type": "recurrence",
+      "signal": "bg_on_37",
+      "window": 2
+    },
+    {
+      "id": "B0248",
+      "type": "invariant",
+      "signal": "bg_ack_41"
+    },
+    {
+      "id": "B0279",
+      "type": "response",
+      "trigger": "bg_on_46",
+      "target": "bg_ack_46",
+      "deadline": 1
+    },
+    {
+      "id": "B0757",
+      "type": "invariant",
+      "signal": "bg_on_126"
+    },
+    {
+      "id": "B0023",
+      "type": "bounded_delay",
+      "trigger": "bg_on_3",
+      "target": "bg_ack_3",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0112",
+      "type": "recurrence",
+      "signal": "bg_on_18",
+      "window": 2
+    },
+    {
+      "id": "B0652",
+      "type": "recurrence",
+      "signal": "bg_on_108",
+      "window": 2
+    }
+  ],
+  "scenario": "scale-mixed",
+  "expected_status": "unsat",
+  "dataset_type": "synthetic",
+  "variant": "classic"
+}

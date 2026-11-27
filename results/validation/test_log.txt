@@ -1,0 +1,34 @@
+test_activation_names_and_empty_selection (test_completion.TestCompletion.test_activation_names_and_empty_selection) ... ok
+test_cli_input_error (test_completion.TestCompletion.test_cli_input_error) ... ok
+test_distinct_conflicts_with_fixed_observations (test_completion.TestCompletion.test_distinct_conflicts_with_fixed_observations) ... ok
+test_satisfiable_generator_and_variation (test_completion.TestCompletion.test_satisfiable_generator_and_variation) ... ok
+test_typed_unknown_and_timeout (test_completion.TestCompletion.test_typed_unknown_and_timeout) ... ok
+test_worker_deadline_and_resume (test_completion.TestCompletion.test_worker_deadline_and_resume) ... Study progress: 2/2
+Study progress: 2/2
+ok
+test_consistent_background (test_data.TestData.test_consistent_background) ... ok
+test_invalid_dataset (test_data.TestData.test_invalid_dataset) ... ok
+test_roundtrip (test_data.TestData.test_roundtrip) ... ok
+test_tiny_pilot (test_experiments.TestExperiments.test_tiny_pilot) ... ok
+test_controlled_minimality (test_mis.TestMIS.test_controlled_minimality) ... ok
+test_core_versus_mis (test_mis.TestMIS.test_core_versus_mis) ... ok
+test_sat_has_no_mis (test_mis.TestMIS.test_sat_has_no_mis) ... ok
+test_subsets_agree (test_mis.TestMIS.test_subsets_agree) ... ok
+test_absence (test_model.TestTemporalPatterns.test_absence) ... ok
+test_bounded_delay_horizon (test_model.TestTemporalPatterns.test_bounded_delay_horizon) ... ok
+test_bounded_delay_vacuous (test_model.TestTemporalPatterns.test_bounded_delay_vacuous) ... ok
+test_bounded_delay_zero (test_model.TestTemporalPatterns.test_bounded_delay_zero) ... ok
+test_input_validation (test_model.TestTemporalPatterns.test_input_validation) ... ok
+test_invariant (test_model.TestTemporalPatterns.test_invariant) ... ok
+test_invariant_absence_conflict (test_model.TestTemporalPatterns.test_invariant_absence_conflict) ... ok
+test_late_conflict_in_horizon (test_model.TestTemporalPatterns.test_late_conflict_in_horizon) ... ok
+test_recurrence_absence_conflict (test_model.TestTemporalPatterns.test_recurrence_absence_conflict) ... ok
+test_response_conflict (test_model.TestTemporalPatterns.test_response_conflict) ... ok
+test_response_vacuous (test_model.TestTemporalPatterns.test_response_vacuous) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.032s
+
+OK
+MIS: finished size=6
+RQ1: finished size=6

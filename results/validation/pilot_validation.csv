@@ -1,0 +1,89 @@
+case_id,num_rules,N,test,expected,observed,status
+always_sat-N2,2,2,full set,sat,sat,pass
+always_sat-N2,2,2,reported full set,sat,sat,pass
+always_sat-N3,2,3,full set,sat,sat,pass
+always_sat-N3,2,3,reported full set,sat,sat,pass
+always_sat-N4,2,4,full set,sat,sat,pass
+always_sat-N4,2,4,reported full set,sat,sat,pass
+always_sat-N5,2,5,full set,sat,sat,pass
+always_sat-N5,2,5,reported full set,sat,sat,pass
+always_unsat-N2,2,2,full set,unsat,unsat,pass
+always_unsat-N2,2,2,reported full set,unsat,unsat,pass
+always_unsat-N3,2,3,full set,unsat,unsat,pass
+always_unsat-N3,2,3,reported full set,unsat,unsat,pass
+always_unsat-N4,2,4,full set,unsat,unsat,pass
+always_unsat-N4,2,4,reported full set,unsat,unsat,pass
+always_unsat-N5,2,5,full set,unsat,unsat,pass
+always_unsat-N5,2,5,reported full set,unsat,unsat,pass
+boundary_delay-N2,1,2,full set,unsat,unsat,pass
+boundary_delay-N2,1,2,reported full set,unsat,unsat,pass
+boundary_delay-N3,1,3,full set,unsat,unsat,pass
+boundary_delay-N3,1,3,reported full set,unsat,unsat,pass
+boundary_delay-N4,1,4,full set,sat,sat,pass
+boundary_delay-N4,1,4,reported full set,sat,sat,pass
+boundary_delay-N5,1,5,full set,sat,sat,pass
+boundary_delay-N5,1,5,reported full set,sat,sat,pass
+fret_liquid_mixer_projection,2,5,full set,sat,sat,pass
+fret_liquid_mixer_projection,2,5,reported full set,sat,sat,pass
+fret_liquid_mixer_projection,2,5,RQ1 ordered outcomes,sat,sat,pass
+hanfor_boolean_example,2,5,full set,sat,sat,pass
+hanfor_boolean_example,2,5,reported full set,sat,sat,pass
+hanfor_boolean_example,2,5,RQ1 ordered outcomes,sat,sat,pass
+late_conflict-N2,2,2,full set,sat,sat,pass
+late_conflict-N2,2,2,reported full set,sat,sat,pass
+late_conflict-N3,2,3,full set,unsat,unsat,pass
+late_conflict-N3,2,3,reported full set,unsat,unsat,pass
+late_conflict-N4,2,4,full set,unsat,unsat,pass
+late_conflict-N4,2,4,reported full set,unsat,unsat,pass
+late_conflict-N5,2,5,full set,unsat,unsat,pass
+late_conflict-N5,2,5,reported full set,unsat,unsat,pass
+pilot-mixed-12,12,5,full set,unsat,unsat,pass
+pilot-mixed-12,12,5,reported full set,unsat,unsat,pass
+pilot-mixed-12,12,5,RQ1 ordered outcomes,unsat;sat;unsat;sat,unsat;sat;unsat;sat,pass
+pilot-mixed-12,12,5,background without injection,sat,sat,pass
+pilot-mixed-12,12,5,injected subset R1;R2;R3,unsat,unsat,pass
+pilot-mixed-12,12,5,injected subset remove R1,sat,sat,pass
+pilot-mixed-12,12,5,injected subset remove R2,sat,sat,pass
+pilot-mixed-12,12,5,injected subset remove R3,sat,sat,pass
+pilot-mixed-12,12,5,reported MIS R1;R2;R3,unsat,unsat,pass
+pilot-mixed-12,12,5,reported MIS remove R1,sat,sat,pass
+pilot-mixed-12,12,5,reported MIS remove R2,sat,sat,pass
+pilot-mixed-12,12,5,reported MIS remove R3,sat,sat,pass
+pilot-mixed-30,30,5,full set,unsat,unsat,pass
+pilot-mixed-30,30,5,reported full set,unsat,unsat,pass
+pilot-mixed-30,30,5,RQ1 ordered outcomes,unsat;sat;unsat;sat,unsat;sat;unsat;sat,pass
+pilot-mixed-30,30,5,background without injection,sat,sat,pass
+pilot-mixed-30,30,5,injected subset R1;R2;R3,unsat,unsat,pass
+pilot-mixed-30,30,5,injected subset remove R1,sat,sat,pass
+pilot-mixed-30,30,5,injected subset remove R2,sat,sat,pass
+pilot-mixed-30,30,5,injected subset remove R3,sat,sat,pass
+pilot-mixed-30,30,5,reported MIS R1;R2;R3,unsat,unsat,pass
+pilot-mixed-30,30,5,reported MIS remove R1,sat,sat,pass
+pilot-mixed-30,30,5,reported MIS remove R2,sat,sat,pass
+pilot-mixed-30,30,5,reported MIS remove R3,sat,sat,pass
+pilot-mixed-60,60,5,full set,unsat,unsat,pass
+pilot-mixed-60,60,5,reported full set,unsat,unsat,pass
+pilot-mixed-60,60,5,RQ1 ordered outcomes,unsat;sat;unsat;sat,unsat;sat;unsat;sat,pass
+pilot-mixed-60,60,5,background without injection,sat,sat,pass
+pilot-mixed-60,60,5,injected subset R1;R2;R3,unsat,unsat,pass
+pilot-mixed-60,60,5,injected subset remove R1,sat,sat,pass
+pilot-mixed-60,60,5,injected subset remove R2,sat,sat,pass
+pilot-mixed-60,60,5,injected subset remove R3,sat,sat,pass
+pilot-mixed-60,60,5,reported MIS R1;R2;R3,unsat,unsat,pass
+pilot-mixed-60,60,5,reported MIS remove R1,sat,sat,pass
+pilot-mixed-60,60,5,reported MIS remove R2,sat,sat,pass
+pilot-mixed-60,60,5,reported MIS remove R3,sat,sat,pass
+pilot-varied-30,30,5,full set,unsat,unsat,pass
+pilot-varied-30,30,5,reported full set,unsat,unsat,pass
+pilot-varied-30,30,5,RQ1 ordered outcomes,unsat;sat;unsat;sat,unsat;sat;unsat;sat,pass
+pilot-varied-30,30,5,background without injection,sat,sat,pass
+pilot-varied-30,30,5,injected subset R1;R2;R3;R4,unsat,unsat,pass
+pilot-varied-30,30,5,injected subset remove R1,sat,sat,pass
+pilot-varied-30,30,5,injected subset remove R2,sat,sat,pass
+pilot-varied-30,30,5,injected subset remove R3,sat,sat,pass
+pilot-varied-30,30,5,injected subset remove R4,sat,sat,pass
+pilot-varied-30,30,5,reported MIS R1;R2;R3;R4,unsat,unsat,pass
+pilot-varied-30,30,5,reported MIS remove R1,sat,sat,pass
+pilot-varied-30,30,5,reported MIS remove R2,sat,sat,pass
+pilot-varied-30,30,5,reported MIS remove R3,sat,sat,pass
+pilot-varied-30,30,5,reported MIS remove R4,sat,sat,pass

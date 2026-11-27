@@ -1,0 +1,16 @@
+{
+  "case_id": "hanfor_boolean_example",
+  "N": 5,
+  "rules": [
+    {
+      "id": "REQ3_0",
+      "type": "invariant",
+      "signal": "constraint1"
+    },
+    {
+      "id": "REQ4_0",
+      "type": "absence",
+      "signal": "constraint2"
+    }
+  ]
+}

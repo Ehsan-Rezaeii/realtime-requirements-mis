@@ -81,7 +81,7 @@ def benchmark_mis(config, out_dir):
         rules = case["rules"]
         expected_ids = set(case["injected_ids"])
         for rep in range(1, config["repeats"] + 1):
-            names = list(MIS_METHODS)
+            names = ["nonincremental", "incremental", "core"]
             shift = (rep - 1) % len(names)
             for method_name in names[shift:] + names[:shift]:
                 status, error, minimal, recovered, mis, elapsed = "ok", "", False, False, [], None

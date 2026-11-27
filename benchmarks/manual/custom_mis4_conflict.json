@@ -1,0 +1,55 @@
+{
+  "case_id": "custom_mis4_conflict",
+  "N": 5,
+  "injected_ids": [
+    "R1",
+    "R2",
+    "R3",
+    "R4"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "type": "recurrence",
+      "signal": "auth_req",
+      "window": 6
+    },
+    {
+      "id": "R2",
+      "type": "response",
+      "trigger": "auth_req",
+      "target": "token_valid",
+      "deadline": 1
+    },
+    {
+      "id": "R3",
+      "type": "response",
+      "trigger": "token_valid",
+      "target": "db_access",
+      "deadline": 1
+    },
+    {
+      "id": "R4",
+      "type": "absence",
+      "signal": "db_access"
+    },
+    {
+      "id": "B1",
+      "type": "invariant",
+      "signal": "network_up"
+    },
+    {
+      "id": "B2",
+      "type": "bounded_delay",
+      "trigger": "network_up",
+      "target": "ping_ok",
+      "min_delay": 0,
+      "max_delay": 1
+    },
+    {
+      "id": "B3",
+      "type": "absence",
+      "signal": "intrusion_detected"
+    }
+  ]
+}

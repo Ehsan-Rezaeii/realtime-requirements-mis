@@ -1,0 +1,33 @@
+{
+  "case_id": "custom_sat_independent",
+  "N": 5,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "invariant",
+      "signal": "alarm"
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "motor"
+    },
+    {
+      "id": "R3",
+      "type": "recurrence",
+      "signal": "heartbeat",
+      "window": 3
+    },
+    {
+      "id": "R4",
+      "type": "response",
+      "trigger": "heartbeat",
+      "target": "alarm",
+      "deadline": 0
+    }
+  ],
+  "dataset_type": "manual",
+  "expected_status": "sat",
+  "scenario": "manual",
+  "source_path": "benchmarks/manual/custom_sat_independent.json"
+}

@@ -1,0 +1,97 @@
+{
+  "config": {
+    "N": 5,
+    "repeats": 2,
+    "timeout_ms": 700,
+    "operation_seconds": 3.0,
+    "memory_mib": 768,
+    "solver_seed": 17,
+    "bounds": [
+      2,
+      3,
+      4,
+      5
+    ],
+    "scenarios": [
+      "always_sat",
+      "always_unsat",
+      "late_conflict",
+      "boundary_delay"
+    ],
+    "synthetic": [
+      {
+        "family": "pilot-mixed",
+        "sizes": [
+          12,
+          30,
+          60
+        ],
+        "mis_size": 3,
+        "seed": 42,
+        "style": "mixed",
+        "variant": "classic"
+      },
+      {
+        "family": "pilot-varied",
+        "sizes": [
+          30
+        ],
+        "mis_size": 4,
+        "seed": 518,
+        "style": "mixed",
+        "variant": "varied"
+      }
+    ],
+    "files": [
+      {
+        "path": "benchmarks/public/fret_liquid_mixer_projection.json",
+        "dataset_type": "public_subset",
+        "expected": "sat"
+      },
+      {
+        "path": "benchmarks/public/hanfor_boolean_example.json",
+        "dataset_type": "public_subset",
+        "expected": "sat"
+      }
+    ]
+  },
+  "python": "3.12.14",
+  "z3": "4.15.4",
+  "packages": {
+    "z3-solver": "4.15.4.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.1",
+    "scipy": "1.15.2"
+  },
+  "system": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "logical_cores": 3,
+  "available_cores": 3,
+  "host_ram": "10207480 kB",
+  "runtime_limits": {
+    "memory.max": "8589934592",
+    "cpu.max": "200000 100000"
+  },
+  "environment": "local CPU runtime",
+  "memory_enforcement": "RLIMIT_AS per worker",
+  "source_sha256": {
+    "__init__.py": "f8c070d77bc00d8d437b593638f61948ec45a90a9d6359eff1d614deabc97eab",
+    "__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "cli.py": "a4ca1d6bf6ea26fc0c6b7797426408cec0c825e8e5a45a05e28ce24d27655547",
+    "dataio.py": "1eb30012d81fc3a9d1662783feb677a10a2779ca69ffcab1a51fedd88f9887be",
+    "experiments.py": "9fc6fdf0e067193a4d544d6ec92b25ce5d793e60127ea36c4d0f07c8213ad05e",
+    "generator.py": "3d152753930c9c951b3586a6e3719f6803a88446e270f42d4ec01ae1196b0ec3",
+    "mis.py": "d5251880be38fe98b0ed6a97fd94232d88f6b5e2b44f3cd38d0967e8ec3b6107",
+    "model.py": "c4006c411a0c0ea9422bfaa9e855bfa907509869368df62358044388cd81bcc5",
+    "solver.py": "651c325a4534052c0299b8e9e1df625bebe79d953c97d1719a8aac470cadef25",
+    "study.py": "37d2dc435fa8340e2e79e572e6aab7735e17d43c4f7048d2d80516a3a16cfa6a",
+    "study_worker.py": "2f0f8decb440ce4910ac0fbc44c6bde682c7dfe278fc44772b142da353365f55"
+  },
+  "input_sha256": {
+    "benchmarks/public/fret_liquid_mixer_projection.json": "00e4c032c8dec1c4e71f28290e3f6eaab0faf97786b9a3b36947ed9b345573c9",
+    "benchmarks/public/hanfor_boolean_example.json": "4428df5e73bfe42023aad7e677ae79c989ee0f8468a74e0cec7c3eeb7b2185b9"
+  },
+  "git_commit": "4301d213b3c06dbce7759fed39a2c77273757664",
+  "git_status": "",
+  "started_utc": "2026-11-27T10:14:49.646279+00:00"
+}

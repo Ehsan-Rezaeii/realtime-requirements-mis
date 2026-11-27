@@ -1,0 +1,5 @@
+method,scheduled_unsat_runs,returned_candidates,decided_candidate_validations,valid_minimal_runs,validity_among_decided_candidates,valid_mis_yield_all_unsat_runs,scheduled_injected_runs,exact_injection_recoveries,exact_recovery_per_injected_run,distinct_injected_cases,distinct_injected_cases_recovered,injection_recall_by_case,invalid,unknown,timeout,crash,error
+core,210,208,208,208,1,0.99047619,160,158,0.9875,16,16,1,0,0,2,0,0
+incremental,210,180,180,180,1,0.85714286,160,130,0.8125,16,13,0.8125,0,0,30,0,0
+nonincremental,210,156,156,156,1,0.74285714,160,106,0.6625,16,11,0.6875,0,0,54,0,0
+quickxplain,210,200,200,200,1,0.95238095,160,150,0.9375,16,15,0.9375,0,0,10,0,0

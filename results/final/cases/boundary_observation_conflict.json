@@ -1,0 +1,34 @@
+{
+  "case_id": "boundary_observation_conflict",
+  "N": 5,
+  "observations": [
+    {
+      "signal": "request",
+      "time": 3,
+      "value": true
+    }
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "type": "response",
+      "trigger": "request",
+      "target": "grant",
+      "deadline": 1
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "grant"
+    },
+    {
+      "id": "B1",
+      "type": "absence",
+      "signal": "noise"
+    }
+  ],
+  "dataset_type": "manual",
+  "expected_status": "unsat",
+  "scenario": "manual",
+  "source_path": "benchmarks/manual/boundary_observation_conflict.json"
+}

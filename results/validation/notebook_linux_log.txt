@@ -1,0 +1,172 @@
+/tmp/team3-venv/lib/python3.12/site-packages/IPython/paths.py:67: UserWarning: IPython parent '/home/agent' is not a writable location, using a temp directory.
+  warn("IPython parent '{}' is not a writable location,"
+/tmp/team3-venv/lib/python3.12/site-packages/IPython/paths.py:67: UserWarning: IPython parent '/home/agent' is not a writable location, using a temp directory.
+  warn("IPython parent '{}' is not a writable location,"
+[33mWARNING: The directory '/home/agent/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.[0m[33m
+[0mRequirement already satisfied: z3-solver==4.15.4.0 in /tmp/team3-venv/lib/python3.12/site-packages (from -r requirements.txt (line 1)) (4.15.4.0)
+Requirement already satisfied: pandas==2.2.3 in /tmp/team3-venv/lib/python3.12/site-packages (from -r requirements.txt (line 2)) (2.2.3)
+Requirement already satisfied: matplotlib==3.10.1 in /tmp/team3-venv/lib/python3.12/site-packages (from -r requirements.txt (line 3)) (3.10.1)
+Requirement already satisfied: scipy==1.15.2 in /tmp/team3-venv/lib/python3.12/site-packages (from -r requirements.txt (line 4)) (1.15.2)
+Requirement already satisfied: numpy>=1.26.0 in /tmp/team3-venv/lib/python3.12/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2.4.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /tmp/team3-venv/lib/python3.12/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (4.0.0)
+Requirement already satisfied: pytz>=2020.1 in /tmp/team3-venv/lib/python3.12/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2026.6)
+Requirement already satisfied: tzdata>=2022.7 in /tmp/team3-venv/lib/python3.12/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2026.6)
+Requirement already satisfied: contourpy>=1.0.1 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (1.4.0)
+Requirement already satisfied: cycler>=0.10 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (4.69.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (1.5.1)
+Requirement already satisfied: packaging>=20.0 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (26.4)
+Requirement already satisfied: pillow>=8 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (13.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (3.3.3)
+
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m25.0.1[0m[39;49m -> [0m[32;49m26.3[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpython -m pip install --upgrade pip[0m
+3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+4.15.4
+Consistency: unsat
+Initial core: ['R3', 'R2', 'R1']
+MIS: ['R3', 'R2', 'R1']
+MIS valid: True
+test_activation_names_and_empty_selection (test_completion.TestCompletion.test_activation_names_and_empty_selection) ... ok
+test_cli_input_error (test_completion.TestCompletion.test_cli_input_error) ... ok
+test_distinct_conflicts_with_fixed_observations (test_completion.TestCompletion.test_distinct_conflicts_with_fixed_observations) ... ok
+test_satisfiable_generator_and_variation (test_completion.TestCompletion.test_satisfiable_generator_and_variation) ... ok
+test_typed_unknown_and_timeout (test_completion.TestCompletion.test_typed_unknown_and_timeout) ... ok
+test_worker_deadline_and_resume (test_completion.TestCompletion.test_worker_deadline_and_resume) ... Study progress: 2/2
+Study progress: 2/2
+ok
+test_consistent_background (test_data.TestData.test_consistent_background) ... ok
+test_invalid_dataset (test_data.TestData.test_invalid_dataset) ... ok
+test_roundtrip (test_data.TestData.test_roundtrip) ... ok
+test_tiny_pilot (test_experiments.TestExperiments.test_tiny_pilot) ... ok
+test_controlled_minimality (test_mis.TestMIS.test_controlled_minimality) ... ok
+test_core_versus_mis (test_mis.TestMIS.test_core_versus_mis) ... ok
+test_sat_has_no_mis (test_mis.TestMIS.test_sat_has_no_mis) ... ok
+test_subsets_agree (test_mis.TestMIS.test_subsets_agree) ... ok
+test_absence (test_model.TestTemporalPatterns.test_absence) ... ok
+test_bounded_delay_horizon (test_model.TestTemporalPatterns.test_bounded_delay_horizon) ... ok
+test_bounded_delay_vacuous (test_model.TestTemporalPatterns.test_bounded_delay_vacuous) ... ok
+test_bounded_delay_zero (test_model.TestTemporalPatterns.test_bounded_delay_zero) ... ok
+test_input_validation (test_model.TestTemporalPatterns.test_input_validation) ... ok
+test_invariant (test_model.TestTemporalPatterns.test_invariant) ... ok
+test_invariant_absence_conflict (test_model.TestTemporalPatterns.test_invariant_absence_conflict) ... ok
+test_late_conflict_in_horizon (test_model.TestTemporalPatterns.test_late_conflict_in_horizon) ... ok
+test_recurrence_absence_conflict (test_model.TestTemporalPatterns.test_recurrence_absence_conflict) ... ok
+test_response_conflict (test_model.TestTemporalPatterns.test_response_conflict) ... ok
+test_response_vacuous (test_model.TestTemporalPatterns.test_response_vacuous) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.043s
+
+OK
+MIS: finished size=6
+RQ1: finished size=6
+Study progress: 50/136
+Study progress: 100/136
+Study progress: 136/136
+Saved: /workspace/realtime-requirements-mis/results/notebook/pilot/raw
+{"pass": 88, "fail": 0, "not_checked": 0, "not_applicable": 0}
+Analyzed 136 runs across 22 cases.
+status
+ok    136
+Analyzed 136 runs across 22 cases.
+status
+ok    136
+Cell 1 outputs: [('stream', [])]
+/workspace/realtime-requirements-mis
+
+Cell 2 outputs: [('stream', []), ('stream', []), ('stream', []), ('stream', []), ('stream', []), ('stream', []), ('stream', []), ('stream', []), ('stream', []), ('stream', []), ('stream', [])]
+[33mWARNING: The directory '/home/agent/.cache/pip' or its parent directory is not owned or is not writable by the current user. The cache has been disabled. Check the permissions and owner of that directory. If executing pip with sudo, you should use sudo's -H flag.[0m[33m
+[0m
+Requirement already satisfied: z3-solver==4.15.4.0 in /tmp/team3-venv/lib/python3.12/site-packages (from -r requirements.txt (line 1)) (4.15.4.0)
+Requirement already satisfied: pandas==2.2.3 in /tmp/team3-venv/lib/python3.12/site-packages (from -r requirements.txt (line 2)) (2.2.3)
+Requirement already satisfied: matplotlib==3.10.1 in /tmp/team3-venv/lib/python3.12/site-packages (from -r requirements.txt (line 3)) (3.10.1)
+Requirement already satisfied: scipy==1.15.2 in /tmp/team3-venv/lib/python3.12/site-packages (from -r requirements.txt (line 4)) (1.15.2)
+Requirement already satisfied: numpy>=1.26.0 in /tmp/team3-venv/lib/python3.12/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2.4.6)
+Requirement already satisfied: python-dateutil>=2.8.2 in /tmp/team3-venv/lib/python3.12/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (4.0.0)
+Requirement already satisfied: pytz>=2020.1 in /tmp/team3-venv/lib/python3.12/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2026.6)
+Requirement already satisfied: tzdata>=2022.7 in /tmp/team3-venv/lib/python3.12/site-packages (from pandas==2.2.3->-r requirements.txt (line 2)) (2026.6)
+Requirement already satisfied: contourpy>=1.0.1 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (1.4.0)
+Requirement already satisfied: cycler>=0.10 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (4.69.1)
+Requirement already satisfied: kiwisolver>=1.3.1 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (1.5.1)
+Requirement already satisfied: packaging>=20.0 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (26.4)
+Requirement already satisfied: pillow>=8 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (13.0.0)
+Requirement already satisfied: pyparsing>=2.3.1 in /tmp/team3-venv/lib/python3.12/site-packages (from matplotlib==3.10.1->-r requirements.txt (line 3)) (3.3.3)
+
+
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m A new release of pip is available: [0m[31;49m25.0.1[0m[39;49m -> [0m[32;49m26.3[0m
+[1m[[0m[34;49mnotice[0m[1;39;49m][0m[39;49m To update, run: [0m[32;49mpython -m pip install --upgrade pip[0m
+
+3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]
+4.15.4
+
+Consistency: unsat
+Initial core: ['R3', 'R2', 'R1']
+MIS: ['R3', 'R2', 'R1']
+MIS valid: True
+
+test_activation_names_and_empty_selection (test_completion.TestCompletion.test_activation_names_and_empty_selection) ... ok
+test_cli_input_error (test_completion.TestCompletion.test_cli_input_error) ... 
+ok
+test_distinct_conflicts_with_fixed_observations (test_completion.TestCompletion.test_distinct_conflicts_with_fixed_observations) ... ok
+test_satisfiable_generator_and_variation (test_completion.TestCompletion.test_satisfiable_generator_and_variation) ... ok
+test_typed_unknown_and_timeout (test_completion.TestCompletion.test_typed_unknown_and_timeout) ... ok
+test_worker_deadline_and_resume (test_completion.TestCompletion.test_worker_deadline_and_resume) ... ok
+test_consistent_background (test_data.TestData.test_consistent_background) ... ok
+test_invalid_dataset (test_data.TestData.test_invalid_dataset) ... ok
+test_roundtrip (test_data.TestData.test_roundtrip) ... ok
+test_tiny_pilot (test_experiments.TestExperiments.test_tiny_pilot) ... 
+Study progress: 2/2
+Study progress: 2/2
+
+ok
+test_controlled_minimality (test_mis.TestMIS.test_controlled_minimality) ... 
+ok
+test_core_versus_mis (test_mis.TestMIS.test_core_versus_mis) ... ok
+test_sat_has_no_mis (test_mis.TestMIS.test_sat_has_no_mis) ... ok
+test_subsets_agree (test_mis.TestMIS.test_subsets_agree) ... ok
+test_absence (test_model.TestTemporalPatterns.test_absence) ... ok
+test_bounded_delay_horizon (test_model.TestTemporalPatterns.test_bounded_delay_horizon) ... ok
+test_bounded_delay_vacuous (test_model.TestTemporalPatterns.test_bounded_delay_vacuous) ... ok
+test_bounded_delay_zero (test_model.TestTemporalPatterns.test_bounded_delay_zero) ... ok
+test_input_validation (test_model.TestTemporalPatterns.test_input_validation) ... ok
+test_invariant (test_model.TestTemporalPatterns.test_invariant) ... ok
+test_invariant_absence_conflict (test_model.TestTemporalPatterns.test_invariant_absence_conflict) ... ok
+test_late_conflict_in_horizon (test_model.TestTemporalPatterns.test_late_conflict_in_horizon) ... ok
+test_recurrence_absence_conflict (test_model.TestTemporalPatterns.test_recurrence_absence_conflict) ... ok
+test_response_conflict (test_model.TestTemporalPatterns.test_response_conflict) ... ok
+test_response_vacuous (test_model.TestTemporalPatterns.test_response_vacuous) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 2.043s
+
+OK
+
+MIS: finished size=6
+RQ1: finished size=6
+
+Cell 4 outputs: [('stream', []), ('stream', []), ('stream', []), ('stream', []), ('stream', [])]
+Study progress: 50/136
+
+Study progress: 100/136
+
+Study progress: 136/136
+Saved: /workspace/realtime-requirements-mis/results/notebook/pilot/raw
+
+{"pass": 88, "fail": 0, "not_checked": 0, "not_applicable": 0}
+
+Analyzed 136 runs across 22 cases.
+status
+ok    136
+
+Cell 6 outputs: [('stream', [])]
+Analyzed 136 runs across 22 cases.
+status
+ok    136
+
+Cell 7 outputs: [('display_data', ['text/plain', 'text/html']), ('display_data', ['image/png', 'text/plain']), ('display_data', ['image/png', 'text/plain']), ('display_data', ['image/png', 'text/plain']), ('display_data', ['image/png', 'text/plain']), ('display_data', ['image/png', 'text/plain']), ('display_data', ['image/png', 'text/plain'])]
+Cell 8 outputs: [('stream', [])]
+/workspace/realtime-requirements-mis/results/notebook/pilot-evidence.zip
+
+Notebook CPU/Linux validation: all code cells completed.

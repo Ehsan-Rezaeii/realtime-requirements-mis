@@ -1,0 +1,20 @@
+{
+  "case_id": "always_sat-N50",
+  "scenario": "always_sat",
+  "N": 50,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "absence",
+      "signal": "a"
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "b"
+    }
+  ],
+  "observations": [],
+  "expected_status": "sat",
+  "dataset_type": "temporal_scenario"
+}

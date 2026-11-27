@@ -1,0 +1,61 @@
+npm warn deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142
+npm warn deprecated har-validator@5.1.5: this library is no longer supported
+npm warn deprecated left-pad@1.3.0: use String.prototype.padStart()
+npm warn deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
+npm warn deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm warn deprecated source-map-resolve@0.5.3: See https://github.com/lydell/source-map-resolve#deprecated
+npm warn deprecated source-map-url@0.4.1: See https://github.com/lydell/source-map-url#deprecated
+npm warn deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm warn deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm warn deprecated sane@4.1.0: some dependency vulnerabilities fixed, support for node < 10 dropped, and newer ECMAScript syntax/features added
+npm warn deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+
+added 556 packages in 8s
+((LAST V (((! liquid_level_2) & ((! LAST) & (X liquid_level_2))) -> (X timer_60sec_start))) & (liquid_level_2 -> timer_60sec_start))
+Error for LevelDB
+Error [OpenError]: IO error: /home/agent/Documents/fret-db/LOCK: No such file or directory
+    at /tmp/team3-fret/fret-electron/app/node_modules/levelup/lib/levelup.js:119:23
+    at /tmp/team3-fret/fret-electron/app/node_modules/abstract-leveldown/abstract-leveldown.js:38:14
+    at /tmp/team3-fret/fret-electron/app/node_modules/deferred-leveldown/deferred-leveldown.js:31:21
+    at /tmp/team3-fret/fret-electron/app/node_modules/leveldown/node_modules/abstract-leveldown/abstract-leveldown.js:41:14 {
+  [cause]: undefined
+}
+Error handling document Error [OpenError]: IO error: /home/agent/Documents/fret-db/LOCK: No such file or directory
+    at /tmp/team3-fret/fret-electron/app/node_modules/levelup/lib/levelup.js:119:23
+    at /tmp/team3-fret/fret-electron/app/node_modules/abstract-leveldown/abstract-leveldown.js:38:14
+    at /tmp/team3-fret/fret-electron/app/node_modules/deferred-leveldown/deferred-leveldown.js:31:21
+    at /tmp/team3-fret/fret-electron/app/node_modules/leveldown/node_modules/abstract-leveldown/abstract-leveldown.js:41:14 {
+  [cause]: undefined
+}
+Error for modelDB
+Error [OpenError]: IO error: /home/agent/Documents/model-db/LOCK: No such file or directory
+    at /tmp/team3-fret/fret-electron/app/node_modules/levelup/lib/levelup.js:119:23
+    at /tmp/team3-fret/fret-electron/app/node_modules/abstract-leveldown/abstract-leveldown.js:38:14
+    at /tmp/team3-fret/fret-electron/app/node_modules/deferred-leveldown/deferred-leveldown.js:31:21
+    at /tmp/team3-fret/fret-electron/app/node_modules/leveldown/node_modules/abstract-leveldown/abstract-leveldown.js:41:14 {
+  [cause]: undefined
+}
+((LAST V (((! timer_60sec_expire) & ((! LAST) & (X timer_60sec_expire))) -> (X timer_120sec_start))) & (timer_60sec_expire -> timer_120sec_start))
+Error for LevelDB
+Error [OpenError]: IO error: /home/agent/Documents/fret-db/LOCK: No such file or directory
+    at /tmp/team3-fret/fret-electron/app/node_modules/levelup/lib/levelup.js:119:23
+    at /tmp/team3-fret/fret-electron/app/node_modules/abstract-leveldown/abstract-leveldown.js:38:14
+    at /tmp/team3-fret/fret-electron/app/node_modules/deferred-leveldown/deferred-leveldown.js:31:21
+    at /tmp/team3-fret/fret-electron/app/node_modules/leveldown/node_modules/abstract-leveldown/abstract-leveldown.js:41:14 {
+  [cause]: undefined
+}
+Error handling document Error [OpenError]: IO error: /home/agent/Documents/fret-db/LOCK: No such file or directory
+    at /tmp/team3-fret/fret-electron/app/node_modules/levelup/lib/levelup.js:119:23
+    at /tmp/team3-fret/fret-electron/app/node_modules/abstract-leveldown/abstract-leveldown.js:38:14
+    at /tmp/team3-fret/fret-electron/app/node_modules/deferred-leveldown/deferred-leveldown.js:31:21
+    at /tmp/team3-fret/fret-electron/app/node_modules/leveldown/node_modules/abstract-leveldown/abstract-leveldown.js:41:14 {
+  [cause]: undefined
+}
+Error for modelDB
+Error [OpenError]: IO error: /home/agent/Documents/model-db/LOCK: No such file or directory
+    at /tmp/team3-fret/fret-electron/app/node_modules/levelup/lib/levelup.js:119:23
+    at /tmp/team3-fret/fret-electron/app/node_modules/abstract-leveldown/abstract-leveldown.js:38:14
+    at /tmp/team3-fret/fret-electron/app/node_modules/deferred-leveldown/deferred-leveldown.js:31:21
+    at /tmp/team3-fret/fret-electron/app/node_modules/leveldown/node_modules/abstract-leveldown/abstract-leveldown.js:41:14 {
+  [cause]: undefined
+}

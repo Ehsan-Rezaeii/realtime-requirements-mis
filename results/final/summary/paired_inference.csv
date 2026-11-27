@@ -1,0 +1,5 @@
+experiment,method,cases,case_ids,median_case_speedup,bootstrap_low,bootstrap_high,a12_faster,wilcoxon_p,holm_p
+rq1,incremental,5,scale-mixed-30;simple-mis4-30;varied-mis2-30;varied-mis3-30;varied-mis4-30,2.1541669,2.084462,2.9552366,0.88,0.0625,0.25
+mis,incremental,5,scale-mixed-30;simple-mis4-30;varied-mis2-30;varied-mis3-30;varied-mis4-30,7.4817144,5.5133528,10.68945,1,0.0625,0.25
+mis,core,5,scale-mixed-30;simple-mis4-30;varied-mis2-30;varied-mis3-30;varied-mis4-30,8.1202899,7.1263821,12.425963,1,0.0625,0.25
+mis,quickxplain,5,scale-mixed-30;simple-mis4-30;varied-mis2-30;varied-mis3-30;varied-mis4-30,7.249006,6.3070132,17.489743,1,0.0625,0.25

@@ -1,0 +1,38 @@
+{
+  "case_id": "custom_mis2_conflict",
+  "N": 5,
+  "injected_ids": [
+    "R1",
+    "R2"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "type": "recurrence",
+      "signal": "sensor_alert",
+      "window": 3
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "sensor_alert"
+    },
+    {
+      "id": "B1",
+      "type": "invariant",
+      "signal": "system_power"
+    },
+    {
+      "id": "B2",
+      "type": "response",
+      "trigger": "system_power",
+      "target": "status_led",
+      "deadline": 1
+    },
+    {
+      "id": "B3",
+      "type": "absence",
+      "signal": "hardware_fault"
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "N": 5,
+  "repeats": 10,
+  "timeout_ms": 700,
+  "operation_seconds": 3.0,
+  "memory_mib": 768,
+  "solver_seed": 17,
+  "bounds": [
+    2,
+    3,
+    4,
+    5,
+    10,
+    20,
+    50
+  ],
+  "scenarios": [
+    "always_sat",
+    "always_unsat",
+    "late_conflict",
+    "boundary_delay"
+  ],
+  "synthetic": [
+    {
+      "family": "scale-mixed",
+      "sizes": [
+        12,
+        30,
+        60,
+        120,
+        240,
+        500,
+        1000,
+        2000,
+        5000
+      ],
+      "mis_size": 3,
+      "seed": 42,
+      "style": "mixed",
+      "variant": "classic"
+    },
+    {
+      "family": "varied-mis2",
+      "sizes": [
+        30,
+        60
+      ],
+      "mis_size": 2,
+      "seed": 143,
+      "style": "mixed",
+      "variant": "varied"
+    },
+    {
+      "family": "varied-mis3",
+      "sizes": [
+        30,
+        60
+      ],
+      "mis_size": 3,
+      "seed": 291,
+      "style": "mixed",
+      "variant": "varied"
+    },
+    {
+      "family": "varied-mis4",
+      "sizes": [
+        30,
+        60
+      ],
+      "mis_size": 4,
+      "seed": 518,
+      "style": "mixed",
+      "variant": "varied"
+    },
+    {
+      "family": "simple-mis4",
+      "sizes": [
+        30
+      ],
+      "mis_size": 4,
+      "seed": 31,
+      "style": "simple",
+      "variant": "classic"
+    },
+    {
+      "family": "simple-sat",
+      "sizes": [
+        30
+      ],
+      "mis_size": 3,
+      "seed": 71,
+      "style": "simple",
+      "variant": "classic",
+      "sat": true
+    },
+    {
+      "family": "varied-sat",
+      "sizes": [
+        60
+      ],
+      "mis_size": 3,
+      "seed": 187,
+      "style": "mixed",
+      "variant": "varied",
+      "sat": true
+    }
+  ],
+  "files": [
+    {
+      "path": "benchmarks/manual/boundary_full_window.json",
+      "dataset_type": "manual",
+      "expected": "sat"
+    },
+    {
+      "path": "benchmarks/manual/boundary_horizon_end_trap.json",
+      "dataset_type": "manual",
+      "expected": "unsat"
+    },
+    {
+      "path": "benchmarks/manual/boundary_immediate_response.json",
+      "dataset_type": "manual",
+      "expected": "sat"
+    },
+    {
+      "path": "benchmarks/manual/boundary_observation_conflict.json",
+      "dataset_type": "manual",
+      "expected": "unsat"
+    },
+    {
+      "path": "benchmarks/manual/boundary_vacuous_no_trigger.json",
+      "dataset_type": "manual",
+      "expected": "sat"
+    },
+    {
+      "path": "benchmarks/manual/custom_mis2_conflict.json",
+      "dataset_type": "manual",
+      "expected": "unsat"
+    },
+    {
+      "path": "benchmarks/manual/custom_mis3_conflict.json",
+      "dataset_type": "manual",
+      "expected": "unsat"
+    },
+    {
+      "path": "benchmarks/manual/custom_mis4_conflict.json",
+      "dataset_type": "manual",
+      "expected": "unsat"
+    },
+    {
+      "path": "benchmarks/manual/custom_sat_all_patterns.json",
+      "dataset_type": "manual",
+      "expected": "sat"
+    },
+    {
+      "path": "benchmarks/manual/custom_sat_independent.json",
+      "dataset_type": "manual",
+      "expected": "sat"
+    },
+    {
+      "path": "benchmarks/public/fret_liquid_mixer_projection.json",
+      "dataset_type": "public_subset",
+      "expected": "sat"
+    },
+    {
+      "path": "benchmarks/public/hanfor_boolean_example.json",
+      "dataset_type": "public_subset",
+      "expected": "sat"
+    }
+  ]
+}

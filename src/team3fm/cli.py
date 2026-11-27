@@ -6,11 +6,14 @@ from pathlib import Path
 
 from z3 import unsat
 
+import sys
+
 from .dataio import load_dataset, save_dataset
 from .experiments import run_experiments
 from .generator import generate_case
 from .mis import MIS_METHODS, mis_core_deletion, validate_mis
-from .solver import IncrementalChecker, check_nonincremental
+from .solver import InconclusiveError, IncrementalChecker, check_nonincremental
+from .study import run_study
 
 
 def build_parser():
@@ -24,20 +27,25 @@ def build_parser():
     generate.add_argument("--N", type=int, default=5)
     generate.add_argument("--seed", type=int, default=42)
     generate.add_argument("--style", choices=["simple", "mixed"], default="mixed")
+    generate.add_argument("--sat", action="store_true")
+    generate.add_argument("--variant", choices=["classic", "varied"], default="classic")
     generate.add_argument("--output", default="benchmarks/generated/sample.json")
 
     check = commands.add_parser("check", help="Check consistency and extract one validated MIS")
     check.add_argument("--input", required=True)
-    check.add_argument("--method", choices=["nonincremental", "incremental", "core"], default="core")
+    check.add_argument("--method", choices=list(MIS_METHODS), default="core")
     check.add_argument("--timeout-ms", type=int, default=5000)
 
     benchmark = commands.add_parser("benchmark", help="Run reproducible pilot comparisons")
     benchmark.add_argument("--mode", choices=["mis", "consistency", "bounds", "all"], default="all")
     benchmark.add_argument("--config", default="experiments/config.json")
+    study = commands.add_parser("study", help="Run or resume RQ1–RQ5 in an isolated worker")
+    study.add_argument("--config", default="experiments/final.json")
+    study.add_argument("--output", default="results/reproduction")
     return parser
 
 
-def main(argv=None):
+def _main(argv=None):
     args = build_parser().parse_args(argv)
     if args.command == "demo":
         case = generate_case(4, mis_size=3, N=5, seed=42, style="simple")
@@ -52,7 +60,8 @@ def main(argv=None):
         return
 
     if args.command == "generate":
-        case = generate_case(args.size, args.mis_size, args.N, args.seed, args.style)
+        case = generate_case(args.size, args.mis_size, args.N, args.seed, args.style,
+                             satisfiable=args.sat, variant=args.variant)
         path = save_dataset(case, args.output)
         print(f"Saved: {path} ({len(case['rules'])} rules; injected={case['injected_ids']})")
         return
@@ -62,16 +71,24 @@ def main(argv=None):
         rules, N = data["rules"], data["N"]
         observations = data.get("observations", [])
         if args.method == "incremental":
-            result = IncrementalChecker(rules, N, args.timeout_ms, observations).check()
+            result = IncrementalChecker(rules, N, args.timeout_ms, observations).check(decided=True)
         else:
-            result = check_nonincremental(rules, N, args.timeout_ms, observations)
+            result = check_nonincremental(rules, N, args.timeout_ms, observations, decided=True)
         print("Case:", data["case_id"])
         print("Rules:", len(rules), "N:", N, "Consistency:", result)
         if result == unsat:
             mis = MIS_METHODS[args.method](rules, N, args.timeout_ms, observations)
             print("MIS:", [r["id"] for r in mis])
             print("MIS size:", len(mis))
-            print("MIS valid:", validate_mis(mis, N, args.timeout_ms, observations))
+            valid = validate_mis(mis, N, args.timeout_ms, observations, rules=rules)
+            print("MIS valid:", valid)
+            return 0 if valid else 1
+        print("MIS: none (SAT)")
+        return
+
+    if args.command == "study":
+        config = json.loads(Path(args.config).read_text(encoding="utf-8"))
+        print("Saved:", run_study(config, args.output))
         return
 
     if args.command == "benchmark":
@@ -82,5 +99,13 @@ def main(argv=None):
         return
 
 
+def main(argv=None):
+    try:
+        return _main(argv)
+    except (OSError, ValueError, KeyError, InconclusiveError) as exc:
+        print(f"{type(exc).__name__}: {exc}", file=sys.stderr)
+        return 2
+
+
 if __name__ == "__main__":
-    main()
+    raise SystemExit(main())

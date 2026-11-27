@@ -1,0 +1,28 @@
+{
+  "case_id": "late_conflict-N50",
+  "scenario": "late_conflict",
+  "N": 50,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "response",
+      "trigger": "request",
+      "target": "grant",
+      "deadline": 1
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "grant"
+    }
+  ],
+  "observations": [
+    {
+      "signal": "request",
+      "time": 3,
+      "value": true
+    }
+  ],
+  "expected_status": "unsat",
+  "dataset_type": "temporal_scenario"
+}

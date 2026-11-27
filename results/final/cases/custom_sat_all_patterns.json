@@ -1,0 +1,41 @@
+{
+  "case_id": "custom_sat_all_patterns",
+  "N": 5,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "invariant",
+      "signal": "power_on"
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "critical_error"
+    },
+    {
+      "id": "R3",
+      "type": "recurrence",
+      "signal": "sensor_poll",
+      "window": 2
+    },
+    {
+      "id": "R4",
+      "type": "response",
+      "trigger": "sensor_poll",
+      "target": "data_ack",
+      "deadline": 1
+    },
+    {
+      "id": "R5",
+      "type": "bounded_delay",
+      "trigger": "sensor_poll",
+      "target": "bus_ready",
+      "min_delay": 0,
+      "max_delay": 1
+    }
+  ],
+  "dataset_type": "manual",
+  "expected_status": "sat",
+  "scenario": "manual",
+  "source_path": "benchmarks/manual/custom_sat_all_patterns.json"
+}

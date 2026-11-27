@@ -1,0 +1,9 @@
+experiment,case_id,challenger,best_baseline,speedup,at_least_as_fast
+rq1,pilot-mixed-12,incremental,nonincremental,2.3860726,True
+rq1,pilot-mixed-30,incremental,nonincremental,2.3580634,True
+rq1,pilot-mixed-60,incremental,nonincremental,2.6695807,True
+rq1,pilot-varied-30,incremental,nonincremental,2.0666006,True
+mis,pilot-mixed-12,core,quickxplain,0.89972435,False
+mis,pilot-mixed-30,core,incremental,1.2204448,True
+mis,pilot-mixed-60,core,quickxplain,1.3504151,True
+mis,pilot-varied-30,core,incremental,1.2295575,True

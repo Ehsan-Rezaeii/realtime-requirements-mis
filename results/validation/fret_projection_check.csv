@@ -1,0 +1,3 @@
+rule_id,N,traces,source_sat_traces,local_sat_traces,source_only,local_only,source_only_trigger,source_only_target
+LM-005,2,64,34,27,7,0,011,010
+LM-007,2,64,34,27,7,0,011,010

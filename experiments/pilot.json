@@ -1,0 +1,56 @@
+{
+  "N": 5,
+  "repeats": 2,
+  "timeout_ms": 700,
+  "operation_seconds": 3.0,
+  "memory_mib": 768,
+  "solver_seed": 17,
+  "bounds": [
+    2,
+    3,
+    4,
+    5
+  ],
+  "scenarios": [
+    "always_sat",
+    "always_unsat",
+    "late_conflict",
+    "boundary_delay"
+  ],
+  "synthetic": [
+    {
+      "family": "pilot-mixed",
+      "sizes": [
+        12,
+        30,
+        60
+      ],
+      "mis_size": 3,
+      "seed": 42,
+      "style": "mixed",
+      "variant": "classic"
+    },
+    {
+      "family": "pilot-varied",
+      "sizes": [
+        30
+      ],
+      "mis_size": 4,
+      "seed": 518,
+      "style": "mixed",
+      "variant": "varied"
+    }
+  ],
+  "files": [
+    {
+      "path": "benchmarks/public/fret_liquid_mixer_projection.json",
+      "dataset_type": "public_subset",
+      "expected": "sat"
+    },
+    {
+      "path": "benchmarks/public/hanfor_boolean_example.json",
+      "dataset_type": "public_subset",
+      "expected": "sat"
+    }
+  ]
+}
