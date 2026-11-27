@@ -1,0 +1,24 @@
+{
+  "case_id": "boundary_delay-N50",
+  "scenario": "boundary_delay",
+  "N": 50,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "bounded_delay",
+      "trigger": "a",
+      "target": "b",
+      "min_delay": 2,
+      "max_delay": 2
+    }
+  ],
+  "observations": [
+    {
+      "signal": "a",
+      "time": 2,
+      "value": true
+    }
+  ],
+  "expected_status": "sat",
+  "dataset_type": "temporal_scenario"
+}

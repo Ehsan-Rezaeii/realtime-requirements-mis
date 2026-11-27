@@ -1,0 +1,26 @@
+[26-11-27 13:52:53 utils.py:147] DEBUG - Enabled logging.
+usage: app.py [-h] [-c INPUT_CSV] [-r] [-rti] [-L] [-G] [-hd HEADERS] tag
+
+positional arguments:
+  tag                   A tag for the session. Session will be reloaded, if
+                        tag exists.
+
+options:
+  -h, --help            show this help message and exit
+  -c INPUT_CSV, --input_csv INPUT_CSV
+                        Path to the csv to be processed.
+  -r, --revision        Create a new session by updating a existing session
+                        with a new csv file.
+  -rti, --reload_type_inference
+                        Reload the type inference results.
+  -L, --list_stored_sessions
+                        List the tags of stored sessions..
+  -G, --generate_scoped_pattern_training_data
+                        Generate training data out of description with
+                        assigned scoped pattern.
+  -hd HEADERS, --headers HEADERS
+                        Header Definition of the form --header='{
+                        "csv_id_header": "ID", "csv_desc_header":
+                        "Description", "csv_formal_header":
+                        "Hanfor_Formalization", "csv_type_header" : "Type"}',
+                        must be valid json.

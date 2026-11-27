@@ -1,0 +1,5 @@
+case_id,steps,project_z3,hanfor_simulator,details,agreement
+hanfor_boolean_example,6,sat,trace_found,,True
+hanfor_boolean_same_signal_conflict,6,unsat,blocked_at_step,"Requirement violation: REQ3_0, Formalization: 0, Countertrace: 0
+Reason: inconsistency, 
+(! constraint1), constraint1",True

@@ -1,0 +1,9 @@
+experiment_id,method,runs,ok,invalid,unknown,timeout,crash,error,not_run,success_rate,timeout_rate
+mis,core,12,12,0,0,0,0,0,0,1,0
+mis,incremental,12,12,0,0,0,0,0,0,1,0
+mis,nonincremental,12,12,0,0,0,0,0,0,1,0
+mis,quickxplain,12,12,0,0,0,0,0,0,1,0
+rq1,incremental,12,12,0,0,0,0,0,0,1,0
+rq1,nonincremental,12,12,0,0,0,0,0,0,1,0
+rq4,incremental,32,32,0,0,0,0,0,0,1,0
+rq4,nonincremental,32,32,0,0,0,0,0,0,1,0

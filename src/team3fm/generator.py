@@ -3,17 +3,19 @@
 import random
 
 
-def generate_case(total_rules, mis_size=3, N=5, seed=42, style="mixed"):
+def generate_case(total_rules, mis_size=3, N=5, seed=42, style="mixed", *, satisfiable=False, variant="classic"):
     """Generate a known MIS and consistent background; no GPU/LLM needed.
 
     style='simple': independent absence constraints.
     style='mixed': linked but satisfiable, deliberately simple patterns.
-    Seeds alter rule ordering, not the underlying logical background.
+    Classic seeds alter ordering. The varied family also changes timing parameters.
     """
     if isinstance(total_rules, bool) or not isinstance(total_rules, int):
         raise ValueError("total_rules must be an integer")
-    if mis_size not in (2, 3, 4) or total_rules < mis_size:
-        raise ValueError("mis_size must be 2, 3, or 4 and total_rules >= mis_size")
+    if type(mis_size) is not int or mis_size not in (2, 3, 4):
+        raise ValueError("mis_size must be 2, 3, or 4")
+    if total_rules < (0 if satisfiable else mis_size):
+        raise ValueError("too few rules for the requested case")
     if isinstance(N, bool) or not isinstance(N, int) or N < 2:
         raise ValueError("N must be an integer >= 2 for the synthetic generator")
     if isinstance(seed, bool) or not isinstance(seed, int):
@@ -40,8 +42,13 @@ def generate_case(total_rules, mis_size=3, N=5, seed=42, style="mixed"):
             {"id": "R4", "type": "absence", "signal": "c"},
         ]
 
+    if variant not in ("classic", "varied"):
+        raise ValueError("variant must be classic or varied")
+    if satisfiable:
+        injected = []
+    parameters = random.Random(seed)
     background = []
-    for i in range(total_rules - mis_size):
+    for i in range(total_rules - len(injected)):
         if style == "simple":
             rule = {"type": "absence", "signal": f"noise_{i+1:04d}"}
         else:
@@ -60,12 +67,19 @@ def generate_case(total_rules, mis_size=3, N=5, seed=42, style="mixed"):
                         "min_delay": 0, "max_delay": 2}
             else:
                 rule = {"type": "absence", "signal": c}
+        if variant == "varied" and style == "mixed":
+            if rule["type"] == "response":
+                rule["deadline"] = parameters.randint(0, N)
+            if rule["type"] == "recurrence":
+                rule["window"] = parameters.randint(1, N + 1)
+            if rule["type"] == "bounded_delay":
+                rule["max_delay"] = parameters.randint(0, N)
         background.append({"id": f"B{i+1:04d}", **rule})
 
     rules = injected + background
     random.Random(seed).shuffle(rules)
     return {
-        "case_id": f"{style}_mis{mis_size}_{total_rules}",
+        "case_id": f"{style}_sat_{total_rules}" if satisfiable else f"{style}_mis{mis_size}_{total_rules}",
         "N": N,
         "seed": seed,
         "generator": style,

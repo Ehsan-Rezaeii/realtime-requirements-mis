@@ -1,0 +1,35 @@
+{
+  "case_id": "boundary_vacuous_no_trigger",
+  "N": 5,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "response",
+      "trigger": "request",
+      "target": "grant",
+      "deadline": 2
+    },
+    {
+      "id": "R2",
+      "type": "bounded_delay",
+      "trigger": "request",
+      "target": "grant",
+      "min_delay": 1,
+      "max_delay": 2
+    },
+    {
+      "id": "R3",
+      "type": "absence",
+      "signal": "request"
+    },
+    {
+      "id": "R4",
+      "type": "absence",
+      "signal": "grant"
+    }
+  ],
+  "dataset_type": "manual",
+  "expected_status": "sat",
+  "scenario": "manual",
+  "source_path": "benchmarks/manual/boundary_vacuous_no_trigger.json"
+}

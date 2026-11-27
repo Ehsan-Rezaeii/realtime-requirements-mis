@@ -1,0 +1,373 @@
+{
+  "case_id": "varied-mis2-60",
+  "N": 5,
+  "seed": 143,
+  "generator": "mixed",
+  "injected_ids": [
+    "R1",
+    "R2"
+  ],
+  "rules": [
+    {
+      "id": "B0049",
+      "type": "invariant",
+      "signal": "bg_on_8"
+    },
+    {
+      "id": "B0020",
+      "type": "invariant",
+      "signal": "bg_ack_3"
+    },
+    {
+      "id": "B0042",
+      "type": "absence",
+      "signal": "bg_off_6"
+    },
+    {
+      "id": "R1",
+      "type": "invariant",
+      "signal": "alarm"
+    },
+    {
+      "id": "B0015",
+      "type": "response",
+      "trigger": "bg_on_2",
+      "target": "bg_ack_2",
+      "deadline": 0
+    },
+    {
+      "id": "B0044",
+      "type": "invariant",
+      "signal": "bg_ack_7"
+    },
+    {
+      "id": "B0040",
+      "type": "recurrence",
+      "signal": "bg_on_6",
+      "window": 5
+    },
+    {
+      "id": "B0032",
+      "type": "invariant",
+      "signal": "bg_ack_5"
+    },
+    {
+      "id": "B0058",
+      "type": "recurrence",
+      "signal": "bg_on_9",
+      "window": 3
+    },
+    {
+      "id": "B0003",
+      "type": "response",
+      "trigger": "bg_on_0",
+      "target": "bg_ack_0",
+      "deadline": 1
+    },
+    {
+      "id": "B0029",
+      "type": "bounded_delay",
+      "trigger": "bg_on_4",
+      "target": "bg_ack_4",
+      "min_delay": 0,
+      "max_delay": 4
+    },
+    {
+      "id": "B0027",
+      "type": "response",
+      "trigger": "bg_on_4",
+      "target": "bg_ack_4",
+      "deadline": 1
+    },
+    {
+      "id": "B0002",
+      "type": "invariant",
+      "signal": "bg_ack_0"
+    },
+    {
+      "id": "B0056",
+      "type": "invariant",
+      "signal": "bg_ack_9"
+    },
+    {
+      "id": "B0011",
+      "type": "bounded_delay",
+      "trigger": "bg_on_1",
+      "target": "bg_ack_1",
+      "min_delay": 0,
+      "max_delay": 1
+    },
+    {
+      "id": "B0024",
+      "type": "absence",
+      "signal": "bg_off_3"
+    },
+    {
+      "id": "B0054",
+      "type": "absence",
+      "signal": "bg_off_8"
+    },
+    {
+      "id": "B0048",
+      "type": "absence",
+      "signal": "bg_off_7"
+    },
+    {
+      "id": "B0031",
+      "type": "invariant",
+      "signal": "bg_on_5"
+    },
+    {
+      "id": "B0051",
+      "type": "response",
+      "trigger": "bg_on_8",
+      "target": "bg_ack_8",
+      "deadline": 0
+    },
+    {
+      "id": "B0019",
+      "type": "invariant",
+      "signal": "bg_on_3"
+    },
+    {
+      "id": "B0038",
+      "type": "invariant",
+      "signal": "bg_ack_6"
+    },
+    {
+      "id": "B0039",
+      "type": "response",
+      "trigger": "bg_on_6",
+      "target": "bg_ack_6",
+      "deadline": 2
+    },
+    {
+      "id": "B0021",
+      "type": "response",
+      "trigger": "bg_on_3",
+      "target": "bg_ack_3",
+      "deadline": 3
+    },
+    {
+      "id": "B0009",
+      "type": "response",
+      "trigger": "bg_on_1",
+      "target": "bg_ack_1",
+      "deadline": 1
+    },
+    {
+      "id": "B0018",
+      "type": "absence",
+      "signal": "bg_off_2"
+    },
+    {
+      "id": "B0034",
+      "type": "recurrence",
+      "signal": "bg_on_5",
+      "window": 4
+    },
+    {
+      "id": "B0055",
+      "type": "invariant",
+      "signal": "bg_on_9"
+    },
+    {
+      "id": "B0052",
+      "type": "recurrence",
+      "signal": "bg_on_8",
+      "window": 6
+    },
+    {
+      "id": "B0012",
+      "type": "absence",
+      "signal": "bg_off_1"
+    },
+    {
+      "id": "B0043",
+      "type": "invariant",
+      "signal": "bg_on_7"
+    },
+    {
+      "id": "B0028",
+      "type": "recurrence",
+      "signal": "bg_on_4",
+      "window": 1
+    },
+    {
+      "id": "B0022",
+      "type": "recurrence",
+      "signal": "bg_on_3",
+      "window": 2
+    },
+    {
+      "id": "B0033",
+      "type": "response",
+      "trigger": "bg_on_5",
+      "target": "bg_ack_5",
+      "deadline": 2
+    },
+    {
+      "id": "B0041",
+      "type": "bounded_delay",
+      "trigger": "bg_on_6",
+      "target": "bg_ack_6",
+      "min_delay": 0,
+      "max_delay": 3
+    },
+    {
+      "id": "B0006",
+      "type": "absence",
+      "signal": "bg_off_0"
+    },
+    {
+      "id": "B0023",
+      "type": "bounded_delay",
+      "trigger": "bg_on_3",
+      "target": "bg_ack_3",
+      "min_delay": 0,
+      "max_delay": 4
+    },
+    {
+      "id": "B0047",
+      "type": "bounded_delay",
+      "trigger": "bg_on_7",
+      "target": "bg_ack_7",
+      "min_delay": 0,
+      "max_delay": 4
+    },
+    {
+      "id": "B0037",
+      "type": "invariant",
+      "signal": "bg_on_6"
+    },
+    {
+      "id": "B0016",
+      "type": "recurrence",
+      "signal": "bg_on_2",
+      "window": 6
+    },
+    {
+      "id": "B0005",
+      "type": "bounded_delay",
+      "trigger": "bg_on_0",
+      "target": "bg_ack_0",
+      "min_delay": 0,
+      "max_delay": 0
+    },
+    {
+      "id": "B0026",
+      "type": "invariant",
+      "signal": "bg_ack_4"
+    },
+    {
+      "id": "B0017",
+      "type": "bounded_delay",
+      "trigger": "bg_on_2",
+      "target": "bg_ack_2",
+      "min_delay": 0,
+      "max_delay": 3
+    },
+    {
+      "id": "B0036",
+      "type": "absence",
+      "signal": "bg_off_5"
+    },
+    {
+      "id": "B0050",
+      "type": "invariant",
+      "signal": "bg_ack_8"
+    },
+    {
+      "id": "B0046",
+      "type": "recurrence",
+      "signal": "bg_on_7",
+      "window": 6
+    },
+    {
+      "id": "B0035",
+      "type": "bounded_delay",
+      "trigger": "bg_on_5",
+      "target": "bg_ack_5",
+      "min_delay": 0,
+      "max_delay": 0
+    },
+    {
+      "id": "B0007",
+      "type": "invariant",
+      "signal": "bg_on_1"
+    },
+    {
+      "id": "B0030",
+      "type": "absence",
+      "signal": "bg_off_4"
+    },
+    {
+      "id": "B0025",
+      "type": "invariant",
+      "signal": "bg_on_4"
+    },
+    {
+      "id": "B0045",
+      "type": "response",
+      "trigger": "bg_on_7",
+      "target": "bg_ack_7",
+      "deadline": 3
+    },
+    {
+      "id": "B0004",
+      "type": "recurrence",
+      "signal": "bg_on_0",
+      "window": 1
+    },
+    {
+      "id": "B0014",
+      "type": "invariant",
+      "signal": "bg_ack_2"
+    },
+    {
+      "id": "B0008",
+      "type": "invariant",
+      "signal": "bg_ack_1"
+    },
+    {
+      "id": "B0013",
+      "type": "invariant",
+      "signal": "bg_on_2"
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "alarm"
+    },
+    {
+      "id": "B0001",
+      "type": "invariant",
+      "signal": "bg_on_0"
+    },
+    {
+      "id": "B0053",
+      "type": "bounded_delay",
+      "trigger": "bg_on_8",
+      "target": "bg_ack_8",
+      "min_delay": 0,
+      "max_delay": 2
+    },
+    {
+      "id": "B0010",
+      "type": "recurrence",
+      "signal": "bg_on_1",
+      "window": 2
+    },
+    {
+      "id": "B0057",
+      "type": "response",
+      "trigger": "bg_on_9",
+      "target": "bg_ack_9",
+      "deadline": 2
+    }
+  ],
+  "scenario": "varied-mis2",
+  "expected_status": "unsat",
+  "dataset_type": "synthetic",
+  "variant": "varied"
+}

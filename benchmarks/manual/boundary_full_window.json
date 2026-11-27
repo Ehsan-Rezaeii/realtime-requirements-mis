@@ -1,0 +1,20 @@
+{
+  "case_id": "boundary_full_window",
+  "N": 5,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "recurrence",
+      "signal": "init_pulse",
+      "window": 6
+    },
+    {
+      "id": "R2",
+      "type": "bounded_delay",
+      "trigger": "init_pulse",
+      "target": "system_ready",
+      "min_delay": 2,
+      "max_delay": 3
+    }
+  ]
+}

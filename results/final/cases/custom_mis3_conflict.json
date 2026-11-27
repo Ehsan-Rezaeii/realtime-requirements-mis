@@ -1,0 +1,51 @@
+{
+  "case_id": "custom_mis3_conflict",
+  "N": 5,
+  "injected_ids": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "type": "recurrence",
+      "signal": "overheat",
+      "window": 2
+    },
+    {
+      "id": "R2",
+      "type": "bounded_delay",
+      "trigger": "overheat",
+      "target": "cooler_on",
+      "min_delay": 0,
+      "max_delay": 1
+    },
+    {
+      "id": "R3",
+      "type": "absence",
+      "signal": "cooler_on"
+    },
+    {
+      "id": "B1",
+      "type": "invariant",
+      "signal": "main_valve"
+    },
+    {
+      "id": "B2",
+      "type": "absence",
+      "signal": "manual_override"
+    },
+    {
+      "id": "B3",
+      "type": "response",
+      "trigger": "main_valve",
+      "target": "pressure_ok",
+      "deadline": 2
+    }
+  ],
+  "dataset_type": "manual",
+  "expected_status": "unsat",
+  "scenario": "manual",
+  "source_path": "benchmarks/manual/custom_mis3_conflict.json"
+}

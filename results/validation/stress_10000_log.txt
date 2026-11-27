@@ -1,0 +1,19 @@
+Case file: mixed_mis3_10000
+/bin/bash: line 1: /usr/bin/time: No such file or directory
+Case file: custom_diverse_mis3_10000
+/bin/bash: line 1: /usr/bin/time: No such file or directory
+
+Retry using Python perf_counter. The first invocation had no /usr/bin/time and started no cases.
+Host: Linux-6.18.57-x86_64-with-glibc2.41. Python: 3.12.14. 30 s process wall deadline.
+Case: mixed_mis3_10000
+Rules: 10000 N: 5 Consistency: unsat
+MIS: ['R1', 'R3', 'R2']
+MIS size: 3
+MIS valid: True
+Wall seconds: 8.003; exit: 0
+Case: custom_diverse_mis3_10000
+Rules: 10000 N: 5 Consistency: unsat
+MIS: ['R3', 'R1', 'R2']
+MIS size: 3
+MIS valid: True
+Wall seconds: 7.515; exit: 0

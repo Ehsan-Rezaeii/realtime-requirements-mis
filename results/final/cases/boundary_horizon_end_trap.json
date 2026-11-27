@@ -1,0 +1,27 @@
+{
+  "case_id": "boundary_horizon_end_trap",
+  "N": 5,
+  "injected_ids": [
+    "R1",
+    "R2"
+  ],
+  "rules": [
+    {
+      "id": "R1",
+      "type": "invariant",
+      "signal": "request"
+    },
+    {
+      "id": "R2",
+      "type": "bounded_delay",
+      "trigger": "request",
+      "target": "grant",
+      "min_delay": 1,
+      "max_delay": 2
+    }
+  ],
+  "dataset_type": "manual",
+  "expected_status": "unsat",
+  "scenario": "manual",
+  "source_path": "benchmarks/manual/boundary_horizon_end_trap.json"
+}

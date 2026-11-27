@@ -1,0 +1,24 @@
+{
+  "case_id": "fret_liquid_mixer_projection",
+  "N": 5,
+  "rules": [
+    {
+      "id": "LM-005",
+      "type": "response",
+      "trigger": "liquid_level_2",
+      "target": "timer_60sec_start",
+      "deadline": 0
+    },
+    {
+      "id": "LM-007",
+      "type": "response",
+      "trigger": "timer_60sec_expire",
+      "target": "timer_120sec_start",
+      "deadline": 0
+    }
+  ],
+  "dataset_type": "public_subset",
+  "expected_status": "sat",
+  "scenario": "public_subset",
+  "source_path": "benchmarks/public/fret_liquid_mixer_projection.json"
+}

@@ -1,0 +1,30 @@
+{
+  "cases": 58,
+  "runs": 2360,
+  "statuses": {
+    "ok": 2250,
+    "timeout": 110,
+    "unknown": 0,
+    "crash": 0,
+    "error": 0,
+    "invalid": 0,
+    "not_run": 0
+  },
+  "valid_mis_runs": 744,
+  "independent_pass": 329,
+  "independent_fail": 0,
+  "independent_not_checked": 0,
+  "rq1_scale_speedup_range": [
+    1.697765,
+    3.1718651
+  ],
+  "code_commit": "4301d213b3c06dbce7759fed39a2c77273757664",
+  "pilot_incremental_wins": [
+    4,
+    4
+  ],
+  "pilot_core_wins": [
+    3,
+    4
+  ]
+}

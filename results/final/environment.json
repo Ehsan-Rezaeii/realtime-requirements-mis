@@ -1,0 +1,221 @@
+{
+  "config": {
+    "N": 5,
+    "repeats": 10,
+    "timeout_ms": 700,
+    "operation_seconds": 3.0,
+    "memory_mib": 768,
+    "solver_seed": 17,
+    "bounds": [
+      2,
+      3,
+      4,
+      5,
+      10,
+      20,
+      50
+    ],
+    "scenarios": [
+      "always_sat",
+      "always_unsat",
+      "late_conflict",
+      "boundary_delay"
+    ],
+    "synthetic": [
+      {
+        "family": "scale-mixed",
+        "sizes": [
+          12,
+          30,
+          60,
+          120,
+          240,
+          500,
+          1000,
+          2000,
+          5000
+        ],
+        "mis_size": 3,
+        "seed": 42,
+        "style": "mixed",
+        "variant": "classic"
+      },
+      {
+        "family": "varied-mis2",
+        "sizes": [
+          30,
+          60
+        ],
+        "mis_size": 2,
+        "seed": 143,
+        "style": "mixed",
+        "variant": "varied"
+      },
+      {
+        "family": "varied-mis3",
+        "sizes": [
+          30,
+          60
+        ],
+        "mis_size": 3,
+        "seed": 291,
+        "style": "mixed",
+        "variant": "varied"
+      },
+      {
+        "family": "varied-mis4",
+        "sizes": [
+          30,
+          60
+        ],
+        "mis_size": 4,
+        "seed": 518,
+        "style": "mixed",
+        "variant": "varied"
+      },
+      {
+        "family": "simple-mis4",
+        "sizes": [
+          30
+        ],
+        "mis_size": 4,
+        "seed": 31,
+        "style": "simple",
+        "variant": "classic"
+      },
+      {
+        "family": "simple-sat",
+        "sizes": [
+          30
+        ],
+        "mis_size": 3,
+        "seed": 71,
+        "style": "simple",
+        "variant": "classic",
+        "sat": true
+      },
+      {
+        "family": "varied-sat",
+        "sizes": [
+          60
+        ],
+        "mis_size": 3,
+        "seed": 187,
+        "style": "mixed",
+        "variant": "varied",
+        "sat": true
+      }
+    ],
+    "files": [
+      {
+        "path": "benchmarks/manual/boundary_full_window.json",
+        "dataset_type": "manual",
+        "expected": "sat"
+      },
+      {
+        "path": "benchmarks/manual/boundary_horizon_end_trap.json",
+        "dataset_type": "manual",
+        "expected": "unsat"
+      },
+      {
+        "path": "benchmarks/manual/boundary_immediate_response.json",
+        "dataset_type": "manual",
+        "expected": "sat"
+      },
+      {
+        "path": "benchmarks/manual/boundary_observation_conflict.json",
+        "dataset_type": "manual",
+        "expected": "unsat"
+      },
+      {
+        "path": "benchmarks/manual/boundary_vacuous_no_trigger.json",
+        "dataset_type": "manual",
+        "expected": "sat"
+      },
+      {
+        "path": "benchmarks/manual/custom_mis2_conflict.json",
+        "dataset_type": "manual",
+        "expected": "unsat"
+      },
+      {
+        "path": "benchmarks/manual/custom_mis3_conflict.json",
+        "dataset_type": "manual",
+        "expected": "unsat"
+      },
+      {
+        "path": "benchmarks/manual/custom_mis4_conflict.json",
+        "dataset_type": "manual",
+        "expected": "unsat"
+      },
+      {
+        "path": "benchmarks/manual/custom_sat_all_patterns.json",
+        "dataset_type": "manual",
+        "expected": "sat"
+      },
+      {
+        "path": "benchmarks/manual/custom_sat_independent.json",
+        "dataset_type": "manual",
+        "expected": "sat"
+      },
+      {
+        "path": "benchmarks/public/fret_liquid_mixer_projection.json",
+        "dataset_type": "public_subset",
+        "expected": "sat"
+      },
+      {
+        "path": "benchmarks/public/hanfor_boolean_example.json",
+        "dataset_type": "public_subset",
+        "expected": "sat"
+      }
+    ]
+  },
+  "python": "3.12.14",
+  "z3": "4.15.4",
+  "packages": {
+    "z3-solver": "4.15.4.0",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.1",
+    "scipy": "1.15.2"
+  },
+  "system": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cpu": "INTEL(R) XEON(R) PLATINUM 8573C",
+  "logical_cores": 3,
+  "available_cores": 3,
+  "host_ram": "10207480 kB",
+  "runtime_limits": {
+    "memory.max": "8589934592",
+    "cpu.max": "200000 100000"
+  },
+  "environment": "local CPU runtime",
+  "memory_enforcement": "RLIMIT_AS per worker",
+  "source_sha256": {
+    "__init__.py": "f8c070d77bc00d8d437b593638f61948ec45a90a9d6359eff1d614deabc97eab",
+    "__main__.py": "307299fda7b77d22c64cb51430ec75e5f59d78e9c948786afb3b2544fe45e4b7",
+    "cli.py": "a4ca1d6bf6ea26fc0c6b7797426408cec0c825e8e5a45a05e28ce24d27655547",
+    "dataio.py": "1eb30012d81fc3a9d1662783feb677a10a2779ca69ffcab1a51fedd88f9887be",
+    "experiments.py": "9fc6fdf0e067193a4d544d6ec92b25ce5d793e60127ea36c4d0f07c8213ad05e",
+    "generator.py": "3d152753930c9c951b3586a6e3719f6803a88446e270f42d4ec01ae1196b0ec3",
+    "mis.py": "d5251880be38fe98b0ed6a97fd94232d88f6b5e2b44f3cd38d0967e8ec3b6107",
+    "model.py": "c4006c411a0c0ea9422bfaa9e855bfa907509869368df62358044388cd81bcc5",
+    "solver.py": "651c325a4534052c0299b8e9e1df625bebe79d953c97d1719a8aac470cadef25",
+    "study.py": "37d2dc435fa8340e2e79e572e6aab7735e17d43c4f7048d2d80516a3a16cfa6a",
+    "study_worker.py": "2f0f8decb440ce4910ac0fbc44c6bde682c7dfe278fc44772b142da353365f55"
+  },
+  "input_sha256": {
+    "benchmarks/manual/boundary_full_window.json": "474b8e824c4161e5c184345191175893e7f858067f2f95fc17e28aba0b89e865",
+    "benchmarks/manual/boundary_horizon_end_trap.json": "ff8e01f106ae64964329b47d2ab0c74587c96c7f42d9d933bae056da21421719",
+    "benchmarks/manual/boundary_immediate_response.json": "95ee533531bff505f7224c483b0990a252413d5addbe63ee03f5b9954efa8ec2",
+    "benchmarks/manual/boundary_observation_conflict.json": "3065e9cd553e0c06bafcb69ae9ea84673add3a7c741f413046fc2ba346962221",
+    "benchmarks/manual/boundary_vacuous_no_trigger.json": "185b08ea2a7c010f3417b18fba486823a3e1d26898a2db895e6a1b47c14851e2",
+    "benchmarks/manual/custom_mis2_conflict.json": "39c9ccffbc9d0065b7c0cb8e56d4f96c98fbb00ce5770385fd13fadc34166904",
+    "benchmarks/manual/custom_mis3_conflict.json": "06684451cef5fb8dff413bed18dc4eddda202930b13c93fd71547b598eb609a6",
+    "benchmarks/manual/custom_mis4_conflict.json": "e1b485f2866325d68c9297544bcbe89ffd886fb5ba55f5e8b31cbf14f68c2cfb",
+    "benchmarks/manual/custom_sat_all_patterns.json": "c5548e831b6060585e57492bf7516205d88eb50944790abea047c03ba2ae7deb",
+    "benchmarks/manual/custom_sat_independent.json": "1c88ef884660b923df62c13672b45651156c89716d2f0350750943f7cdb39bf3",
+    "benchmarks/public/fret_liquid_mixer_projection.json": "00e4c032c8dec1c4e71f28290e3f6eaab0faf97786b9a3b36947ed9b345573c9",
+    "benchmarks/public/hanfor_boolean_example.json": "4428df5e73bfe42023aad7e677ae79c989ee0f8468a74e0cec7c3eeb7b2185b9"
+  },
+  "git_commit": "4301d213b3c06dbce7759fed39a2c77273757664",
+  "git_status": "",
+  "started_utc": "2026-11-27T10:15:41.581266+00:00"
+}

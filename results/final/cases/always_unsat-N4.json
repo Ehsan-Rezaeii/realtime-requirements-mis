@@ -1,0 +1,20 @@
+{
+  "case_id": "always_unsat-N4",
+  "scenario": "always_unsat",
+  "N": 4,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "invariant",
+      "signal": "a"
+    },
+    {
+      "id": "R2",
+      "type": "absence",
+      "signal": "a"
+    }
+  ],
+  "observations": [],
+  "expected_status": "unsat",
+  "dataset_type": "temporal_scenario"
+}

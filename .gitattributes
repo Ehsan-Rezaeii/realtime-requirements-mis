@@ -1,0 +1,9 @@
+# Preserve historical handoff inputs and upstream source bytes.
+benchmarks/manual/*.json -text whitespace=cr-at-eol
+benchmarks/manifest.csv -text whitespace=cr-at-eol
+benchmarks/public/source/HANFOR_example.req -text -whitespace
+results/**/*.csv -text whitespace=cr-at-eol
+# Keep generated Matplotlib SVGs and captured validation output byte-for-byte.
+results/**/*.svg -whitespace
+results/validation/*.txt -whitespace
+results/validation/hanfor_shared_subset.csv -whitespace

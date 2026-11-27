@@ -1,89 +1,67 @@
-# Real-Time Requirements MIS
+# بررسی سازگاری نیازمندی‌های زمان‌حقیقی
 
-بررسی سازگاری نیازمندی‌های زمانی و استخراج زیرمجموعه ناسازگار کمینه (MIS) با Python و Z3.
+پروژهٔ درس روش‌های رسمی، تیم ۳. ابزار با Python و Z3 می‌سنجد آیا یک رد بولی گسسته در افق تعیین‌شده می‌تواند همهٔ نیازمندی‌ها را ارضا کند. در حالت ناسازگار یک زیرمجموعهٔ ناسازگار کمینه یا MIS گزارش می‌دهد. اجرای پروژه روی CPU است.
 
-## نصب و اجرا
+## اجرای سریع
 
-Python 3.9 یا جدیدتر لازم است. دستورها را در پوشه اصلی پروژه اجرا کنید:
-
-```bash
-python -m pip install -r requirements.txt
-python run.py demo
-```
-
-برای اجرای تست‌ها:
+Python 3.12 پیشنهاد می‌شود و نسخهٔ آزموده‌شده است.
 
 ```bash
-PYTHONPATH=src python -m unittest discover -s tests -v
+python3 -m venv .venv
+source .venv/bin/activate
+bash setup.sh
+bash scripts/run_project.sh demo
+bash scripts/run_project.sh test
 ```
 
-در Windows PowerShell:
-
-```powershell
-$env:PYTHONPATH="src"
-python -m unittest discover -s tests -v
-```
-
-## داده و بررسی سازگاری
-
-ورودی‌های نمونه در `benchmarks/pilot/` قرار دارند. برای ساخت ورودی جدید و بررسی آن:
+در Windows می‌توانید محیط را با `.venv\Scripts\Activate.ps1` فعال و بسته‌ها را با `python -m pip install -r requirements.txt` نصب کنید. برای تست در PowerShell ابتدا `$env:PYTHONPATH="src"` و سپس `python -m unittest discover -s tests -v` را اجرا کنید.
 
 ```bash
-python run.py generate --size 30 --mis-size 3 --style mixed --N 5 --seed 42 --output benchmarks/generated/my_case.json
-python run.py check --input benchmarks/generated/my_case.json --method core
-python run.py check --input benchmarks/pilot/mixed_mis3_30.json --method incremental
+python run.py generate --size 60 --mis-size 4 --N 5 --seed 17 --variant varied --output benchmarks/generated/sample.json
+python run.py check --input benchmarks/generated/sample.json --method quickxplain
+python run.py check --input benchmarks/manual/custom_sat_all_patterns.json
 ```
 
-روش‌های موجود: `nonincremental`، `incremental` و `core` (Unsat Core همراه با حذف تکراری). هر روش یک MIS پیدا می‌کند؛ حذف هر عضو آن باید مجموعه را سازگار کند. MIS الزاماً کوچک‌ترین مجموعه از نظر تعداد اعضا نیست و Unsat Core نیز الزاماً کمینه نیست.
+مولد با گزینهٔ `--sat` یک نمونهٔ سازگار می‌سازد. گزینهٔ `--style simple` قواعد پس‌زمینهٔ تک‌سیگنالی ایجاد می‌کند. در مثال بررسی، `core` پیش‌فرض است. گزینه‌های `nonincremental`، `incremental` و `quickxplain` مسیرهای دیگر MIS را فعال می‌کنند. `--timeout-ms` مهلت هر پرس‌وجوی CLI است. مطالعهٔ پژوهشی مهلت کل عملیات را نیز اعمال می‌کند.
 
-فرمت ورودی:
+## خواندن خروجی و مدل
 
-```json
-{
-  "case_id": "example",
-  "N": 5,
-  "rules": [
-    {"id": "R1", "type": "invariant", "signal": "alarm"},
-    {"id": "R2", "type": "absence", "signal": "alarm"}
-  ]
-}
-```
+- **SAT** یعنی شاهدی برای همهٔ قواعد در گام‌های ۰ تا N هست.
+- **UNSAT** یعنی در مدل محدود هیچ رد سازگاری وجود ندارد.
+- **UNKNOWN** یعنی حل‌کننده در شرایط اجرا به تصمیم قطعی نرسیده است.
+- **MIS** مجموعه‌ای UNSAT است که با حذف هر عضو SAT می‌شود. یک ورودی می‌تواند چند MIS داشته باشد.
+- **Unsat Core** گروهی از قواعد شرکت‌کرده در یک برهان UNSAT است. مسیر `core` آن را با حذف آزمایشی کوچک می‌کند و سپس MIS ارزیابی می‌شود.
+- **افزایشی** یعنی قواعد یک‌بار در Z3 رمزگذاری می‌شوند و پرچم‌های فعال‌ساز در هر پرس‌وجو تغییر می‌کنند.
 
-زمان گسسته و شامل نقاط `0` تا `N` است. سیگنال‌ها بولی‌اند. الگوهای پشتیبانی‌شده:
+پنج الگو عبارت‌اند از `invariant` برای الزام همیشگی، `absence` برای منع همیشگی، `response` برای پاسخ تا مهلت، `recurrence` برای وقوع در هر پنجره، و `bounded_delay` برای پاسخ بین دو تأخیر. مشاهدات به‌عنوان قیود ثابت محیطی در نظر گرفته می‌شوند. پاسخ باید در افق جا شود و اگر محرک هرگز برقرار نشود، الزام می‌تواند به‌صورت تهی ارضا شود. [معنای رسمی و نمونه‌ها](docs/TEMPORAL_PATTERNS.md)
 
-- `invariant`: سیگنال در همه گام‌ها درست است.
-- `absence`: سیگنال در همه گام‌ها نادرست است.
-- `response`: پس از رخداد `trigger`، سیگنال `target` از همان لحظه تا `deadline` گام بعد و درون افق رخ می‌دهد.
-- `recurrence`: در هر پنجره کامل با طول `window` دست‌کم یک رخداد وجود دارد.
-- `bounded_delay`: پاسخ بین `min_delay` و `max_delay` گام بعد و درون افق رخ می‌دهد؛ اگر زمان مجازی باقی نماند، رخداد محرک ناممکن است.
-
-فیلد اختیاری `observations` مشاهده‌های ثابت محیطی است، مانند `{"signal":"request","time":3,"value":true}`؛ این مشاهده‌ها عضو MIS نیستند. فیلدهای `seed` و `injected_ids` نیز اختیاری‌اند.
-
-## آزمایش و نمودار
-
-پارامترهای آزمایش در `experiments/config.json` هستند:
+## آزمایش و بازتولید
 
 ```bash
-python run.py benchmark --mode all --config experiments/config.json
-python analysis/plot_results.py --input results/generated/rq1_consistency.csv --output analysis/figures/rq1.png
-python analysis/plot_results.py --input results/generated/rq2_rq3_rq5_mis.csv --output analysis/figures/rq5.png
+bash scripts/run_project.sh pilot
+bash scripts/run_project.sh full
+python analysis/analyze_results.py --study results/final
 ```
 
-حالت‌های `consistency`، `mis` و `bounds` را می‌توان جدا اجرا کرد. خروجی‌های CSV و مشخصات محیط در `results/generated/` ساخته می‌شوند. اجرای مجدد، فایل‌های هم‌نام را بازنویسی می‌کند. خروجی‌ها و نمودارهای تولیدشده در Git ثبت نمی‌شوند.
+فرمان `full` تنظیمات از پیش ثبت‌شده را اجرا و خروجی را در `results/reproduced-final/` می‌نویسد. اجرای همان فرمان و همان مقصد بعد از وقفه از رکوردهای تکمیل‌شده استفاده می‌کند. روی محیط متفاوت یک مقصد تازه انتخاب کنید. برای Colab از [نوت‌بوک](notebooks/FINAL_COLAB.ipynb) با ZIP استخراج‌شده یا نسخهٔ موجود در GitHub استفاده کنید. [جزئیات بازتولید](docs/REPRODUCIBILITY.md)
 
-زمان‌سنجی شامل ساخت حل‌کننده و حل مسئله است؛ اعتبارسنجی MIS جدا انجام می‌شود. `timeout_ms` محدودیت هر فراخوانی Z3 است. پاسخ `unknown` به معنای SAT یا UNSAT نیست.
+### اجرا در Google Colab
 
-داده‌ها مصنوعی‌اند و تغییر seed فقط ترتیب قوانین را تغییر می‌دهد. ناسازگاری در انتهای افق می‌تواند ناشی از قرارداد `bounded_delay` باشد. در سناریوی `late_conflict` آزمایش کران، مشاهده زمان ۳ فقط برای `N >= 3` اضافه می‌شود. نتایج آزمایش‌ها تضمین برتری عمومی یک روش نیستند.
+1. [نوت‌بوک شاخهٔ انتشار](https://colab.research.google.com/github/Ehsan-Rezaeii/realtime-requirements-mis/blob/final-project-completion/notebooks/FINAL_COLAB.ipynb) را باز کنید. از **Runtime → Change runtime type**، گزینهٔ **CPU** را انتخاب کنید.
+2. **Runtime → Run all** را بزنید. نوت‌بوک نسخهٔ شاخهٔ انتشار را دریافت می‌کند و پس از نصب وابستگی‌ها Demo، تست‌ها، پایلوت و نمودارهای پایلوت را اجرا می‌کند.
+3. مقدار `RUN_FULL` پیش‌فرض `False` است. برای اجرای کامل آن را `True` کنید و سلول «اجرای اصلی» و سلول‌های بعد را دوباره اجرا کنید. برای ذخیره در Drive، پیش از پایلوت `SAVE_TO_DRIVE = True` بگذارید.
+4. برای شاخه، تگ یا کامیت دیگری، یک سلول کد پیش از نخستین سلول کد اضافه کنید و `%env TEAM3_REF=نام_شاخه_یا_تگ_یا_شناسه_کامل_کامیت` را اجرا کنید. نوت‌بوک نسخه را در پوشهٔ کاری جدا باز می‌کند.
 
-## ساختار
+**اجرا از ZIP**. ZIP را در Colab بارگذاری و استخراج کنید. در سلولی پیش از کد راه‌اندازی، `%env TEAM3_PROJECT=/content/realtime-requirements-mis` را با مسیر واقعی پوشهٔ دارای `setup.sh` اجرا کنید. اگر قبلاً `TEAM3_REF` را تنظیم کرده‌اید، با `os.environ.pop("TEAM3_REF", None)` پس از `import os` آن را پاک کنید. نصب وابستگی‌ها همچنان به PyPI دسترسی می‌خواهد.
 
-```text
-src/team3fm/              # مدل، حل‌کننده، MIS، مولد داده و CLI
-tests/                   # تست‌های صحت و آزمایش‌ها
-benchmarks/pilot/         # ورودی‌های نمونه JSON
-experiments/config.json  # تنظیمات آزمایش
-analysis/plot_results.py # رسم نمودار از CSV
-run.py                   # نقطه ورود اجرا
-pyproject.toml           # تنظیمات بسته Python
-requirements.txt         # وابستگی‌های اجرا و نمودار
-```
+| پوشه | محتوا |
+|---|---|
+| `src/team3fm` | مدل، حل‌کننده، استخراج، مولد و CLI |
+| `benchmarks` | ورودی‌های دستی، مصنوعی پایه و عمومی، جدول منشأ |
+| `experiments` | تنظیمات پایلوت، مطالعهٔ اصلی و پایلوت تاریخی |
+| `results/final` | دادهٔ خام، جدول‌ها، نمودارها، مانیفست و گزارش محیط |
+| `results/archive` | یادداشت منشأ اجراهای Windows و بایگانی محلی |
+| `analysis`، `scripts`، `tests` | تحلیل، اعتبارسنج مستقل، نصب و آزمون‌ها |
+| `docs`، `reports` | مستندات فارسی، گزارش فنی و مواد دفاع |
+
+اندازه‌گیری‌ها نشان دادند استفادهٔ مجدد از حل‌کننده در دسته‌های چند پرس‌وجویی رمزگذاری را ارزان‌تر می‌کند. در استخراج، Core و QuickXplain با تعداد فراخوانی کمتری روی خانوادهٔ بزرگ قابل مقایسه‌اند. آزمایش افق یک ناسازگاری با ورود رخداد و یک سازگاری پس از فراهم شدن گام پاسخ نشان می‌دهد. شمار موفقیت، timeout و اندازهٔ MIS در گزارش آمده است. نتیجه‌ها محدود به مدل بولی کراندار و مجموعه‌های انتخاب‌شده‌اند. [گزارش فنی](reports/FINAL_REPORT_FA.md) · [نسخهٔ PDF](reports/FINAL_REPORT_FA.pdf) · [تحویل و وضعیت الزامات](FINAL_HANDOFF.md)

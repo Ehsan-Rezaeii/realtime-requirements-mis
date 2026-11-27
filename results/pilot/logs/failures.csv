@@ -1,0 +1,1 @@
+run_id,experiment_id,case_id,scenario,method,dataset_type,num_rules,N,seed,solver_seed,repetition,timeout_ms,operation_seconds,memory_mib,expected,result,status,wall_time_seconds,build_seconds,solving_seconds,validation_seconds,worker_seconds,solver_calls,num_checks,mis_size,mis_ids,core_size,minimal,injection_recovered,injected_ids,outcomes,error,timestamp

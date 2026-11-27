@@ -1,0 +1,17 @@
+# منابع
+
+1. Leonardo de Moura and Nikolaj Bjørner. *Z3: An Efficient SMT Solver*. TACAS, 2008. مقالهٔ معرفی معماری SMT. [ناشر](https://doi.org/10.1007/978-3-540-78800-3_24) · [مخزن رسمی](https://github.com/Z3Prover/z3)
+2. Nikolaj Bjørner, Leonardo de Moura, Lev Nachmanson, Christoph Wintersteiger. *Programming Z3*. راهنمای فرض‌ها، هسته‌های UNSAT و مدل‌ها. [متن نویسندگان](https://theory.stanford.edu/~nikolaj/programmingz3.html)
+3. Matthew B. Dwyer, George S. Avrunin, James C. Corbett. *Patterns in Property Specifications for Finite-State Verification*. ICSE, 1999. [ناشر](https://doi.org/10.1145/302405.302672)
+4. Sascha Konrad and Betty H. C. Cheng. *Real-Time Specification Patterns*. ICSE, 2005. [ناشر](https://doi.org/10.1145/1062455.1062526)
+5. Ulrich Junker. *QuickXplain: Preferred Explanations and Relaxations for Over-Constrained Problems*. AAAI, 2004. [مقاله](https://aaai.org/Papers/AAAI/2004/AAAI04-027.pdf)
+6. Patrick Rodler. *A formal proof and simple explanation of the QuickXplain algorithm*. Artificial Intelligence Review, انتشار آنلاین ۲۰۲۲. [مقاله و اثبات](https://doi.org/10.1007/s10462-022-10149-w)
+7. Mark H. Liffiton and Karem A. Sakallah. *Algorithms for Computing Minimal Unsatisfiable Subsets of Constraints*. Journal of Automated Reasoning, 2008. [ناشر](https://doi.org/10.1007/s10817-007-9084-z)
+8. Mark H. Liffiton, Alessandro Previti, Ammar Malik, João Marques-Silva. *Fast, Flexible MUS Enumeration*. Constraints 21, 2016. [صفحهٔ نویسنده](https://markliffiton.com/marco/) · [کد MARCO](https://github.com/liffiton/MARCO)
+9. Dimitra Giannakopoulou و همکاران. *Formal Requirements Elicitation with FRET*. ۲۰۲۰. [رکورد NASA](https://ntrs.nasa.gov/citations/20200001989)
+10. Anastasia Mavridou, Andreas Katis, Matthew Alan Aoki, Marie Farrell. *Requirements Elicitation, Formalization, and Analysis with FRET: A Tutorial*. FM 2026. [NASA](https://ntrs.nasa.gov/citations/20260003596)
+11. Joost J. Joosten, Marina López Chamosa, Sofía Santiago Fernández. *Coherency through formalisations of Structured Natural Language, A case study on FRETish*. پیش‌چاپ، ۲۰۲۶. [arXiv](https://arxiv.org/abs/2605.10462)
+12. *Hanfor Documentation*. معنای consistency، rt-inconsistency و vacuity. [مستند ابزار](https://ultimate-pa.github.io/hanfor/introduction/index.html) · [مقالهٔ منشأ rt-inconsistency](https://ultimate-pa.github.io/hanfor/references/publications/rt-inconsistency.pdf)
+13. Anastasia Mavridou و همکاران. *The Ten Lockheed Martin Cyber-Physical Challenges: Formalized, Analyzed, and Explained*. RE 2020. [ناشر](https://ieeexplore.ieee.org/document/9218211)
+14. András Vargha and Harold D. Delaney. *A Critique and Improvement of the CL Common Language Effect Size Statistics of McGraw and Wong*. ۲۰۰۰. [ناشر](https://doi.org/10.3102/10769986025002101)
+15. Sture Holm. *A Simple Sequentially Rejective Multiple Test Procedure*. ۱۹۷۹. [ناشر](https://www.jstor.org/stable/4615733)

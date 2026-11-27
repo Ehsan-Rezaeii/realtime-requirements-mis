@@ -1,0 +1,35 @@
+{
+  "case_id": "boundary_immediate_response",
+  "N": 5,
+  "rules": [
+    {
+      "id": "R1",
+      "type": "invariant",
+      "signal": "req"
+    },
+    {
+      "id": "R2",
+      "type": "invariant",
+      "signal": "ack"
+    },
+    {
+      "id": "R3",
+      "type": "response",
+      "trigger": "req",
+      "target": "ack",
+      "deadline": 0
+    },
+    {
+      "id": "R4",
+      "type": "bounded_delay",
+      "trigger": "req",
+      "target": "ack",
+      "min_delay": 0,
+      "max_delay": 0
+    }
+  ],
+  "dataset_type": "manual",
+  "expected_status": "sat",
+  "scenario": "manual",
+  "source_path": "benchmarks/manual/boundary_immediate_response.json"
+}

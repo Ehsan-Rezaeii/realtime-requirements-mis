@@ -27,7 +27,7 @@ def validate_rules(rules, N):
         if rid in ids:
             raise ValueError(f"duplicate rule id: {rid}")
         ids.add(rid)
-        if kind not in PATTERNS:
+        if not isinstance(kind, str) or kind not in PATTERNS:
             raise ValueError(f"unsupported requirement type: {kind}")
 
         fields = ("signal",) if kind in ("invariant", "absence", "recurrence") else ("trigger", "target")
@@ -78,12 +78,11 @@ def make_trace(rules, N, observations=None):
     observations = validate_observations(observations, N)
     names = set()
     for rule in rules:
-        for key in ("signal", "trigger", "target"):
-            if key in rule:
-                names.add(rule[key])
+        fields = ("signal",) if rule["type"] in ("invariant", "absence", "recurrence") else ("trigger", "target")
+        names.update(rule[field] for field in fields)
     for obs in observations:
         names.add(obs["signal"])
-    return {name: [Bool(f"{name}_{t}") for t in range(N + 1)] for name in sorted(names)}
+    return {name: [Bool(f"signal:{name}:{t}") for t in range(N + 1)] for name in sorted(names)}
 
 
 def encode_rule(rule, trace, N):
